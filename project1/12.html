@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clementine's Naughty & Nice Ice Cream</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito:wght@400;500;600&display=swap');
+
+        body {
+            background-color: #fff8ee;
+            color: #3d3028;
+            font-family: "Nunito", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 30px;
+        }
+
+        h1 {
+            font-family: "Fraunces", serif;
+            font-size: 72px;
+            font-weight: 500;
+            line-height: 0.9;
+            letter-spacing: -3px;
+            text-align: center;
+            color: #d46767;
+            margin-bottom: 8px;
+        }
+
+        .name-line {
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #6b4d40;
+        }
+
+        .tagline {
+            font-family: "Fraunces", serif;
+            font-size: 19px;
+            font-style: italic;
+            text-align: center;
+            color: #8c6758;
+        }
+
+        .features {
+            font-size: 13px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #8c6758;
+        }
+
+        h2 {
+            font-family: "Fraunces", serif;
+            font-size: 32px;
+            font-weight: 500;
+            color: #d46767;
+            margin-top: 45px;
+        }
+
+        h3 {
+            font-family: "Fraunces", serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #6b4d40;
+            margin-top: 35px;
+        }
+
+        h4 {
+            font-family: "Fraunces", serif;
+            font-size: 19px;
+            font-weight: 500;
+            color: #d46767;
+            margin-bottom: 2px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #d46767;
+            font-weight: 600;
+        }
+
+        span {
+            color: #d46767;
+            font-weight: 600;
+        }
+
+        li::marker {
+            color: #d46767;
+        }
+
+
+        /* BUILD YOUR SCOOP */
+
+        .scoop-table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .scoop-table th {
+            font-family: "Fraunces", serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #d46767;
+            padding: 10px;
+            border-bottom: 1px solid #d46767;
+        }
+
+        .scoop-table td {
+            padding: 7px;
+        }
+
+        .flavor-number td {
+            font-family: "Fraunces", serif;
+            font-size: 38px;
+            color: #6b4d40;
+            padding-bottom: 0;
+        }
+
+        .price td {
+            color: #d46767;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+
+        /* FLAVORS */
+
+        .flavor {
+            margin-bottom: 18px;
+        }
+
+        .flavor p {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .allergens {
+            font-size: 13px;
+            color: #8c6758;
+        }
+
+        .allergens b {
+            color: #d46767;
+        }
+
+
+        /* LOCATIONS */
+
+        .locations {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .locations h3 {
+            margin-bottom: 5px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<h1>Clementine's</h1>
+
+<p class="name-line">
+    Naughty & Nice Ice Cream
+</p>
+
+<p class="tagline">
+    Small-batch ice cream and sorbet made in St. Louis.
+</p>
+
+<p class="features">
+    Dairy-free • Gluten-free • Vegan • Alcohol-infused
+</p>
+
+
+
+<div>
+
+    <h2>About Clementine's</h2>
+
+    <p>
+        Clementine's is a St. Louis microcreamery making small-batch ice creams and sorbets locally.
+    </p>
+
+    <p>
+        They offer dairy-free, gluten-free, vegan, and alcohol-infused options.
+        <span>Gooey Butter Cake</span> is one of their best-known flavors.
+    </p>
+
+</div>
+
+
+
+<div>
+
+    <h2>Build Your Scoop</h2>
+
+    <table class="scoop-table">
+
+        <tr>
+            <th>Mini</th>
+            <th>Petite</th>
+            <th>Moyen</th>
+            <th>Grand Cru</th>
+        </tr>
+
+        <tr class="flavor-number">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>flavor</td>
+            <td>flavors</td>
+            <td>flavors</td>
+            <td>flavors</td>
+        </tr>
+
+        <tr class="price">
+            <td>$6</td>
+            <td>$8</td>
+            <td>$9.50</td>
+            <td>$15</td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<div>
+
+    <h2>Choose Your Flavor</h2>
+
+
+    <h3>Naughty</h3>
+
+    <p>
+        <i>Alcohol-infused flavors</i>
+    </p>
+
+
+    <div class="flavor">
+        <h4>Maple Bourbon Pecan</h4>
+        <p>Bourbon and maple syrup ice cream with salted candied Missouri pecans.</p>
+        <p class="allergens"><b>Contains:</b> milk, tree nuts, alcohol</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Pink Champagne Sorbet</h4>
+        <p>A light and fresh sparkling wine sorbet.</p>
+        <p class="allergens"><b>Contains:</b> alcohol</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Chocolate Cabernet</h4>
+        <p>Rich chocolate ice cream infused with Cabernet Sauvignon.</p>
+        <p class="allergens"><b>Contains:</b> milk, alcohol</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Amaretto Sour</h4>
+        <p>Amaretto ice cream with bright lemon and a tart cherry swirl.</p>
+        <p class="allergens"><b>Contains:</b> alcohol</p>
+    </div>
+
+
+
+    <h3>Nice</h3>
+
+
+    <div class="flavor">
+        <h4>Gooey Butter Cake</h4>
+        <p>Cream cheese ice cream layered with chunks of scratch-made gooey butter cake.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, egg</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Salted Caramel Cookies & Cream</h4>
+        <p>Dark chocolate sandwich cookie crumbles with ribbons of salted caramel.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, egg, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Salted Cracker Caramel</h4>
+        <p>Sweet and salty caramel ice cream with chocolate, caramel, and crackers.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Italian Butter Cookie</h4>
+        <p>Cookie pieces folded into spiced cookie butter ice cream with brown sugar and cinnamon.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Madagascar Vanilla</h4>
+        <p>Clementine's signature rich vanilla ice cream.</p>
+        <p class="allergens"><b>Contains:</b> milk</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Midnight Pleasures</h4>
+        <p>Triple dark chocolate ice cream.</p>
+        <p class="allergens"><b>Contains:</b> milk</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Espresso Royale</h4>
+        <p>Dark roast coffee ice cream with notes of vanilla and brown sugar.</p>
+        <p class="allergens"><b>Contains:</b> milk</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Chocolate Dreams</h4>
+        <p>Milk chocolate ice cream made with Belgian chocolate.</p>
+        <p class="allergens"><b>Contains:</b> milk, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Banana Moo' Pie</h4>
+        <p>Banana cream ice cream with mini marshmallows and crunchy cookie pieces.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Pumpkin Gooey Butter Cake</h4>
+        <p>Pumpkin spice ice cream with chunks of Clementine's gooey butter cake.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, egg</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Blue Moon</h4>
+        <p>A fruity lemon and raspberry ice cream inspired by the Midwestern classic.</p>
+        <p class="allergens"><b>Contains:</b> milk, tree nuts</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Heritage Mint Chip</h4>
+        <p>Spearmint and peppermint ice cream with dark chocolate flakes.</p>
+        <p class="allergens"><b>Contains:</b> milk, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Honey Lavender</h4>
+        <p>Lavender ice cream sweetened with honey.</p>
+        <p class="allergens"><b>Contains:</b> milk</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Grandma Marie's Butter Brickle</h4>
+        <p>Buttery ice cream with crunchy toffee pieces and caramelized brown sugar.</p>
+        <p class="allergens"><b>Contains:</b> milk, soy, tree nuts</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Ashleigh's Apple Cranberry Pie</h4>
+        <p>Cinnamon ice cream with an apple cranberry pie swirl.</p>
+        <p class="allergens"><b>Contains:</b> milk, wheat, soy</p>
+    </div>
+
+
+
+    <h3>Vegan</h3>
+
+
+    <div class="flavor">
+        <h4>Coconut Fudge</h4>
+        <p>Rich chocolate ice cream made with coconut cream and coconut milk.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Lemon Poppyseed</h4>
+        <p>Tart lemon ice cream with poppy seeds.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Tahini Chocolate Chip</h4>
+        <p>Tahini ice cream with vanilla, brown sugar, and dark chocolate flakes.</p>
+        <p class="allergens"><b>Contains:</b> sesame, soy</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Pomegranate Sorbet</h4>
+        <p>Sweet and tart pomegranate sorbet with hibiscus.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Golden Mylk Biscoff</h4>
+        <p>Golden mylk coconut ice cream with cinnamon Biscoff cookies.</p>
+        <p class="allergens"><b>Contains:</b> soy, wheat</p>
+    </div>
+
+
+
+    <h3>The Poe Collection</h3>
+
+
+    <div class="flavor">
+        <h4>The Raven</h4>
+        <p>Blueberry muffin in ice cream form.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Thing of Evil</h4>
+        <p>Caramel miso coconut with chocolate sandwich cookies.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Nevermorange</h4>
+        <p>Blood orange and olive oil ice cream.</p>
+    </div>
+
+
+    <div class="flavor">
+        <h4>Midnight Dreary</h4>
+        <p>Dark chocolate raspberry ice cream.</p>
+    </div>
+
+</div>
+
+
+
+<div>
+
+    <h2>Cone or Cup?</h2>
+
+    <ul>
+        <li>Waffle Cone — +$2</li>
+        <li>Waffle Bowl — +$2</li>
+        <li>Gluten-Free Cone — +$2.50</li>
+        <li>Konery Cone — +$2</li>
+        <li>Extra Cup — +$0.25</li>
+    </ul>
+
+</div>
+
+
+
+<div>
+
+    <h2>Top It Off</h2>
+
+    <h3>Sauces</h3>
+    <p>Hot Fudge • Salted Caramel • Hot Honey</p>
+
+    <h3>Crunch</h3>
+    <p>Candied Pecans • PB Crumbles • Chocolate Flakes</p>
+
+    <h3>Classics</h3>
+    <p>Whipped Cream • Sprinkles • Cherries</p>
+
+</div>
+
+
+
+<div>
+
+    <h2>A Little Something Extra</h2>
+
+    <h3>Sunday Sundae</h3>
+
+    <p>
+        <b>2 scoops + 3 toppings = $9.25</b>
+    </p>
+
+    <p>
+        <em>Sundays only.</em>
+    </p>
+
+
+    <h3>Pint of the Month Club</h3>
+
+    <p>
+        Ice cream for one year, one pint at a time.
+    </p>
+
+    <ul>
+        <li>Naughty — $159</li>
+        <li>Nice — $129</li>
+        <li>Vegan — $159</li>
+    </ul>
+
+</div>
+
+
+
+<div>
+
+    <h2>Visit Clementine's</h2>
+
+
+    <div class="locations">
+
+
+        <div>
+
+            <h3>Clayton</h3>
+
+            <p>
+                730 De Mun Avenue<br>
+                Clayton, Missouri 63105
+            </p>
+
+            <p>
+                (314) 643-9900
+            </p>
+
+            <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                Google Maps
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Central West End</h3>
+
+            <p>
+                308 N Euclid Avenue<br>
+                St. Louis, Missouri 63108
+            </p>
+
+            <p>
+                (314) 916-4100
+            </p>
+
+            <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                Google Maps
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Lafayette Square</h3>
+
+            <p>
+                1637 S 18th Street<br>
+                St. Louis, Missouri 63104
+            </p>
+
+            <p>
+                (314) 474-5800
+            </p>
+
+            <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                Google Maps
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <h3>Parlor Hours</h3>
+
+    <p>
+        <b>Sunday–Thursday:</b> 12pm–10pm
+    </p>
+
+    <p>
+        <b>Friday–Saturday:</b> 12pm–11pm
+    </p>
+
+</div>
+
+
+</body>
+
+</html>

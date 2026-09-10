@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clementine's Naughty & Nice Ice Cream</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500&display=swap');
+
+
+        body {
+            background-color: #f7f2e8;
+            color: #3f432e;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 30px;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Bodoni Moda", serif;
+        }
+
+
+        h1 {
+            font-size: 58px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #626146;
+            margin-bottom: 5px;
+        }
+
+
+        .brand-subtitle {
+            font-family: "Bodoni Moda", serif;
+            font-size: 27px;
+            text-align: center;
+            color: #a06f69;
+            margin: 0;
+        }
+
+
+        .ice-cream {
+            font-size: 11px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #626146;
+            margin-top: 5px;
+        }
+
+
+        .tagline {
+            font-family: "Bodoni Moda", serif;
+            font-size: 19px;
+            font-style: italic;
+            text-align: center;
+            color: #7c675e;
+            margin-top: 25px;
+            margin-bottom: 4px;
+        }
+
+
+        .features {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #858466;
+        }
+
+
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #a06f69;
+            margin-top: 50px;
+            margin-bottom: 14px;
+        }
+
+
+        h3 {
+            font-size: 23px;
+            font-weight: 500;
+            color: #a06f69;
+            margin-bottom: 7px;
+        }
+
+
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #626146;
+            margin: 0;
+        }
+
+
+        p {
+            margin-top: 6px;
+        }
+
+
+        a {
+            color: #a06f69;
+        }
+
+
+        span {
+            color: #a06f69;
+            font-family: "Bodoni Moda", serif;
+            font-style: italic;
+        }
+
+
+
+        /* BUILD YOUR SCOOP */
+
+
+        .scoop-pricing {
+            margin-top: 25px;
+        }
+
+
+        .scoop-headings {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            border-bottom: 1px solid #a06f69;
+            padding-bottom: 14px;
+        }
+
+
+        .scoop-headings div {
+            font-family: "Bodoni Moda", serif;
+            font-size: 23px;
+            font-weight: 500;
+            color: #a06f69;
+        }
+
+
+        .scoop-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            padding-top: 25px;
+        }
+
+
+        .scoop-number {
+            font-family: "Bodoni Moda", serif;
+            font-size: 52px;
+            color: #7c675e;
+            line-height: 1;
+        }
+
+
+        .scoop-flavor {
+            margin: 14px 0;
+            font-size: 16px;
+            color: #3f432e;
+        }
+
+
+        .scoop-price {
+            font-size: 21px;
+            color: #a06f69;
+            font-weight: 500;
+        }
+
+
+
+        /* FLAVORS */
+
+
+        .small-note {
+            font-size: 12px;
+            color: #7c675e;
+            font-style: italic;
+        }
+
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+
+        details {
+            border-bottom: 1px solid #d8d0c1;
+            padding: 9px 0;
+        }
+
+
+        summary {
+            font-family: "Bodoni Moda", serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #626146;
+            cursor: pointer;
+        }
+
+
+        details p {
+            margin: 5px 0;
+        }
+
+
+        details p b {
+            color: #a06f69;
+        }
+
+
+
+        /* CONE OR CUP */
+
+
+        .cone-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #bdb7a4;
+            border-bottom: 1px solid #bdb7a4;
+        }
+
+
+        .cone-item {
+            text-align: center;
+            padding: 20px 12px;
+            border-right: 1px solid #d8d0c1;
+        }
+
+
+        .cone-item:last-child {
+            border-right: none;
+        }
+
+
+        .cone-name {
+            font-family: "Bodoni Moda", serif;
+            font-size: 17px;
+            color: #626146;
+            margin-bottom: 5px;
+        }
+
+
+        .cone-price {
+            color: #a06f69;
+            font-weight: 500;
+        }
+
+
+
+        /* TOPPINGS */
+
+
+        .topping-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #bdb7a4;
+            border-bottom: 1px solid #bdb7a4;
+        }
+
+
+        .topping-group {
+            padding: 18px 25px;
+            border-right: 1px solid #d8d0c1;
+        }
+
+
+        .topping-group:last-child {
+            border-right: none;
+        }
+
+
+        .topping-group h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+
+        .topping-group p {
+            color: #3f432e;
+        }
+
+
+
+        /* EXTRAS */
+
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+
+        .extra {
+            border-top: 1px solid #bdb7a4;
+            padding-top: 8px;
+        }
+
+
+        .extra h3 {
+            margin-top: 8px;
+        }
+
+
+        .extra-price {
+            color: #a06f69;
+            font-family: "Bodoni Moda", serif;
+            font-size: 21px;
+        }
+
+
+
+        /* LOCATIONS */
+
+
+        .locations {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+
+        .location {
+            border-top: 1px solid #bdb7a4;
+            padding-top: 8px;
+        }
+
+
+        .location h3 {
+            margin-top: 5px;
+        }
+
+
+        li::marker {
+            color: #a06f69;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>Clementine's</h1>
+
+    <p class="brand-subtitle">
+        Naughty & Nice
+    </p>
+
+    <p class="ice-cream">
+        Ice Cream
+    </p>
+
+
+    <p class="tagline">
+        Small-batch ice cream and sorbet made in St. Louis.
+    </p>
+
+
+    <p class="features">
+        Dairy-Free • Gluten-Free • Vegan • Alcohol-Infused
+    </p>
+
+
+
+    <div>
+
+        <h2>About Clementine's</h2>
+
+        <p>
+            Clementine's is a St. Louis microcreamery making small-batch ice creams
+            and sorbets locally.
+        </p>
+
+        <p>
+            They offer dairy-free, gluten-free, vegan, and alcohol-infused options.
+            <span>Gooey Butter Cake</span> is one of their best-known flavors.
+        </p>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>Build Your Scoop</h2>
+
+
+        <div class="scoop-pricing">
+
+
+            <div class="scoop-headings">
+
+                <div>Mini</div>
+                <div>Petite</div>
+                <div>Moyen</div>
+                <div>Grand Cru</div>
+
+            </div>
+
+
+            <div class="scoop-values">
+
+
+                <div>
+                    <div class="scoop-number">1</div>
+                    <div class="scoop-flavor">flavor</div>
+                    <div class="scoop-price">$6</div>
+                </div>
+
+
+                <div>
+                    <div class="scoop-number">2</div>
+                    <div class="scoop-flavor">flavors</div>
+                    <div class="scoop-price">$8</div>
+                </div>
+
+
+                <div>
+                    <div class="scoop-number">3</div>
+                    <div class="scoop-flavor">flavors</div>
+                    <div class="scoop-price">$9.50</div>
+                </div>
+
+
+                <div>
+                    <div class="scoop-number">5</div>
+                    <div class="scoop-flavor">flavors</div>
+                    <div class="scoop-price">$15</div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>Choose Your Flavor</h2>
+
+        <p class="small-note">
+            Click a flavor to see its description and allergens.
+        </p>
+
+
+        <div class="flavor-grid">
+
+
+            <div>
+
+                <h3>Naughty</h3>
+
+                <p>
+                    <i>Alcohol-infused flavors</i>
+                </p>
+
+
+                <details>
+                    <summary>Maple Bourbon Pecan</summary>
+                    <p>Bourbon and maple syrup ice cream with salted candied Missouri pecans.</p>
+                    <p><b>Contains:</b> milk, tree nuts, alcohol</p>
+                </details>
+
+
+                <details>
+                    <summary>Pink Champagne Sorbet</summary>
+                    <p>A light and fresh sparkling wine sorbet.</p>
+                    <p><b>Contains:</b> alcohol</p>
+                </details>
+
+
+                <details>
+                    <summary>Chocolate Cabernet</summary>
+                    <p>Rich chocolate ice cream infused with Cabernet Sauvignon.</p>
+                    <p><b>Contains:</b> milk, alcohol</p>
+                </details>
+
+
+                <details>
+                    <summary>Amaretto Sour</summary>
+                    <p>Amaretto ice cream with bright lemon and a tart cherry swirl.</p>
+                    <p><b>Contains:</b> alcohol</p>
+                </details>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>Nice</h3>
+
+
+                <details>
+                    <summary>Gooey Butter Cake</summary>
+                    <p>Cream cheese ice cream layered with chunks of scratch-made gooey butter cake.</p>
+                    <p><b>Contains:</b> milk, wheat, egg</p>
+                </details>
+
+
+                <details>
+                    <summary>Salted Caramel Cookies & Cream</summary>
+                    <p>Dark chocolate sandwich cookie crumbles with ribbons of salted caramel.</p>
+                    <p><b>Contains:</b> milk, wheat, egg, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Salted Cracker Caramel</summary>
+                    <p>Sweet and salty caramel ice cream with chocolate, caramel, and crackers.</p>
+                    <p><b>Contains:</b> milk, wheat, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Italian Butter Cookie</summary>
+                    <p>Cookie pieces folded into spiced cookie butter ice cream with brown sugar and cinnamon.</p>
+                    <p><b>Contains:</b> milk, wheat, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Madagascar Vanilla</summary>
+                    <p>Clementine's signature rich vanilla ice cream.</p>
+                    <p><b>Contains:</b> milk</p>
+                </details>
+
+
+                <details>
+                    <summary>Midnight Pleasures</summary>
+                    <p>Triple dark chocolate ice cream.</p>
+                    <p><b>Contains:</b> milk</p>
+                </details>
+
+
+                <details>
+                    <summary>Espresso Royale</summary>
+                    <p>Dark roast coffee ice cream with notes of vanilla and brown sugar.</p>
+                    <p><b>Contains:</b> milk</p>
+                </details>
+
+
+                <details>
+                    <summary>Chocolate Dreams</summary>
+                    <p>Milk chocolate ice cream made with Belgian chocolate.</p>
+                    <p><b>Contains:</b> milk, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Banana Moo' Pie</summary>
+                    <p>Banana cream ice cream with mini marshmallows and crunchy cookie pieces.</p>
+                    <p><b>Contains:</b> milk, wheat, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Pumpkin Gooey Butter Cake</summary>
+                    <p>Pumpkin spice ice cream with chunks of Clementine's gooey butter cake.</p>
+                    <p><b>Contains:</b> milk, wheat, egg</p>
+                </details>
+
+
+                <details>
+                    <summary>Blue Moon</summary>
+                    <p>A fruity lemon and raspberry ice cream inspired by the Midwestern classic.</p>
+                    <p><b>Contains:</b> milk, tree nuts</p>
+                </details>
+
+
+                <details>
+                    <summary>Heritage Mint Chip</summary>
+                    <p>Spearmint and peppermint ice cream with dark chocolate flakes.</p>
+                    <p><b>Contains:</b> milk, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Honey Lavender</summary>
+                    <p>Lavender ice cream sweetened with honey.</p>
+                    <p><b>Contains:</b> milk</p>
+                </details>
+
+
+                <details>
+                    <summary>Grandma Marie's Butter Brickle</summary>
+                    <p>Buttery ice cream with crunchy toffee pieces and caramelized brown sugar.</p>
+                    <p><b>Contains:</b> milk, soy, tree nuts</p>
+                </details>
+
+
+                <details>
+                    <summary>Ashleigh's Apple Cranberry Pie</summary>
+                    <p>Cinnamon ice cream with an apple cranberry pie swirl.</p>
+                    <p><b>Contains:</b> milk, wheat, soy</p>
+                </details>
+
+
+            </div>
+
+
+
+            <div>
+
+                <h3>Vegan</h3>
+
+
+                <details>
+                    <summary>Coconut Fudge</summary>
+                    <p>Rich chocolate ice cream made with coconut cream and coconut milk.</p>
+                </details>
+
+
+                <details>
+                    <summary>Lemon Poppyseed</summary>
+                    <p>Tart lemon ice cream with poppy seeds.</p>
+                </details>
+
+
+                <details>
+                    <summary>Tahini Chocolate Chip</summary>
+                    <p>Tahini ice cream with vanilla, brown sugar, and dark chocolate flakes.</p>
+                    <p><b>Contains:</b> sesame, soy</p>
+                </details>
+
+
+                <details>
+                    <summary>Pomegranate Sorbet</summary>
+                    <p>Sweet and tart pomegranate sorbet with hibiscus.</p>
+                </details>
+
+
+                <details>
+                    <summary>Golden Mylk Biscoff</summary>
+                    <p>Golden mylk coconut ice cream with cinnamon Biscoff cookies.</p>
+                    <p><b>Contains:</b> soy, wheat</p>
+                </details>
+
+
+            </div>
+
+
+
+            <div>
+
+                <h3>The Poe Collection</h3>
+
+
+                <details>
+                    <summary>The Raven</summary>
+                    <p>Blueberry muffin in ice cream form.</p>
+                </details>
+
+
+                <details>
+                    <summary>Thing of Evil</summary>
+                    <p>Caramel miso coconut with chocolate sandwich cookies.</p>
+                </details>
+
+
+                <details>
+                    <summary>Nevermorange</summary>
+                    <p>Blood orange and olive oil ice cream.</p>
+                </details>
+
+
+                <details>
+                    <summary>Midnight Dreary</summary>
+                    <p>Dark chocolate raspberry ice cream.</p>
+                </details>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>Cone or Cup?</h2>
+
+
+        <div class="cone-grid">
+
+
+            <div class="cone-item">
+
+                <div class="cone-name">
+                    Waffle Cone
+                </div>
+
+                <div class="cone-price">
+                    +$2
+                </div>
+
+            </div>
+
+
+            <div class="cone-item">
+
+                <div class="cone-name">
+                    Waffle Bowl
+                </div>
+
+                <div class="cone-price">
+                    +$2
+                </div>
+
+            </div>
+
+
+            <div class="cone-item">
+
+                <div class="cone-name">
+                    Gluten-Free Cone
+                </div>
+
+                <div class="cone-price">
+                    +$2.50
+                </div>
+
+            </div>
+
+
+            <div class="cone-item">
+
+                <div class="cone-name">
+                    Konery Cone
+                </div>
+
+                <div class="cone-price">
+                    +$2
+                </div>
+
+            </div>
+
+
+            <div class="cone-item">
+
+                <div class="cone-name">
+                    Extra Cup
+                </div>
+
+                <div class="cone-price">
+                    +$0.25
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>Top It Off</h2>
+
+
+        <div class="topping-grid">
+
+
+            <div class="topping-group">
+
+                <h3>Sauces</h3>
+
+                <p>
+                    Hot Fudge<br>
+                    Salted Caramel<br>
+                    Hot Honey
+                </p>
+
+            </div>
+
+
+            <div class="topping-group">
+
+                <h3>Crunch</h3>
+
+                <p>
+                    Candied Pecans<br>
+                    PB Crumbles<br>
+                    Chocolate Flakes
+                </p>
+
+            </div>
+
+
+            <div class="topping-group">
+
+                <h3>Classics</h3>
+
+                <p>
+                    Whipped Cream<br>
+                    Sprinkles<br>
+                    Cherries
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>A Little Something Extra</h2>
+
+
+        <div class="extra-grid">
+
+
+            <div class="extra">
+
+                <h3>Sunday Sundae</h3>
+
+                <p>
+                    2 scoops + 3 toppings
+                </p>
+
+                <p class="extra-price">
+                    $9.25
+                </p>
+
+                <p>
+                    <em>Sundays only.</em>
+                </p>
+
+            </div>
+
+
+            <div class="extra">
+
+                <h3>Pint of the Month Club</h3>
+
+                <p>
+                    Ice cream for one year, one pint at a time.
+                </p>
+
+                <p>
+                    Naughty <span>$159</span><br>
+                    Nice <span>$129</span><br>
+                    Vegan <span>$159</span>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <h2>Find Your Parlor</h2>
+
+
+        <div class="locations">
+
+
+            <div class="location">
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>
+                    (314) 643-9900
+                </p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
+
+            </div>
+
+
+            <div class="location">
+
+                <h3>Central West End</h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>
+                    (314) 916-4100
+                </p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+
+            </div>
+
+
+            <div class="location">
+
+                <h3>Lafayette Square</h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>
+                    (314) 474-5800
+                </p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <h3>Parlor Hours</h3>
+
+        <p>
+            <b>Sunday–Thursday:</b> 12pm–10pm
+        </p>
+
+        <p>
+            <b>Friday–Saturday:</b> 12pm–11pm
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>
