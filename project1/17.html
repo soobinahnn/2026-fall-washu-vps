@@ -13,10 +13,6 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             background-color: #f7f2ea;
             color: #2d3031;
@@ -25,14 +21,12 @@
             line-height: 1.7;
             max-width: 1150px;
             margin: auto;
-            padding: 0 35px 60px;
+            padding: 40px 35px 60px;
         }
 
         h1,
         h2,
         h3,
-        .logo,
-        nav,
         summary,
         .scoop-name,
         .scoop-number,
@@ -40,36 +34,9 @@
             font-family: "Manrope", sans-serif;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #b8b3aa;
-        }
-
-        .logo {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #2d3031;
-            text-decoration: none;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .hero {
             text-align: center;
-            padding: 45px 20px 35px;
+            padding: 35px 20px 45px;
         }
 
         .eyebrow,
@@ -246,6 +213,39 @@
             font-weight: 600;
         }
 
+        .base-title {
+            margin-top: 35px;
+            margin-bottom: 12px;
+        }
+
+        .cone-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #2d3031;
+            border-bottom: 1px solid #2d3031;
+        }
+
+        .cone-item {
+            padding: 20px 10px;
+            text-align: center;
+            border-right: 1px solid #b8b3aa;
+        }
+
+        .cone-item:last-child {
+            border-right: none;
+        }
+
+        .cone-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cone-price {
+            margin-top: 5px;
+            color: #9d655c;
+            font-weight: 600;
+        }
+
         .flavor-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -292,7 +292,6 @@
         summary {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             list-style: none;
             cursor: pointer;
             font-size: 15px;
@@ -316,34 +315,6 @@
             margin: 7px 0 0;
             color: #4f5352;
             font-size: 13px;
-        }
-
-        .cone-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            border-top: 1px solid #2d3031;
-            border-bottom: 1px solid #2d3031;
-        }
-
-        .cone-item {
-            padding: 24px 10px;
-            text-align: center;
-            border-right: 1px solid #b8b3aa;
-        }
-
-        .cone-item:last-child {
-            border-right: none;
-        }
-
-        .cone-name {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .cone-price {
-            margin-top: 6px;
-            color: #9d655c;
-            font-weight: 600;
         }
 
         .topping-grid {
@@ -430,19 +401,9 @@
         }
 
         @media (max-width: 700px) {
+
             body {
-                padding: 0 18px 45px;
-            }
-
-            header {
-                align-items: flex-start;
-                gap: 15px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: flex-end;
-                gap: 8px 14px;
+                padding: 30px 18px 45px;
             }
 
             h1 {
@@ -458,11 +419,6 @@
             .topping-grid,
             .extra-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .location img,
-            .extra-image {
-                height: 260px;
             }
 
             .parlor-hours {
@@ -490,17 +446,6 @@
 
 <body>
 
-    <header>
-        <div class="logo">Clementine's</div>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#locations">Parlors</a>
-            <a href="#flavors">Flavors</a>
-            <a href="#toppings">Toppings</a>
-        </nav>
-    </header>
-
     <div class="hero">
 
         <p class="eyebrow">
@@ -525,7 +470,8 @@
 
     </div>
 
-    <section id="about">
+
+    <section>
 
         <p class="section-label">
             About
@@ -552,7 +498,8 @@
 
     </section>
 
-    <section id="locations">
+
+    <section>
 
         <p class="section-label">
             Parlors
@@ -570,9 +517,7 @@
                     01 / Clayton
                 </p>
 
-                <img
-                    src="Images/clayton.png"
-                    alt="Clementine's Clayton location">
+                <img src="Images/clayton.png" alt="Clementine's Clayton location">
 
                 <h3>Clayton</h3>
 
@@ -581,9 +526,7 @@
                     Clayton, Missouri 63105
                 </p>
 
-                <p>
-                    (314) 643-9900
-                </p>
+                <p>(314) 643-9900</p>
 
                 <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
                     Google Maps
@@ -591,15 +534,14 @@
 
             </div>
 
+
             <div class="location">
 
                 <p class="location-number">
                     02 / Central West End
                 </p>
 
-                <img
-                    src="Images/central-west-end.png"
-                    alt="Clementine's Central West End location">
+                <img src="Images/central-west-end.png" alt="Clementine's Central West End location">
 
                 <h3>Central West End</h3>
 
@@ -608,9 +550,7 @@
                     St. Louis, Missouri 63108
                 </p>
 
-                <p>
-                    (314) 916-4100
-                </p>
+                <p>(314) 916-4100</p>
 
                 <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
                     Google Maps
@@ -618,15 +558,14 @@
 
             </div>
 
+
             <div class="location">
 
                 <p class="location-number">
                     03 / Lafayette Square
                 </p>
 
-                <img
-                    src="Images/lafayette-square.png"
-                    alt="Clementine's Lafayette Square location">
+                <img src="Images/lafayette-square.png" alt="Clementine's Lafayette Square location">
 
                 <h3>Lafayette Square</h3>
 
@@ -635,9 +574,7 @@
                     St. Louis, Missouri 63104
                 </p>
 
-                <p>
-                    (314) 474-5800
-                </p>
+                <p>(314) 474-5800</p>
 
                 <a href="https://share.google/GIK7YTYYrtyXrQzYs">
                     Google Maps
@@ -646,6 +583,7 @@
             </div>
 
         </div>
+
 
         <div class="parlor-hours">
 
@@ -667,6 +605,7 @@
         </div>
 
     </section>
+
 
     <section>
 
@@ -717,9 +656,44 @@
 
         </div>
 
+
+        <h3 class="base-title">
+            Cone or cup?
+        </h3>
+
+        <div class="cone-grid">
+
+            <div class="cone-item">
+                <div class="cone-name">Waffle Cone</div>
+                <div class="cone-price">+$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Waffle Bowl</div>
+                <div class="cone-price">+$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Gluten-Free Cone</div>
+                <div class="cone-price">+$2.50</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Konery Cone</div>
+                <div class="cone-price">+$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Extra Cup</div>
+                <div class="cone-price">+$0.25</div>
+            </div>
+
+        </div>
+
     </section>
 
-    <section id="flavors">
+
+    <section>
 
         <p class="section-label">
             Flavors
@@ -768,6 +742,7 @@
                 </details>
 
             </div>
+
 
             <div class="flavor-section">
 
@@ -869,6 +844,7 @@
 
             </div>
 
+
             <div class="flavor-section">
 
                 <h3>Vegan</h3>
@@ -906,11 +882,10 @@
 
             </div>
 
+
             <div class="flavor-section">
 
-                <h3>
-                    The Poe Collection
-                </h3>
+                <h3>The Poe Collection</h3>
 
                 <p class="flavor-label">
                     A little mysterious
@@ -942,48 +917,8 @@
 
     </section>
 
+
     <section>
-
-        <p class="section-label">
-            Pick your base
-        </p>
-
-        <h2>
-            Cone or cup?
-        </h2>
-
-        <div class="cone-grid">
-
-            <div class="cone-item">
-                <div class="cone-name">Waffle Cone</div>
-                <div class="cone-price">+$2</div>
-            </div>
-
-            <div class="cone-item">
-                <div class="cone-name">Waffle Bowl</div>
-                <div class="cone-price">+$2</div>
-            </div>
-
-            <div class="cone-item">
-                <div class="cone-name">Gluten-Free Cone</div>
-                <div class="cone-price">+$2.50</div>
-            </div>
-
-            <div class="cone-item">
-                <div class="cone-name">Konery Cone</div>
-                <div class="cone-price">+$2</div>
-            </div>
-
-            <div class="cone-item">
-                <div class="cone-name">Extra Cup</div>
-                <div class="cone-price">+$0.25</div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="toppings">
 
         <p class="section-label">
             Toppings
@@ -1063,6 +998,7 @@
 
     </section>
 
+
     <section>
 
         <p class="section-label">
@@ -1084,9 +1020,7 @@
 
                 <div class="extra-content">
 
-                    <h3>
-                        Sunday Sundae
-                    </h3>
+                    <h3>Sunday Sundae</h3>
 
                     <p>
                         2 scoops + 3 toppings
@@ -1104,6 +1038,7 @@
 
             </div>
 
+
             <div class="extra-item">
 
                 <img
@@ -1113,31 +1048,25 @@
 
                 <div class="extra-content">
 
-                    <h3>
-                        Pint of the Month Club
-                    </h3>
+                    <h3>Pint of the Month Club</h3>
 
                     <p>
                         Ice cream for one year, one pint at a time.
                     </p>
 
-                    <div class="club-prices">
+                    <div class="club-row">
+                        <div>Naughty</div>
+                        <span>$159</span>
+                    </div>
 
-                        <div class="club-row">
-                            <div>Naughty</div>
-                            <span>$159</span>
-                        </div>
+                    <div class="club-row">
+                        <div>Nice</div>
+                        <span>$129</span>
+                    </div>
 
-                        <div class="club-row">
-                            <div>Nice</div>
-                            <span>$129</span>
-                        </div>
-
-                        <div class="club-row">
-                            <div>Vegan</div>
-                            <span>$159</span>
-                        </div>
-
+                    <div class="club-row">
+                        <div>Vegan</div>
+                        <span>$159</span>
                     </div>
 
                 </div>
@@ -1149,5 +1078,4 @@
     </section>
 
 </body>
-
 </html>

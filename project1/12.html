@@ -8,144 +8,85 @@
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
 
         body {
-            background-color: #fff8ee;
-            color: #3d3028;
-            font-family: "Nunito", sans-serif;
-            font-size: 16px;
+            background-color: #f4efe5;
+            color: #25282b;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
             line-height: 1.6;
-            margin: 30px;
+            margin: 35px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Manrope", sans-serif;
         }
 
         h1 {
-            font-family: "Fraunces", serif;
-            font-size: 72px;
+            font-size: 68px;
             font-weight: 500;
-            line-height: 0.9;
-            letter-spacing: -3px;
             text-align: center;
-            color: #d46767;
-            margin-bottom: 8px;
+            color: #18365d;
+            margin-bottom: 5px;
         }
 
         .name-line {
+            text-align: center;
+            color: #345d8c;
             font-size: 13px;
             font-weight: 600;
-            text-align: center;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #6b4d40;
+            letter-spacing: 3px;
         }
 
         .tagline {
-            font-family: "Fraunces", serif;
-            font-size: 19px;
-            font-style: italic;
             text-align: center;
-            color: #8c6758;
+            color: #696964;
+            margin-top: 25px;
         }
 
         .features {
-            font-size: 13px;
             text-align: center;
+            color: #345d8c;
+            font-size: 11px;
+            text-transform: uppercase;
             letter-spacing: 1px;
-            color: #8c6758;
         }
 
         h2 {
-            font-family: "Fraunces", serif;
+            color: #18365d;
             font-size: 32px;
             font-weight: 500;
-            color: #d46767;
-            margin-top: 45px;
+            margin-top: 55px;
         }
 
         h3 {
-            font-family: "Fraunces", serif;
-            font-size: 24px;
-            font-weight: 500;
-            color: #6b4d40;
-            margin-top: 35px;
+            color: #18365d;
+            font-size: 22px;
+            margin-top: 30px;
         }
 
         h4 {
-            font-family: "Fraunces", serif;
-            font-size: 19px;
-            font-weight: 500;
-            color: #d46767;
-            margin-bottom: 2px;
+            color: #345d8c;
+            font-size: 17px;
+            margin-bottom: 3px;
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.6;
+            margin-top: 5px;
         }
 
         a {
-            color: #d46767;
+            color: #345d8c;
+        }
+
+        .highlight {
+            color: #18365d;
             font-weight: 600;
-        }
-
-        span {
-            color: #d46767;
-            font-weight: 600;
-        }
-
-        li::marker {
-            color: #d46767;
-        }
-
-        .scoop-table {
-            width: 100%;
-            text-align: center;
-            border-collapse: collapse;
-        }
-
-        .scoop-table th {
-            font-family: "Fraunces", serif;
-            font-size: 20px;
-            font-weight: 500;
-            color: #d46767;
-            padding: 10px;
-            border-bottom: 1px solid #d46767;
-        }
-
-        .scoop-table td {
-            padding: 7px;
-        }
-
-        .flavor-number td {
-            font-family: "Fraunces", serif;
-            font-size: 38px;
-            color: #6b4d40;
-            padding-bottom: 0;
-        }
-
-        .price td {
-            color: #d46767;
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .flavor {
-            margin-bottom: 18px;
-        }
-
-        .flavor p {
-            margin-top: 2px;
-            margin-bottom: 2px;
-        }
-
-        .allergens {
-            font-size: 13px;
-            color: #8c6758;
-        }
-
-        .allergens b {
-            color: #d46767;
         }
 
         .locations {
@@ -158,6 +99,70 @@
             margin-bottom: 5px;
         }
 
+        .scoop-table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .scoop-table th {
+            color: #18365d;
+            font-family: "Manrope", sans-serif;
+            font-size: 19px;
+            padding: 10px;
+            border-bottom: 1px solid #18365d;
+        }
+
+        .scoop-table td {
+            padding: 7px;
+        }
+
+        .flavor-number td {
+            color: #18365d;
+            font-family: "Manrope", sans-serif;
+            font-size: 38px;
+        }
+
+        .price td {
+            color: #9c7c36;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .cone-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cone-list li {
+            border-top: 1px solid #18365d;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .flavor {
+            margin-bottom: 18px;
+        }
+
+        .flavor p {
+            margin: 2px 0;
+        }
+
+        .allergens {
+            color: #696964;
+            font-size: 13px;
+        }
+
+        .allergens b {
+            color: #345d8c;
+        }
+
+        li::marker {
+            color: #345d8c;
+        }
     </style>
 
 </head>
@@ -178,24 +183,102 @@
         Dairy-free • Gluten-free • Vegan • Alcohol-infused
     </p>
 
+
     <div>
 
         <h2>About Clementine's</h2>
 
         <p>
-            Clementine's is a St. Louis microcreamery making small-batch ice creams and sorbets locally.
+            Clementine's is a St. Louis microcreamery making small-batch
+            ice creams and sorbets locally.
         </p>
 
         <p>
             They offer dairy-free, gluten-free, vegan, and alcohol-infused options.
-            <span>Gooey Butter Cake</span> is one of their best-known flavors.
+            <span class="highlight">Gooey Butter Cake</span> is one of their best-known flavors.
         </p>
 
     </div>
 
+
     <div>
 
-        <h2>Build Your Scoop</h2>
+        <h2>Find Your Parlor</h2>
+
+        <div class="locations">
+
+            <div>
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>
+                    (314) 643-9900
+                </p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>Central West End</h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>
+                    (314) 916-4100
+                </p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>Lafayette Square</h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>
+                    (314) 474-5800
+                </p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+        <h3>Parlor Hours</h3>
+
+        <p>
+            <b>Sunday–Thursday:</b> 12pm–10pm<br>
+            <b>Friday–Saturday:</b> 12pm–11pm
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h2>Scoop Pricing</h2>
 
         <table class="scoop-table">
 
@@ -229,7 +312,18 @@
 
         </table>
 
+        <h3>Cone or Cup</h3>
+
+        <ul class="cone-list">
+            <li>Waffle Cone — $2</li>
+            <li>Waffle Bowl — $2</li>
+            <li>Gluten-Free Cone — $2.50</li>
+            <li>Konery Cone — $2</li>
+            <li>Extra Cup — $0.25</li>
+        </ul>
+
     </div>
+
 
     <div>
 
@@ -264,6 +358,7 @@
             <p>Amaretto ice cream with bright lemon and a tart cherry swirl.</p>
             <p class="allergens"><b>Contains:</b> alcohol</p>
         </div>
+
 
         <h3>Nice</h3>
 
@@ -357,6 +452,7 @@
             <p class="allergens"><b>Contains:</b> milk, wheat, soy</p>
         </div>
 
+
         <h3>Vegan</h3>
 
         <div class="flavor">
@@ -386,6 +482,7 @@
             <p class="allergens"><b>Contains:</b> soy, wheat</p>
         </div>
 
+
         <h3>The Poe Collection</h3>
 
         <div class="flavor">
@@ -410,38 +507,35 @@
 
     </div>
 
-    <div>
-
-        <h2>Cone or Cup?</h2>
-
-        <ul>
-            <li>Waffle Cone — +$2</li>
-            <li>Waffle Bowl — +$2</li>
-            <li>Gluten-Free Cone — +$2.50</li>
-            <li>Konery Cone — +$2</li>
-            <li>Extra Cup — +$0.25</li>
-        </ul>
-
-    </div>
 
     <div>
 
         <h2>Top It Off</h2>
 
         <h3>Sauces</h3>
-        <p>Hot Fudge • Salted Caramel • Hot Honey</p>
+
+        <p>
+            Hot Fudge • Salted Caramel • Hot Honey
+        </p>
 
         <h3>Crunch</h3>
-        <p>Candied Pecans • PB Crumbles • Chocolate Flakes</p>
+
+        <p>
+            Candied Pecans • PB Crumbles • Chocolate Flakes
+        </p>
 
         <h3>Classics</h3>
-        <p>Whipped Cream • Sprinkles • Cherries</p>
+
+        <p>
+            Whipped Cream • Sprinkles • Cherries
+        </p>
 
     </div>
 
+
     <div>
 
-        <h2>A Little Something Extra</h2>
+        <h2>A Little Extra</h2>
 
         <h3>Sunday Sundae</h3>
 
@@ -464,83 +558,6 @@
             <li>Nice — $129</li>
             <li>Vegan — $159</li>
         </ul>
-
-    </div>
-
-    <div>
-
-        <h2>Visit Clementine's</h2>
-
-        <div class="locations">
-
-            <div>
-
-                <h3>Clayton</h3>
-
-                <p>
-                    730 De Mun Avenue<br>
-                    Clayton, Missouri 63105
-                </p>
-
-                <p>
-                    (314) 643-9900
-                </p>
-
-                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div>
-
-                <h3>Central West End</h3>
-
-                <p>
-                    308 N Euclid Avenue<br>
-                    St. Louis, Missouri 63108
-                </p>
-
-                <p>
-                    (314) 916-4100
-                </p>
-
-                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div>
-
-                <h3>Lafayette Square</h3>
-
-                <p>
-                    1637 S 18th Street<br>
-                    St. Louis, Missouri 63104
-                </p>
-
-                <p>
-                    (314) 474-5800
-                </p>
-
-                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
-                    Google Maps
-                </a>
-
-            </div>
-
-        </div>
-
-        <h3>Parlor Hours</h3>
-
-        <p>
-            <b>Sunday–Thursday:</b> 12pm–10pm
-        </p>
-
-        <p>
-            <b>Friday–Saturday:</b> 12pm–11pm
-        </p>
 
     </div>
 

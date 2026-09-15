@@ -175,6 +175,54 @@
             font-weight: 600;
         }
 
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .location {
+            padding-top: 12px;
+            border-top: 2px solid #18365d;
+        }
+
+        .location img {
+            width: 100%;
+            height: 280px;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .location h3,
+        .location p {
+            margin: 5px 0;
+        }
+
+        .location a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #18365d;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .parlor-hours {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+            padding: 18px 0;
+            border-top: 1px solid #18365d;
+            border-bottom: 1px solid #18365d;
+        }
+
+        .parlor-hours h3,
+        .parlor-hours p {
+            margin: 0;
+        }
+
         .scoop-box {
             background-color: #18365d;
             color: #f4efe5;
@@ -218,6 +266,41 @@
         .scoop-price {
             color: #e8d7a8;
             font-size: 18px;
+            font-weight: 600;
+        }
+
+        .base-title {
+            margin-top: 35px;
+            margin-bottom: 12px;
+        }
+
+        .cone-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #18365d;
+            border-bottom: 1px solid #18365d;
+        }
+
+        .cone-item {
+            padding: 22px 10px;
+            text-align: center;
+            border-right: 1px solid #b9c9d8;
+        }
+
+        .cone-item:last-child {
+            border-right: none;
+        }
+
+        .cone-name {
+            color: #18365d;
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .cone-price {
+            color: #345d8c;
+            margin-top: 6px;
             font-weight: 600;
         }
 
@@ -307,41 +390,6 @@
             color: #ddd8d0;
         }
 
-        .cone-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            border-top: 1px solid #18365d;
-            border-bottom: 1px solid #18365d;
-        }
-
-        .cone-item {
-            border-top: none;
-            border-right: 1px solid #b9c9d8;
-        }
-
-        .cone-item:last-child {
-            border-right: none;
-        }
-
-        .cone-item summary {
-            color: #18365d;
-            justify-content: center;
-            padding: 22px 10px;
-            font-size: 15px;
-        }
-
-        .cone-item summary::after {
-            color: #345d8c;
-            margin-left: 8px;
-        }
-
-        .cone-price {
-            color: #345d8c;
-            text-align: center;
-            padding: 0 10px 20px;
-            font-weight: 600;
-        }
-
         .topping-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -390,6 +438,11 @@
             gap: 22px;
         }
 
+        .extra-item {
+            display: flex;
+            flex-direction: column;
+        }
+
         .extra-image {
             width: 100%;
             height: 320px;
@@ -399,6 +452,7 @@
 
         .extra-content {
             padding: 24px 26px;
+            flex: 1;
         }
 
         .extra-item:first-child .extra-content {
@@ -435,54 +489,6 @@
             justify-content: space-between;
             padding: 8px 0;
             border-bottom: 1px solid #aaa;
-        }
-
-        .locations {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .location {
-            padding-top: 12px;
-            border-top: 2px solid #18365d;
-        }
-
-        .location img {
-            width: 100%;
-            height: 280px;
-            display: block;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-
-        .location h3,
-        .location p {
-            margin: 5px 0;
-        }
-
-        .location a {
-            display: inline-block;
-            margin-top: 8px;
-            color: #18365d;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .parlor-hours {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 25px;
-            margin-top: 30px;
-            padding: 18px 0;
-            border-top: 1px solid #18365d;
-            border-bottom: 1px solid #18365d;
-        }
-
-        .parlor-hours h3,
-        .parlor-hours p {
-            margin: 0;
         }
 
         footer {
@@ -541,6 +547,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .parlor-hours {
+                grid-template-columns: 1fr;
+            }
+
             .scoop-headings,
             .scoop-values {
                 grid-template-columns: repeat(2, 1fr);
@@ -552,21 +562,14 @@
             }
 
             .cone-item {
+                text-align: left;
                 border-right: none;
                 border-bottom: 1px solid #b9c9d8;
-            }
-
-            .cone-item summary {
-                justify-content: space-between;
             }
 
             .extra-image,
             .location img {
                 height: 260px;
-            }
-
-            .parlor-hours {
-                grid-template-columns: 1fr;
             }
 
             footer {
@@ -584,9 +587,9 @@
 
         <nav>
             <a href="#about">About</a>
+            <a href="#locations">Parlors</a>
             <a href="#flavors">Flavors</a>
             <a href="#toppings">Toppings</a>
-            <a href="#locations">Parlors</a>
         </nav>
     </header>
 
@@ -663,6 +666,126 @@
 
     </section>
 
+    <section id="locations">
+
+        <p class="section-label">
+            Parlors
+        </p>
+
+        <h2>
+            Find your parlor
+        </h2>
+
+        <div class="locations">
+
+            <div class="location">
+
+                <p class="location-number">
+                    01 / Clayton
+                </p>
+
+                <img
+                    src="Images/clayton.png"
+                    alt="Clementine's Clayton location">
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>
+                    (314) 643-9900
+                </p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div class="location">
+
+                <p class="location-number">
+                    02 / Central West End
+                </p>
+
+                <img
+                    src="Images/central-west-end.png"
+                    alt="Clementine's Central West End location">
+
+                <h3>
+                    Central West End
+                </h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>
+                    (314) 916-4100
+                </p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div class="location">
+
+                <p class="location-number">
+                    03 / Lafayette Square
+                </p>
+
+                <img
+                    src="Images/lafayette-square.png"
+                    alt="Clementine's Lafayette Square location">
+
+                <h3>
+                    Lafayette Square
+                </h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>
+                    (314) 474-5800
+                </p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="parlor-hours">
+
+            <div>
+                <p class="hours-small">Hours</p>
+                <h3>Parlor hours</h3>
+            </div>
+
+            <p>
+                <b>Sunday–Thursday</b><br>
+                12pm–10pm
+            </p>
+
+            <p>
+                <b>Friday–Saturday</b><br>
+                12pm–11pm
+            </p>
+
+        </div>
+
+    </section>
+
     <section>
 
         <p class="section-label">
@@ -670,7 +793,7 @@
         </p>
 
         <h2>
-            Build your scoop
+            Scoop Pricing
         </h2>
 
         <div class="scoop-box">
@@ -708,6 +831,39 @@
                     <div class="scoop-price">$15</div>
                 </div>
 
+            </div>
+
+        </div>
+
+        <h3 class="base-title">
+            Cone or Cup
+        </h3>
+
+        <div class="cone-grid">
+
+            <div class="cone-item">
+                <div class="cone-name">Waffle Cone</div>
+                <div class="cone-price">$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Waffle Bowl</div>
+                <div class="cone-price">$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Gluten-Free Cone</div>
+                <div class="cone-price">$2.50</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Konery Cone</div>
+                <div class="cone-price">$2</div>
+            </div>
+
+            <div class="cone-item">
+                <div class="cone-name">Extra Cup</div>
+                <div class="cone-price">$0.25</div>
             </div>
 
         </div>
@@ -937,51 +1093,6 @@
 
     </section>
 
-    <section>
-
-        <p class="section-label">
-            Pick your base
-        </p>
-
-        <h2>
-            Cone or cup?
-        </h2>
-
-        <p class="small-note">
-            Click an option to see the price.
-        </p>
-
-        <div class="cone-grid">
-
-            <details class="cone-item">
-                <summary>Waffle Cone</summary>
-                <div class="cone-price">+$2</div>
-            </details>
-
-            <details class="cone-item">
-                <summary>Waffle Bowl</summary>
-                <div class="cone-price">+$2</div>
-            </details>
-
-            <details class="cone-item">
-                <summary>Gluten-Free Cone</summary>
-                <div class="cone-price">+$2.50</div>
-            </details>
-
-            <details class="cone-item">
-                <summary>Konery Cone</summary>
-                <div class="cone-price">+$2</div>
-            </details>
-
-            <details class="cone-item">
-                <summary>Extra Cup</summary>
-                <div class="cone-price">+$0.25</div>
-            </details>
-
-        </div>
-
-    </section>
-
     <section id="toppings">
 
         <p class="section-label">
@@ -1169,126 +1280,6 @@
                 </div>
 
             </div>
-
-        </div>
-
-    </section>
-
-    <section id="locations">
-
-        <p class="section-label">
-            Parlors
-        </p>
-
-        <h2>
-            Find your parlor
-        </h2>
-
-        <div class="locations">
-
-            <div class="location">
-
-                <p class="location-number">
-                    01 / Clayton
-                </p>
-
-                <img
-                    src="Images/clayton.png"
-                    alt="Clementine's Clayton location">
-
-                <h3>Clayton</h3>
-
-                <p>
-                    730 De Mun Avenue<br>
-                    Clayton, Missouri 63105
-                </p>
-
-                <p>
-                    (314) 643-9900
-                </p>
-
-                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    02 / Central West End
-                </p>
-
-                <img
-                    src="Images/central-west-end.png"
-                    alt="Clementine's Central West End location">
-
-                <h3>
-                    Central West End
-                </h3>
-
-                <p>
-                    308 N Euclid Avenue<br>
-                    St. Louis, Missouri 63108
-                </p>
-
-                <p>
-                    (314) 916-4100
-                </p>
-
-                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    03 / Lafayette Square
-                </p>
-
-                <img
-                    src="Images/lafayette-square.png"
-                    alt="Clementine's Lafayette Square location">
-
-                <h3>
-                    Lafayette Square
-                </h3>
-
-                <p>
-                    1637 S 18th Street<br>
-                    St. Louis, Missouri 63104
-                </p>
-
-                <p>
-                    (314) 474-5800
-                </p>
-
-                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
-                    Google Maps
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="parlor-hours">
-
-            <div>
-                <p class="hours-small">Hours</p>
-                <h3>Parlor hours</h3>
-            </div>
-
-            <p>
-                <b>Sunday–Thursday</b><br>
-                12pm–10pm
-            </p>
-
-            <p>
-                <b>Friday–Saturday</b><br>
-                12pm–11pm
-            </p>
 
         </div>
 
