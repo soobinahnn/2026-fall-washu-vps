@@ -7,7 +7,11 @@
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
+<<<<<<< HEAD
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap');
+=======
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap');
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
         * {
             box-sizing: border-box;
@@ -17,6 +21,7 @@
             scroll-behavior: smooth;
         }
 
+<<<<<<< HEAD
         body {
             background-color: #f4efe5;
             color: #25282b;
@@ -26,19 +31,59 @@
             max-width: 1150px;
             margin: auto;
             padding: 0 35px 60px;
+=======
+        :root {
+            --ivory: #f4efe5;
+            --paper: #fbf8f1;
+            --navy: #18365d;
+            --deep-navy: #102846;
+            --ceramic-blue: #345d8c;
+            --soft-blue: #b9c9d8;
+            --vanilla: #e8d7a8;
+            --ink: #25282b;
+            --muted: #696964;
+            --line: #c9c2b7;
+            --soft-line: #ddd7cf;
+        }
+
+        body {
+            background-color: var(--ivory);
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 42px 50px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         h1,
         h2,
         h3,
+<<<<<<< HEAD
         .logo {
             font-family: "Bodoni Moda", serif;
+=======
+        summary,
+        nav,
+        .logo,
+        .scoop-name,
+        .scoop-number,
+        .cone-name {
+            font-family: "Manrope", sans-serif;
+        }
+
+        a {
+            color: inherit;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+<<<<<<< HEAD
             padding: 20px 0;
             border-bottom: 1px solid #18365d;
         }
@@ -46,10 +91,22 @@
         .logo {
             color: #18365d;
             font-size: 24px;
+=======
+            padding: 22px 0;
+            border-bottom: 1px solid var(--navy);
+        }
+
+        .logo {
+            color: var(--navy);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         nav {
             display: flex;
+<<<<<<< HEAD
             gap: 25px;
         }
 
@@ -118,18 +175,94 @@
             font-size: 9px;
             text-transform: uppercase;
             letter-spacing: 1px;
+=======
+            gap: 28px;
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--ceramic-blue);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 54px 20px 46px;
+        }
+
+        .eyebrow {
+            margin: 0 0 15px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+            color: var(--ceramic-blue);
+        }
+
+        h1 {
+            max-width: 950px;
+            margin: 0 auto;
+            color: var(--navy);
+            font-size: 84px;
+            font-weight: 500;
+            line-height: 0.98;
+            letter-spacing: -4px;
+        }
+
+        .brand-subtitle {
+            margin: 15px 0 0;
+            color: var(--ceramic-blue);
+            font-family: "Manrope", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .tagline {
+            max-width: 600px;
+            margin: 26px auto 0;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .features {
+            margin-top: 15px;
+            color: var(--navy);
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+        }
+
+        .brand-photo {
+            margin-top: 24px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .brand-photo img {
             width: 100%;
+<<<<<<< HEAD
             height: 420px;
             object-fit: cover;
             display: block;
+=======
+            height: 430px;
+            display: block;
+            object-fit: cover;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .brand-photo-info {
             display: flex;
             justify-content: space-between;
+<<<<<<< HEAD
             padding: 10px 0;
             color: #18365d;
             font-size: 9px;
@@ -153,10 +286,62 @@
             color: #18365d;
             font-size: 26px;
             margin-bottom: 8px;
+=======
+            align-items: center;
+            padding: 11px 0;
+            border-bottom: 1px solid var(--navy);
+            color: var(--navy);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        section {
+            margin-top: 82px;
+        }
+
+        #about {
+            margin-top: 65px;
+        }
+
+        .section-label {
+            margin: 0 0 7px;
+            color: var(--ceramic-blue);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+        }
+
+        h2 {
+            margin: 0 0 27px;
+            color: var(--navy);
+            font-size: 39px;
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -1.7px;
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 23px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .small-note {
+            margin-top: -17px;
+            margin-bottom: 25px;
+            color: var(--muted);
+            font-size: 12px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .about-layout {
             display: grid;
+<<<<<<< HEAD
             grid-template-columns: 1fr 2fr;
             gap: 60px;
         }
@@ -278,11 +463,93 @@
             font-family: "Bodoni Moda", serif;
             font-style: italic;
             margin-top: -15px;
+=======
+            grid-template-columns: 0.6fr 1.4fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .about-side {
+            padding-top: 3px;
+        }
+
+        .about-number {
+            margin: 0;
+            color: var(--ceramic-blue);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 10px;
+            letter-spacing: 1.3px;
+        }
+
+        .about-copy {
+            max-width: 720px;
+            font-size: 16px;
+        }
+
+        .about-copy p:first-child {
+            margin-top: 0;
+        }
+
+        .highlight {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .scoop-box {
+            background-color: var(--navy);
+            color: var(--ivory);
+            padding: 36px 30px 38px;
+        }
+
+        .scoop-headings {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(244, 239, 229, 0.35);
+            text-align: center;
+        }
+
+        .scoop-name {
+            color: var(--ivory);
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .scoop-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding-top: 28px;
+            text-align: center;
+        }
+
+        .scoop-number {
+            color: var(--ivory);
+            font-size: 56px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .scoop-flavor {
+            margin: 9px 0 4px;
+            color: #d9d5ce;
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .scoop-price {
+            color: var(--vanilla);
+            font-size: 18px;
+            font-weight: 600;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .flavor-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
             gap: 30px;
         }
 
@@ -305,16 +572,80 @@
         details {
             border-bottom: 1px solid #c9c2b7;
             padding: 10px 0;
+=======
+            gap: 28px;
+        }
+
+        .flavor-section {
+            padding: 25px 27px 19px;
+        }
+
+        .flavor-section:nth-child(1) {
+            background-color: var(--paper);
+            border: 1px solid var(--line);
+        }
+
+        .flavor-section:nth-child(2) {
+            background-color: var(--vanilla);
+        }
+
+        .flavor-section:nth-child(3) {
+            background-color: var(--soft-blue);
+        }
+
+        .flavor-section:nth-child(4) {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .flavor-section h3 {
+            margin: 0 0 4px;
+            font-size: 28px;
+        }
+
+        .flavor-section:nth-child(4) h3 {
+            color: var(--ivory);
+        }
+
+        .flavor-label {
+            margin: 0 0 18px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .flavor-section:nth-child(4) .flavor-label {
+            color: var(--vanilla);
+        }
+
+        details {
+            padding: 12px 0;
+            border-top: 1px solid rgba(37, 40, 43, 0.2);
+        }
+
+        .flavor-section:nth-child(4) details {
+            border-top: 1px solid rgba(244, 239, 229, 0.25);
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         summary {
             display: flex;
             justify-content: space-between;
             align-items: center;
+<<<<<<< HEAD
             list-style: none;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
+=======
+            gap: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         summary::-webkit-details-marker {
@@ -323,9 +654,15 @@
 
         summary::after {
             content: "+";
+<<<<<<< HEAD
             color: #345d8c;
             font-family: "Bodoni Moda", serif;
             font-size: 21px;
+=======
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         details[open] summary::after {
@@ -333,6 +670,7 @@
         }
 
         details p {
+<<<<<<< HEAD
             margin: 7px 0 0;
             font-size: 13px;
         }
@@ -348,12 +686,44 @@
             text-align: center;
             padding: 25px 10px;
             border-right: 1px solid #c9c2b7;
+=======
+            margin: 9px 0 0;
+            color: #555654;
+            font-size: 13px;
+        }
+
+        details p b {
+            color: var(--ink);
+        }
+
+        .flavor-section:nth-child(4) details p {
+            color: #ddd8d0;
+        }
+
+        .flavor-section:nth-child(4) details p b {
+            color: var(--ivory);
+        }
+
+        .cone-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--navy);
+            border-bottom: 1px solid var(--navy);
+        }
+
+        .cone-item {
+            padding: 0;
+            text-align: center;
+            border-top: none;
+            border-right: 1px solid rgba(24, 54, 93, 0.25);
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .cone-item:last-child {
             border-right: none;
         }
 
+<<<<<<< HEAD
         .cone-name {
             color: #18365d;
             font-family: "Bodoni Moda", serif;
@@ -363,11 +733,34 @@
         .cone-price {
             color: #345d8c;
             margin-top: 5px;
+=======
+        .cone-item summary {
+            justify-content: center;
+            padding: 27px 12px;
+            color: var(--navy);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cone-item summary::after {
+            margin-left: 8px;
+            color: var(--ceramic-blue);
+            font-size: 17px;
+        }
+
+        .cone-price {
+            margin: -6px 0 0;
+            padding: 0 12px 25px;
+            color: var(--ceramic-blue);
+            font-size: 15px;
+            font-weight: 600;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .topping-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+<<<<<<< HEAD
             gap: 25px;
         }
 
@@ -384,16 +777,89 @@
             color: #696964;
             font-family: "Bodoni Moda", serif;
             font-style: italic;
+=======
+            gap: 24px;
+        }
+
+        .topping-card {
+            background-color: var(--paper);
+            padding: 23px 23px 16px;
+            border-top: 4px solid var(--navy);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .topping-card:nth-child(2) {
+            border-top-color: var(--ceramic-blue);
+        }
+
+        .topping-card:nth-child(3) {
+            border-top-color: var(--vanilla);
+        }
+
+        .topping-number {
+            margin: 0 0 20px;
+            color: var(--ceramic-blue);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .topping-card h3 {
+            margin: 0 0 4px;
+            color: var(--navy);
+            font-size: 26px;
+        }
+
+        .topping-description {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .topping-detail {
+            padding: 11px 0;
+            border-top: 1px solid var(--soft-line);
+        }
+
+        .topping-detail summary {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .topping-detail summary::after {
+            color: var(--ceramic-blue);
+            font-size: 17px;
+        }
+
+        .topping-detail p {
+            margin: 7px 0 2px;
+            color: #66645f;
+            font-size: 12px;
+            line-height: 1.6;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .extra-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
             gap: 30px;
+=======
+            gap: 22px;
+        }
+
+        .extra-item {
+            overflow: hidden;
+            background-color: var(--paper);
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .extra-image {
             width: 100%;
+<<<<<<< HEAD
             height: 330px;
             object-fit: cover;
             display: block;
@@ -421,30 +887,207 @@
             color: #e8d7a8;
             font-size: 10px;
             text-transform: uppercase;
+=======
+            height: 340px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .extra-content {
+            padding: 25px 27px 28px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .extra-item:first-child .extra-content {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .extra-item:last-child .extra-content {
+            background-color: var(--vanilla);
+        }
+
+        .extra-item h3 {
+            margin: 0 0 8px;
+            font-size: 27px;
+        }
+
+        .extra-item:first-child h3 {
+            color: var(--ivory);
+        }
+
+        .extra-item:last-child h3 {
+            color: var(--navy);
+        }
+
+        .extra-description {
+            margin: 0 0 12px;
+        }
+
+        .extra-item:first-child .extra-description {
+            color: #ded9d0;
+        }
+
+        .extra-price {
+            margin: 10px 0;
+            color: var(--vanilla);
+            font-family: "Manrope", sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+
+        .extra-note {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .extra-item:first-child .extra-note {
+            color: var(--vanilla);
+        }
+
+        .club-prices {
+            margin-top: 16px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         .club-row {
             display: flex;
             justify-content: space-between;
             padding: 8px 0;
+<<<<<<< HEAD
             border-bottom: 1px solid #8fa0b3;
+=======
+            border-bottom: 1px solid rgba(24, 54, 93, 0.2);
+        }
+
+        .club-row:last-child {
+            border-bottom: none;
+        }
+
+        .club-row span {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .location {
+            padding-top: 12px;
+            border-top: 2px solid var(--navy);
+        }
+
+        .location-number {
+            margin: 0 0 10px;
+            color: var(--ceramic-blue);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .location img {
+            width: 100%;
+            height: 295px;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 17px;
+        }
+
+        .location h3 {
+            margin: 0 0 9px;
+        }
+
+        .location p {
+            margin: 5px 0;
+        }
+
+        .location a {
+            display: inline-block;
+            margin-top: 9px;
+            padding-bottom: 2px;
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--navy);
+        }
+
+        .location a:hover {
+            color: var(--ceramic-blue);
+            border-color: var(--ceramic-blue);
+        }
+
+        .parlor-hours {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            align-items: start;
+            margin-top: 34px;
+            padding: 20px 0;
+            border-top: 1px solid var(--navy);
+            border-bottom: 1px solid var(--navy);
+        }
+
+        .hours-small {
+            margin: 0 0 3px;
+            color: var(--ceramic-blue);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .parlor-hours h3 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .parlor-hours p {
+            margin: 0;
+            font-size: 13px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         footer {
             display: flex;
             justify-content: space-between;
+<<<<<<< HEAD
             margin-top: 90px;
             padding-top: 15px;
             border-top: 1px solid #18365d;
             color: #18365d;
             font-size: 9px;
             text-transform: uppercase;
+=======
+            align-items: center;
+            gap: 25px;
+            margin-top: 95px;
+            padding-top: 16px;
+            border-top: 1px solid var(--navy);
+            color: var(--navy);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         }
 
         footer p {
             margin: 0;
         }
 
+<<<<<<< HEAD
         @media (max-width: 800px) {
             .hero,
             .about-layout {
@@ -487,23 +1130,126 @@
 
             h2 {
                 font-size: 34px;
+=======
+        @media (max-width: 900px) {
+            body {
+                padding: 0 24px 60px;
+            }
+
+            h1 {
+                font-size: 62px;
+                letter-spacing: -3px;
+            }
+
+            .brand-photo img {
+                height: 340px;
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .locations {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+
+            .location img {
+                height: 230px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .parlor-hours {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .parlor-hours > div {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 0 18px 45px;
+            }
+
+            header {
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 8px 15px;
+                font-size: 9px;
+            }
+
+            .hero {
+                padding: 38px 5px 30px;
+            }
+
+            h1 {
+                font-size: 45px;
+                letter-spacing: -2px;
+            }
+
+            .brand-subtitle {
+                font-size: 20px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             }
 
             .brand-photo img {
                 height: 250px;
             }
 
+<<<<<<< HEAD
             .locations,
             .flavor-grid,
             .topping-grid,
             .extra-grid {
                 grid-template-columns: 1fr;
+=======
+            .brand-photo-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+
+            h2 {
+                font-size: 31px;
+            }
+
+            section {
+                margin-top: 62px;
+            }
+
+            #about {
+                margin-top: 50px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             }
 
             .scoop-headings,
             .scoop-values {
                 grid-template-columns: repeat(2, 1fr);
+<<<<<<< HEAD
                 row-gap: 25px;
+=======
+                row-gap: 28px;
+            }
+
+            .flavor-grid {
+                grid-template-columns: 1fr;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             }
 
             .cone-grid {
@@ -511,14 +1257,61 @@
             }
 
             .cone-item {
+<<<<<<< HEAD
                 text-align: left;
                 border-right: none;
                 border-bottom: 1px solid #c9c2b7;
+=======
+                border-right: none;
+                border-bottom: 1px solid rgba(24, 54, 93, 0.2);
+            }
+
+            .cone-item:last-child {
+                border-bottom: none;
+            }
+
+            .cone-item summary {
+                justify-content: space-between;
+                padding: 20px 12px;
+            }
+
+            .cone-price {
+                padding: 0 12px 20px;
+            }
+
+            .topping-grid,
+            .extra-grid,
+            .locations {
+                grid-template-columns: 1fr;
+            }
+
+            .extra-image {
+                height: 270px;
+            }
+
+            .location img {
+                height: 260px;
+            }
+
+            .parlor-hours {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .parlor-hours > div {
+                grid-column: auto;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             }
 
             footer {
                 flex-direction: column;
+<<<<<<< HEAD
                 gap: 5px;
+=======
+                align-items: flex-start;
+                gap: 6px;
+                margin-top: 75px;
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             }
         }
     </style>
@@ -531,13 +1324,20 @@
 
         <nav>
             <a href="#about">About</a>
+<<<<<<< HEAD
             <a href="#locations">Parlors</a>
             <a href="#flavors">Flavors</a>
             <a href="#toppings">Toppings</a>
+=======
+            <a href="#flavors">Flavors</a>
+            <a href="#toppings">Toppings</a>
+            <a href="#locations">Parlors</a>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         </nav>
     </header>
 
     <div class="hero">
+<<<<<<< HEAD
 
         <div>
             <p class="eyebrow">St. Louis microcreamery</p>
@@ -565,6 +1365,26 @@
 
     <div class="brand-photo">
 
+=======
+        <p class="eyebrow">St. Louis microcreamery</p>
+
+        <h1>Clementine's</h1>
+
+        <p class="brand-subtitle">
+            Naughty & nice ice cream
+        </p>
+
+        <p class="tagline">
+            Small-batch ice cream and sorbet made locally in St. Louis.
+        </p>
+
+        <p class="features">
+            Dairy-free • Gluten-free • Vegan • Alcohol-infused
+        </p>
+    </div>
+
+    <div class="brand-photo">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
         <img
             src="Images/Clementine.png"
             alt="Clementine's Naughty and Nice Ice Cream storefront sign">
@@ -573,6 +1393,7 @@
             <span>Clementine's Naughty & Nice</span>
             <span>St. Louis, Missouri</span>
         </div>
+<<<<<<< HEAD
 
     </div>
 
@@ -600,6 +1421,22 @@
 
                 <div class="about-copy">
 
+=======
+    </div>
+
+    <section id="about">
+        <div class="about-layout">
+
+            <div class="about-side">
+                <p class="section-label">About</p>
+                <p class="about-number">01 / THE MICROCREAMERY</p>
+            </div>
+
+            <div>
+                <h2>A little about Clementine's</h2>
+
+                <div class="about-copy">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <p>
                         Clementine's is a St. Louis microcreamery making small-batch
                         ice creams and sorbets locally.
@@ -610,6 +1447,7 @@
                         <span class="highlight">Gooey Butter Cake</span> is one of their
                         best-known flavors.
                     </p>
+<<<<<<< HEAD
 
                 </div>
 
@@ -760,6 +1598,20 @@
 
         <div class="scoop-box">
 
+=======
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <p class="section-label">Menu</p>
+
+        <h2>Build your scoop</h2>
+
+        <div class="scoop-box">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             <div class="scoop-headings">
                 <div class="scoop-name">Mini</div>
                 <div class="scoop-name">Petite</div>
@@ -768,7 +1620,10 @@
             </div>
 
             <div class="scoop-values">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                 <div>
                     <div class="scoop-number">1</div>
                     <div class="scoop-flavor">flavor</div>
@@ -792,6 +1647,7 @@
                     <div class="scoop-flavor">flavors</div>
                     <div class="scoop-price">$15</div>
                 </div>
+<<<<<<< HEAD
 
             </div>
 
@@ -808,6 +1664,16 @@
         <h2>
             Choose your flavor
         </h2>
+=======
+            </div>
+        </div>
+    </section>
+
+    <section id="flavors">
+        <p class="section-label">Flavors</p>
+
+        <h2>Choose your flavor</h2>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
         <p class="small-note">
             Click a flavor to see its description and allergens.
@@ -816,6 +1682,7 @@
         <div class="flavor-grid">
 
             <div class="flavor-section">
+<<<<<<< HEAD
 
                 <h3>
                     Naughty
@@ -824,6 +1691,11 @@
                 <p class="flavor-label">
                     Alcohol-infused
                 </p>
+=======
+                <h3>Naughty</h3>
+
+                <p class="flavor-label">Alcohol-infused</p>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <details>
                     <summary>Maple Bourbon Pecan</summary>
@@ -848,6 +1720,7 @@
                     <p>Amaretto ice cream with bright lemon and a tart cherry swirl.</p>
                     <p><b>Contains:</b> alcohol</p>
                 </details>
+<<<<<<< HEAD
 
             </div>
 
@@ -860,6 +1733,14 @@
                 <p class="flavor-label">
                     Classic favorites
                 </p>
+=======
+            </div>
+
+            <div class="flavor-section">
+                <h3>Nice</h3>
+
+                <p class="flavor-label">Classic favorites</p>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <details>
                     <summary>Gooey Butter Cake</summary>
@@ -950,6 +1831,7 @@
                     <p>Cinnamon ice cream with an apple cranberry pie swirl.</p>
                     <p><b>Contains:</b> milk, wheat, soy</p>
                 </details>
+<<<<<<< HEAD
 
             </div>
 
@@ -962,6 +1844,14 @@
                 <p class="flavor-label">
                     Dairy-free
                 </p>
+=======
+            </div>
+
+            <div class="flavor-section">
+                <h3>Vegan</h3>
+
+                <p class="flavor-label">Dairy-free</p>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <details>
                     <summary>Coconut Fudge</summary>
@@ -989,6 +1879,7 @@
                     <p>Golden mylk coconut ice cream with cinnamon Biscoff cookies.</p>
                     <p><b>Contains:</b> soy, wheat</p>
                 </details>
+<<<<<<< HEAD
 
             </div>
 
@@ -1001,6 +1892,14 @@
                 <p class="flavor-label">
                     A little mysterious
                 </p>
+=======
+            </div>
+
+            <div class="flavor-section">
+                <h3>The Poe Collection</h3>
+
+                <p class="flavor-label">A little mysterious</p>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <details>
                     <summary>The Raven</summary>
@@ -1021,6 +1920,7 @@
                     <summary>Midnight Dreary</summary>
                     <p>Dark chocolate raspberry ice cream.</p>
                 </details>
+<<<<<<< HEAD
 
             </div>
 
@@ -1078,6 +1978,56 @@
         <h2>
             Top it off
         </h2>
+=======
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <p class="section-label">Pick your base</p>
+
+        <h2>Cone or cup?</h2>
+
+        <p class="small-note">
+            Click an option to see the price.
+        </p>
+
+        <div class="cone-grid">
+
+            <details class="cone-item">
+                <summary class="cone-name">Waffle Cone</summary>
+                <div class="cone-price">+$2</div>
+            </details>
+
+            <details class="cone-item">
+                <summary class="cone-name">Waffle Bowl</summary>
+                <div class="cone-price">+$2</div>
+            </details>
+
+            <details class="cone-item">
+                <summary class="cone-name">Gluten-Free Cone</summary>
+                <div class="cone-price">+$2.50</div>
+            </details>
+
+            <details class="cone-item">
+                <summary class="cone-name">Konery Cone</summary>
+                <div class="cone-price">+$2</div>
+            </details>
+
+            <details class="cone-item">
+                <summary class="cone-name">Extra Cup</summary>
+                <div class="cone-price">+$0.25</div>
+            </details>
+
+        </div>
+    </section>
+
+    <section id="toppings">
+        <p class="section-label">Toppings</p>
+
+        <h2>Top it off</h2>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
         <p class="small-note">
             Click each topping for a little more.
@@ -1086,6 +2036,7 @@
         <div class="topping-grid">
 
             <div class="topping-card">
+<<<<<<< HEAD
 
                 <p class="topping-number">
                     01 / Drizzle
@@ -1094,21 +2045,35 @@
                 <h3>
                     Sauces
                 </h3>
+=======
+                <p class="topping-number">01 / drizzle</p>
+
+                <h3>Sauces</h3>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <p class="topping-description">
                     Sweet, sticky, and made for drizzling.
                 </p>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>Hot Fudge</summary>
                     <p>Warm chocolate poured over the top.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>Salted Caramel</summary>
                     <p>Buttery caramel finished with a little salt.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
                     <summary>Hot Honey</summary>
                     <p>Sweet honey with a little heat.</p>
@@ -1125,21 +2090,42 @@
                 <h3>
                     Crunch
                 </h3>
+=======
+                <details class="topping-detail">
+                    <summary>Hot Honey</summary>
+                    <p>Sweet honey with a little heat.</p>
+                </details>
+            </div>
+
+            <div class="topping-card">
+                <p class="topping-number">02 / texture</p>
+
+                <h3>Crunch</h3>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <p class="topping-description">
                     For a little extra bite.
                 </p>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>Candied Pecans</summary>
                     <p>Sweet, toasted pecans with a crisp finish.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>PB Crumbles</summary>
                     <p>Salty-sweet peanut butter crunch.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
                     <summary>Chocolate Flakes</summary>
                     <p>Thin pieces of chocolate for a delicate crunch.</p>
@@ -1156,21 +2142,42 @@
                 <h3>
                     Classics
                 </h3>
+=======
+                <details class="topping-detail">
+                    <summary>Chocolate Flakes</summary>
+                    <p>Thin pieces of chocolate for a delicate crunch.</p>
+                </details>
+            </div>
+
+            <div class="topping-card">
+                <p class="topping-number">03 / classic</p>
+
+                <h3>Classics</h3>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
 
                 <p class="topping-description">
                     The finishing touch.
                 </p>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>Whipped Cream</summary>
                     <p>Light, soft, and piled high.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
+=======
+                <details class="topping-detail">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                     <summary>Sprinkles</summary>
                     <p>A little color and crunch.</p>
                 </details>
 
+<<<<<<< HEAD
                 <details>
                     <summary>Cherries</summary>
                     <p>The classic finish on top.</p>
@@ -1196,12 +2203,32 @@
 
             <div>
 
+=======
+                <details class="topping-detail">
+                    <summary>Cherries</summary>
+                    <p>The classic finish on top.</p>
+                </details>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <p class="section-label">Extras</p>
+
+        <h2>A little extra</h2>
+
+        <div class="extra-grid">
+
+            <div class="extra-item">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                 <img
                     class="extra-image"
                     src="Images/Sundae.png"
                     alt="Clementine's Sunday Sundae">
 
                 <div class="extra-content">
+<<<<<<< HEAD
 
                     <h3>
                         Sunday Sundae
@@ -1225,12 +2252,28 @@
 
             <div>
 
+=======
+                    <h3>Sunday Sundae</h3>
+
+                    <p class="extra-description">
+                        2 scoops + 3 toppings
+                    </p>
+
+                    <p class="extra-price">$9.25</p>
+
+                    <p class="extra-note">Sundays only</p>
+                </div>
+            </div>
+
+            <div class="extra-item">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                 <img
                     class="extra-image"
                     src="Images/Pint.png"
                     alt="Clementine's Pint of the Month Club">
 
                 <div class="extra-content">
+<<<<<<< HEAD
 
                     <h3>
                         Pint of the Month Club
@@ -1242,6 +2285,15 @@
 
                     <div>
 
+=======
+                    <h3>Pint of the Month Club</h3>
+
+                    <p class="extra-description">
+                        Ice cream for one year, one pint at a time.
+                    </p>
+
+                    <div class="club-prices">
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
                         <div class="club-row">
                             <div>Naughty</div>
                             <span>$159</span>
@@ -1256,15 +2308,94 @@
                             <div>Vegan</div>
                             <span>$159</span>
                         </div>
+<<<<<<< HEAD
 
                     </div>
 
                 </div>
 
+=======
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="locations">
+        <p class="section-label">Parlors</p>
+
+        <h2>Find your parlor</h2>
+
+        <div class="locations">
+
+            <div class="location">
+                <p class="location-number">01 / Clayton</p>
+
+                <img
+                    src="Images/clayton.png"
+                    alt="Clementine's Clayton location">
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>(314) 643-9900</p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
+            </div>
+
+            <div class="location">
+                <p class="location-number">02 / Central West End</p>
+
+                <img
+                    src="Images/central-west-end.png"
+                    alt="Clementine's Central West End location">
+
+                <h3>Central West End</h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>(314) 916-4100</p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+            </div>
+
+            <div class="location">
+                <p class="location-number">03 / Lafayette Square</p>
+
+                <img
+                    src="Images/lafayette-square.png"
+                    alt="Clementine's Lafayette Square location">
+
+                <h3>Lafayette Square</h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>(314) 474-5800</p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
             </div>
 
         </div>
 
+<<<<<<< HEAD
     </section>
 
     <footer>
@@ -1277,6 +2408,29 @@
             Designed by Soobin Ahn · 2026
         </p>
 
+=======
+        <div class="parlor-hours">
+            <div>
+                <p class="hours-small">Hours</p>
+                <h3>Parlor hours</h3>
+            </div>
+
+            <p>
+                <b>Sunday–Thursday</b><br>
+                12pm–10pm
+            </p>
+
+            <p>
+                <b>Friday–Saturday</b><br>
+                12pm–11pm
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Clementine's Naughty & Nice Ice Cream</p>
+        <p>Designed by Soobin Ahn · 2026</p>
+>>>>>>> 0434c9c34bea223029968d88c87c157e7c353553
     </footer>
 
 </body>
