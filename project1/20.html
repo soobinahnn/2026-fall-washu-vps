@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap');
 
         * {
             box-sizing: border-box;
@@ -18,28 +17,15 @@
             scroll-behavior: smooth;
         }
 
-        :root {
-            --ivory: #f3eee6;
-            --paper: #faf7f2;
-            --powder: #c9d3db;
-            --soft-blue: #aebdc8;
-            --cherry: #a93443;
-            --deep-red: #7f2531;
-            --ink: #2d2b29;
-            --muted: #6f6a65;
-            --line: #c9c0b7;
-            --soft-line: #ded7cf;
-        }
-
         body {
-            background-color: var(--ivory);
-            color: var(--ink);
+            background: #f3eee6;
+            color: #2d2b29;
             font-family: "DM Sans", sans-serif;
             font-size: 15px;
             line-height: 1.7;
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 42px 50px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 36px 60px;
         }
 
         h1,
@@ -47,8 +33,8 @@
         h3,
         .logo,
         .brand-subtitle,
-        .scoop-number,
         .scoop-name,
+        .scoop-number,
         .cone-name {
             font-family: "Bodoni Moda", serif;
         }
@@ -58,389 +44,299 @@
         }
 
         header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 28px 0 23px;
             text-align: center;
-            border-bottom: 1px solid var(--cherry);
+            padding: 26px 0 20px;
+            border-bottom: 1px solid #a93443;
         }
 
         .logo {
-            color: var(--deep-red);
-            font-size: 31px;
-            font-weight: 500;
-            line-height: 1;
-            letter-spacing: -1px;
+            color: #7f2531;
+            font-size: 30px;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 34px;
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            gap: 30px;
+            margin-top: 14px;
         }
 
         nav a {
+            color: #7f2531;
             text-decoration: none;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
-            color: var(--cherry);
+            color: #a93443;
         }
 
         .hero {
             display: grid;
-            grid-template-columns: 1.65fr 0.65fr;
-            gap: 52px;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
             align-items: end;
-            padding: 80px 0 62px;
-            border-bottom: 1px solid var(--cherry);
+            padding: 70px 0 55px;
+            border-bottom: 1px solid #a93443;
         }
 
-        .eyebrow {
-            margin: 0 0 17px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
+        .eyebrow,
+        .section-label,
+        .about-number,
+        .signature-label,
+        .location-number,
+        .hours-small,
+        .topping-number {
+            color: #a93443;
             font-size: 9px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2.2px;
-        }
-
-        h1 {
-            margin: 0;
-            color: var(--deep-red);
-            font-size: 100px;
-            font-weight: 400;
-            line-height: 0.87;
-            letter-spacing: -5px;
-        }
-
-        .brand-subtitle {
-            margin: 18px 0 0;
-            color: var(--cherry);
-            font-size: 34px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-
-        .hero-right {
-            padding: 0 0 4px 32px;
-            border-left: 1px solid var(--cherry);
-        }
-
-        .tagline {
-            max-width: 330px;
-            margin: 0 0 28px;
-            font-family: "Bodoni Moda", serif;
-            font-size: 24px;
-            font-style: italic;
-            line-height: 1.35;
-        }
-
-        .features {
-            max-width: 320px;
-            margin: 0;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            line-height: 1.7;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
 
+        h1 {
+            color: #7f2531;
+            font-size: 88px;
+            font-weight: 400;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin: 0;
+        }
+
+        .brand-subtitle {
+            color: #a93443;
+            font-size: 32px;
+            font-style: italic;
+            margin: 14px 0 0;
+        }
+
+        .hero-right {
+            padding-left: 28px;
+            border-left: 1px solid #a93443;
+        }
+
+        .tagline {
+            font-family: "Bodoni Moda", serif;
+            font-size: 22px;
+            font-style: italic;
+            margin-top: 0;
+        }
+
+        .features {
+            color: #a93443;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .brand-photo {
-            margin-top: 38px;
+            margin-top: 35px;
         }
 
         .brand-photo img {
             width: 100%;
-            height: 460px;
-            display: block;
+            height: 430px;
             object-fit: cover;
+            display: block;
         }
 
         .brand-photo-info {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 11px 0;
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
+            padding: 10px 0;
+            color: #7f2531;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            border-bottom: 1px solid var(--cherry);
+            border-bottom: 1px solid #a93443;
         }
 
         section {
-            margin-top: 94px;
-        }
-
-        #about {
-            margin-top: 75px;
-        }
-
-        .section-label {
-            margin: 0 0 8px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
+            margin-top: 85px;
         }
 
         h2 {
-            margin: 0 0 28px;
-            color: var(--deep-red);
-            font-size: 47px;
+            color: #7f2531;
+            font-size: 43px;
             font-weight: 400;
             line-height: 1;
-            letter-spacing: -1.8px;
+            margin: 5px 0 25px;
         }
 
         h3 {
-            color: var(--deep-red);
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 1.15;
-        }
-
-        .small-note {
-            margin-top: -14px;
-            margin-bottom: 28px;
-            color: var(--muted);
-            font-family: "Bodoni Moda", serif;
-            font-size: 14px;
-            font-style: italic;
+            color: #7f2531;
+            font-size: 27px;
+            margin-bottom: 8px;
         }
 
         .about-layout {
             display: grid;
-            grid-template-columns: 0.55fr 1.45fr;
-            gap: 75px;
-            align-items: start;
-        }
-
-        .about-side {
-            padding-top: 4px;
-        }
-
-        .about-number {
-            margin: 0;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
+            grid-template-columns: 1fr 2fr;
+            gap: 55px;
         }
 
         .about-copy {
-            max-width: 710px;
+            max-width: 650px;
             font-size: 16px;
         }
 
-        .about-copy p:first-child {
-            margin-top: 0;
-        }
-
-        .about-copy p {
-            max-width: 650px;
-        }
-
         .highlight {
-            color: var(--deep-red);
+            color: #7f2531;
             font-family: "Bodoni Moda", serif;
-            font-size: 18px;
             font-style: italic;
-            font-weight: 500;
+            font-size: 18px;
         }
 
         .signature-feature {
             display: grid;
-            grid-template-columns: 1.35fr 0.65fr;
-            margin-top: 48px;
-            border-top: 1px solid var(--cherry);
-            border-bottom: 1px solid var(--cherry);
+            grid-template-columns: 1.4fr 1fr;
+            margin-top: 40px;
+            border-top: 1px solid #a93443;
+            border-bottom: 1px solid #a93443;
         }
 
         .signature-feature img {
             width: 100%;
-            height: 340px;
-            display: block;
+            height: 330px;
             object-fit: cover;
+            display: block;
         }
 
         .signature-detail {
-            padding: 32px 34px;
-            background-color: var(--paper);
+            background: #faf7f2;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .signature-label {
-            margin: 0 0 18px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
         .signature-detail h3 {
-            margin: 0 0 17px;
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 400;
-            line-height: 1;
+            margin: 5px 0 15px;
         }
 
         .signature-detail p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 14px;
+            color: #6f6a65;
         }
 
         .signature-allergens {
-            margin-top: 25px !important;
-            color: var(--deep-red) !important;
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px !important;
+            color: #7f2531 !important;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
         }
 
         .scoop-box {
-            background-color: var(--cherry);
-            color: var(--ivory);
-            padding: 38px 32px 40px;
+            background: #a93443;
+            color: #f3eee6;
+            padding: 35px 30px;
         }
 
-        .scoop-headings {
+        .scoop-headings,
+        .scoop-values {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            padding-bottom: 17px;
-            border-bottom: 1px solid rgba(243, 238, 230, 0.4);
             text-align: center;
         }
 
+        .scoop-headings {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #d7aab0;
+        }
+
+        .scoop-values {
+            padding-top: 25px;
+        }
+
         .scoop-name {
-            color: var(--ivory);
             font-size: 22px;
             font-style: italic;
         }
 
-        .scoop-values {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding-top: 28px;
-            text-align: center;
-        }
-
         .scoop-number {
-            color: var(--ivory);
-            font-size: 65px;
-            font-weight: 400;
+            font-size: 60px;
             line-height: 1;
         }
 
         .scoop-flavor {
             margin: 8px 0 4px;
-            color: #eee5e1;
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.3px;
         }
 
         .scoop-price {
-            color: var(--powder);
+            color: #c9d3db;
             font-size: 18px;
-            font-weight: 500;
+        }
+
+        .small-note {
+            color: #6f6a65;
+            font-family: "Bodoni Moda", serif;
+            font-style: italic;
+            margin-top: -15px;
         }
 
         .flavor-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
-            align-items: start;
         }
 
         .flavor-section {
-            padding: 28px 30px 22px;
+            padding: 25px 27px 20px;
         }
 
         .flavor-section:nth-child(1) {
-            background-color: var(--powder);
+            background: #c9d3db;
         }
 
         .flavor-section:nth-child(2) {
-            background-color: var(--paper);
-            border: 1px solid var(--line);
+            background: #faf7f2;
+            border: 1px solid #c9c0b7;
         }
 
         .flavor-section:nth-child(3) {
-            background-color: var(--soft-blue);
+            background: #aebdc8;
         }
 
         .flavor-section:nth-child(4) {
-            background-color: var(--deep-red);
-            color: var(--ivory);
+            background: #7f2531;
+            color: #f3eee6;
         }
 
         .flavor-section h3 {
             margin: 0 0 5px;
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 400;
-            line-height: 1;
         }
 
         .flavor-section:nth-child(4) h3 {
-            color: var(--ivory);
+            color: #f3eee6;
         }
 
         .flavor-label {
-            margin: 0 0 20px;
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
+            color: #7f2531;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.4px;
+            letter-spacing: 1px;
         }
 
         .flavor-section:nth-child(4) .flavor-label {
-            color: var(--powder);
+            color: #c9d3db;
         }
 
         details {
-            padding: 12px 0;
-            border-top: 1px solid rgba(45, 43, 41, 0.2);
-        }
-
-        .flavor-section:nth-child(4) details {
-            border-top: 1px solid rgba(243, 238, 230, 0.27);
+            padding: 10px 0;
+            border-top: 1px solid #c9c0b7;
         }
 
         summary {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 15px;
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
             list-style: none;
+            cursor: pointer;
+            font-weight: 500;
         }
 
         summary::-webkit-details-marker {
@@ -449,279 +345,165 @@
 
         summary::after {
             content: "+";
-            color: var(--cherry);
+            color: #a93443;
             font-family: "Bodoni Moda", serif;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 1;
+            font-size: 21px;
         }
 
         details[open] summary::after {
             content: "−";
         }
 
-        .flavor-section:nth-child(4) summary::after {
-            color: var(--powder);
-        }
-
         details p {
-            margin: 9px 0 0;
-            color: #55514e;
+            margin: 7px 0 0;
             font-size: 13px;
         }
 
-        details p b {
-            color: var(--ink);
+        .flavor-section:nth-child(4) details {
+            border-color: #aebdc8;
+        }
+
+        .flavor-section:nth-child(4) summary::after {
+            color: #c9d3db;
         }
 
         .flavor-section:nth-child(4) details p {
-            color: #eadfdb;
-        }
-
-        .flavor-section:nth-child(4) details p b {
-            color: var(--ivory);
+            color: #eee3df;
         }
 
         .cone-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            border-top: 1px solid var(--cherry);
-            border-bottom: 1px solid var(--cherry);
+            border-top: 1px solid #a93443;
+            border-bottom: 1px solid #a93443;
         }
 
         .cone-item {
-            padding: 0;
-            border-right: 1px solid rgba(169, 52, 67, 0.25);
+            padding: 20px;
+            border-top: none;
+            border-right: 1px solid #d7aab0;
         }
 
         .cone-item:last-child {
             border-right: none;
         }
 
-        .cone-item summary {
-            min-height: 116px;
-            padding: 25px 20px 20px;
-            align-items: flex-start;
-            justify-content: space-between;
-            color: var(--deep-red);
-            text-align: left;
-        }
-
-        .cone-item summary::after {
-            margin-top: 5px;
-            margin-left: 12px;
-            color: var(--cherry);
-            font-size: 20px;
-        }
-
         .cone-name {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.2;
+            color: #7f2531;
+            font-size: 18px;
         }
 
         .cone-price {
-            padding: 0 20px 24px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 10px;
-            text-align: left;
-            letter-spacing: 1.3px;
+            color: #a93443;
+            margin-top: 8px;
         }
 
         .topping-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            align-items: start;
-        }
-
-        .topping-card {
-            overflow: hidden;
         }
 
         .topping-image {
             width: 100%;
-            height: 310px;
-            display: block;
+            height: 285px;
             object-fit: cover;
+            display: block;
         }
 
         .topping-content {
-            padding: 20px 0 14px;
-            border-top: 1px solid var(--cherry);
-        }
-
-        .topping-number {
-            margin: 0 0 16px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
+            padding-top: 18px;
+            border-top: 1px solid #a93443;
         }
 
         .topping-card h3 {
-            margin: 0 0 5px;
-            font-size: 30px;
-            font-weight: 400;
+            margin: 0;
         }
 
         .topping-description {
-            margin: 0 0 20px;
-            color: var(--muted);
+            color: #6f6a65;
             font-family: "Bodoni Moda", serif;
-            font-size: 15px;
             font-style: italic;
         }
 
         .topping-detail {
-            padding: 11px 0;
-            border-top: 1px solid var(--soft-line);
-        }
-
-        .topping-detail summary {
-            color: var(--deep-red);
-            font-size: 14px;
-        }
-
-        .topping-detail summary::after {
-            color: var(--cherry);
-            font-size: 19px;
-        }
-
-        .topping-detail p {
-            margin: 7px 0 2px;
-            color: #66615d;
-            font-size: 12px;
-            line-height: 1.6;
+            border-top: 1px solid #ded7cf;
         }
 
         .extra-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
-            align-items: start;
-        }
-
-        .extra-item {
-            overflow: hidden;
         }
 
         .extra-image {
             width: 100%;
-            height: 350px;
-            display: block;
+            height: 330px;
             object-fit: cover;
+            display: block;
         }
 
         .extra-content {
-            padding: 25px 27px 28px;
+            padding: 24px 26px;
         }
 
         .extra-item:first-child .extra-content {
-            background-color: var(--deep-red);
-            color: var(--ivory);
+            background: #7f2531;
+            color: #f3eee6;
         }
 
         .extra-item:last-child .extra-content {
-            background-color: var(--powder);
-        }
-
-        .extra-item h3 {
-            margin: 0 0 8px;
-            font-size: 31px;
-            font-weight: 400;
+            background: #c9d3db;
         }
 
         .extra-item:first-child h3 {
-            color: var(--ivory);
+            color: #f3eee6;
         }
 
-        .extra-item:last-child h3 {
-            color: var(--deep-red);
-        }
-
-        .extra-description {
-            margin: 0 0 12px;
-        }
-
-        .extra-item:first-child .extra-description {
-            color: #eee3df;
+        .extra-item h3 {
+            margin-top: 0;
         }
 
         .extra-price {
-            margin: 12px 0;
-            color: var(--powder);
+            color: #c9d3db;
             font-family: "Bodoni Moda", serif;
-            font-size: 48px;
-            line-height: 1;
+            font-size: 42px;
+            margin: 10px 0;
         }
 
         .extra-note {
-            margin: 0;
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.3px;
-        }
-
-        .extra-item:first-child .extra-note {
-            color: var(--powder);
-        }
-
-        .club-prices {
-            margin-top: 18px;
         }
 
         .club-row {
             display: flex;
             justify-content: space-between;
-            padding: 9px 0;
-            border-bottom: 1px solid rgba(127, 37, 49, 0.22);
-        }
-
-        .club-row:last-child {
-            border-bottom: none;
-        }
-
-        .club-row span {
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #aebdc8;
         }
 
         .locations {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 25px;
         }
 
         .location {
             padding-top: 12px;
-            border-top: 1px solid var(--cherry);
-        }
-
-        .location-number {
-            margin: 0 0 11px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
+            border-top: 1px solid #a93443;
         }
 
         .location img {
             width: 100%;
-            height: 295px;
-            display: block;
+            height: 280px;
             object-fit: cover;
-            margin-bottom: 18px;
+            display: block;
+            margin-bottom: 15px;
         }
 
         .location h3 {
-            margin: 0 0 9px;
-            font-size: 28px;
+            margin: 5px 0;
         }
 
         .location p {
@@ -730,209 +512,107 @@
 
         .location a {
             display: inline-block;
-            margin-top: 10px;
-            padding-bottom: 2px;
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-decoration: none;
+            color: #7f2531;
+            margin-top: 8px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 1.1px;
-            border-bottom: 1px solid var(--deep-red);
-        }
-
-        .location a:hover {
-            color: var(--cherry);
-            border-color: var(--cherry);
         }
 
         .parlor-hours {
             display: grid;
-            grid-template-columns: 1.6fr 1fr 1fr;
-            align-items: start;
-            margin-top: 38px;
-            padding: 20px 0;
-            border-top: 1px solid var(--cherry);
-            border-bottom: 1px solid var(--cherry);
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 35px;
+            padding: 18px 0;
+            border-top: 1px solid #a93443;
+            border-bottom: 1px solid #a93443;
         }
 
-        .hours-small {
-            margin: 0 0 3px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-        }
-
-        .parlor-hours h3 {
-            margin: 0;
-            font-size: 24px;
-        }
-
+        .parlor-hours h3,
         .parlor-hours p {
             margin: 0;
-            font-size: 13px;
         }
 
         footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            gap: 25px;
-            margin-top: 110px;
+            margin-top: 90px;
             padding-top: 15px;
-            border-top: 1px solid var(--cherry);
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
+            border-top: 1px solid #a93443;
+            color: #7f2531;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1.1px;
         }
 
         footer p {
             margin: 0;
         }
 
-        @media (max-width: 900px) {
-            body {
-                padding: 0 24px 60px;
-            }
-
-            .hero {
-                grid-template-columns: 1.25fr 0.75fr;
-                gap: 34px;
+        @media (max-width: 800px) {
+            .hero,
+            .about-layout,
+            .signature-feature {
+                grid-template-columns: 1fr;
             }
 
             .hero-right {
-                padding-left: 24px;
-            }
-
-            .tagline {
-                font-size: 20px;
+                padding: 20px 0 0;
+                border-left: none;
+                border-top: 1px solid #a93443;
             }
 
             h1 {
-                font-size: 75px;
-            }
-
-            .brand-photo img {
-                height: 350px;
-            }
-
-            .about-layout {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .signature-feature {
-                grid-template-columns: 1.2fr 0.8fr;
+                font-size: 65px;
             }
 
             .locations {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
-            }
-
-            .location img {
-                height: 230px;
+                grid-template-columns: 1fr 1fr;
             }
 
             .parlor-hours {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            .parlor-hours > div {
-                grid-column: 1 / -1;
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 600px) {
             body {
-                padding: 0 18px 45px;
-            }
-
-            .logo {
-                font-size: 24px;
+                padding: 0 18px 40px;
             }
 
             nav {
                 flex-wrap: wrap;
-                gap: 8px 17px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 34px;
-                padding: 50px 0 40px;
-            }
-
-            .hero-right {
-                padding: 22px 0 0;
-                border-left: none;
-                border-top: 1px solid var(--cherry);
-            }
-
-            .tagline {
-                max-width: 430px;
-                font-size: 21px;
+                gap: 10px 18px;
             }
 
             h1 {
-                font-size: 58px;
-                letter-spacing: -3px;
+                font-size: 50px;
             }
 
-            .brand-subtitle {
-                font-size: 25px;
+            h2 {
+                font-size: 34px;
             }
 
-            .brand-photo img {
+            .brand-photo img,
+            .signature-feature img {
                 height: 250px;
             }
 
             .brand-photo-info {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 2px;
             }
 
-            h2 {
-                font-size: 37px;
-            }
-
-            section {
-                margin-top: 70px;
-            }
-
-            #about {
-                margin-top: 55px;
-            }
-
-            .signature-feature {
+            .locations,
+            .flavor-grid,
+            .topping-grid,
+            .extra-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .signature-feature img {
-                height: 260px;
-            }
-
-            .signature-detail {
-                padding: 27px 24px 30px;
             }
 
             .scoop-headings,
             .scoop-values {
                 grid-template-columns: repeat(2, 1fr);
-                row-gap: 28px;
-            }
-
-            .flavor-grid,
-            .topping-grid,
-            .extra-grid,
-            .locations {
-                grid-template-columns: 1fr;
+                row-gap: 25px;
             }
 
             .cone-grid {
@@ -941,45 +621,17 @@
 
             .cone-item {
                 border-right: none;
-                border-bottom: 1px solid rgba(169, 52, 67, 0.22);
-            }
-
-            .cone-item:last-child {
-                border-bottom: none;
-            }
-
-            .cone-item summary {
-                min-height: auto;
-                padding: 20px 8px 14px;
-            }
-
-            .cone-price {
-                padding: 0 8px 20px;
+                border-bottom: 1px solid #d7aab0;
             }
 
             .topping-image,
             .extra-image {
-                height: 270px;
-            }
-
-            .location img {
                 height: 260px;
-            }
-
-            .parlor-hours {
-                grid-template-columns: 1fr;
-                gap: 17px;
-            }
-
-            .parlor-hours > div {
-                grid-column: auto;
             }
 
             footer {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
-                margin-top: 80px;
+                gap: 5px;
             }
         }
     </style>
@@ -988,6 +640,7 @@
 <body>
 
     <header>
+
         <div class="logo">
             Clementine's
         </div>
@@ -998,11 +651,14 @@
             <a href="#toppings">Toppings</a>
             <a href="#locations">Parlors</a>
         </nav>
+
     </header>
+
 
     <div class="hero">
 
         <div>
+
             <p class="eyebrow">
                 St. Louis microcreamery
             </p>
@@ -1014,7 +670,9 @@
             <p class="brand-subtitle">
                 Naughty & nice ice cream
             </p>
+
         </div>
+
 
         <div class="hero-right">
 
@@ -1030,6 +688,7 @@
 
     </div>
 
+
     <div class="brand-photo">
 
         <img
@@ -1037,6 +696,7 @@
             alt="Clementine's Naughty and Nice Ice Cream storefront sign">
 
         <div class="brand-photo-info">
+
             <span>
                 Clementine's Naughty & Nice
             </span>
@@ -1044,15 +704,17 @@
             <span>
                 St. Louis, Missouri
             </span>
+
         </div>
 
     </div>
+
 
     <section id="about">
 
         <div class="about-layout">
 
-            <div class="about-side">
+            <div>
 
                 <p class="section-label">
                     About
@@ -1063,6 +725,7 @@
                 </p>
 
             </div>
+
 
             <div>
 
@@ -1088,6 +751,7 @@
             </div>
 
         </div>
+
 
         <div class="signature-feature">
 
@@ -1120,6 +784,7 @@
 
     </section>
 
+
     <section>
 
         <p class="section-label">
@@ -1130,14 +795,18 @@
             Build your scoop
         </h2>
 
+
         <div class="scoop-box">
 
             <div class="scoop-headings">
+
                 <div class="scoop-name">Mini</div>
                 <div class="scoop-name">Petite</div>
                 <div class="scoop-name">Moyen</div>
                 <div class="scoop-name">Grand Cru</div>
+
             </div>
+
 
             <div class="scoop-values">
 
@@ -1171,6 +840,7 @@
 
     </section>
 
+
     <section id="flavors">
 
         <p class="section-label">
@@ -1185,7 +855,9 @@
             Click a flavor to see its description and allergens.
         </p>
 
+
         <div class="flavor-grid">
+
 
             <div class="flavor-section">
 
@@ -1222,6 +894,7 @@
                 </details>
 
             </div>
+
 
             <div class="flavor-section">
 
@@ -1325,6 +998,7 @@
 
             </div>
 
+
             <div class="flavor-section">
 
                 <h3>
@@ -1364,6 +1038,7 @@
 
             </div>
 
+
             <div class="flavor-section">
 
                 <h3>
@@ -1396,9 +1071,11 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
     <section>
 
@@ -1414,56 +1091,38 @@
             Click an option to see the price.
         </p>
 
+
         <div class="cone-grid">
 
             <details class="cone-item">
-                <summary class="cone-name">
-                    Waffle Cone
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
+                <summary class="cone-name">Waffle Cone</summary>
+                <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
-                <summary class="cone-name">
-                    Waffle Bowl
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
+                <summary class="cone-name">Waffle Bowl</summary>
+                <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
-                <summary class="cone-name">
-                    Gluten-Free Cone
-                </summary>
-                <div class="cone-price">
-                    +$2.50
-                </div>
+                <summary class="cone-name">Gluten-Free Cone</summary>
+                <div class="cone-price">+$2.50</div>
             </details>
 
             <details class="cone-item">
-                <summary class="cone-name">
-                    Konery Cone
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
+                <summary class="cone-name">Konery Cone</summary>
+                <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
-                <summary class="cone-name">
-                    Extra Cup
-                </summary>
-                <div class="cone-price">
-                    +$0.25
-                </div>
+                <summary class="cone-name">Extra Cup</summary>
+                <div class="cone-price">+$0.25</div>
             </details>
 
         </div>
 
     </section>
+
 
     <section id="toppings">
 
@@ -1479,7 +1138,9 @@
             Click each topping for a little more.
         </p>
 
+
         <div class="topping-grid">
+
 
             <div class="topping-card">
 
@@ -1521,6 +1182,7 @@
 
             </div>
 
+
             <div class="topping-card">
 
                 <img
@@ -1560,6 +1222,7 @@
                 </div>
 
             </div>
+
 
             <div class="topping-card">
 
@@ -1601,9 +1264,11 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
     <section>
 
@@ -1615,7 +1280,9 @@
             A little extra
         </h2>
 
+
         <div class="extra-grid">
+
 
             <div class="extra-item">
 
@@ -1630,7 +1297,7 @@
                         Sunday Sundae
                     </h3>
 
-                    <p class="extra-description">
+                    <p>
                         2 scoops + 3 toppings
                     </p>
 
@@ -1646,6 +1313,7 @@
 
             </div>
 
+
             <div class="extra-item">
 
                 <img
@@ -1659,11 +1327,11 @@
                         Pint of the Month Club
                     </h3>
 
-                    <p class="extra-description">
+                    <p>
                         Ice cream for one year, one pint at a time.
                     </p>
 
-                    <div class="club-prices">
+                    <div>
 
                         <div class="club-row">
                             <div>Naughty</div>
@@ -1686,9 +1354,11 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
     <section id="locations">
 
@@ -1700,7 +1370,9 @@
             Find your parlor
         </h2>
 
+
         <div class="locations">
+
 
             <div class="location">
 
@@ -1731,6 +1403,7 @@
 
             </div>
 
+
             <div class="location">
 
                 <p class="location-number">
@@ -1759,6 +1432,7 @@
                 </a>
 
             </div>
+
 
             <div class="location">
 
@@ -1789,7 +1463,9 @@
 
             </div>
 
+
         </div>
+
 
         <div class="parlor-hours">
 
@@ -1818,6 +1494,7 @@
         </div>
 
     </section>
+
 
     <footer>
 
