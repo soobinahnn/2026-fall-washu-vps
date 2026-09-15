@@ -22,13 +22,11 @@
         body {
             background-color: #f7f3ea;
             color: #454a40;
-
             font-family: "DM Sans", sans-serif;
             font-size: 15px;
             line-height: 1.7;
 
-            max-width: 1240px;
-
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 38px 90px;
         }
@@ -43,7 +41,6 @@
         a {
             color: #9a735f;
         }
-
 
 
         /* HEADER */
@@ -61,7 +58,6 @@
         .logo {
             font-family: "Bodoni Moda", serif;
             font-size: 21px;
-
             color: #759283;
         }
 
@@ -71,7 +67,6 @@
 
             font-size: 10px;
             text-transform: uppercase;
-
             letter-spacing: 1.5px;
         }
 
@@ -85,16 +80,13 @@
         }
 
 
-
         /* HERO */
 
         .hero {
             display: grid;
-
             grid-template-columns: 1.5fr 0.7fr;
 
             gap: 60px;
-
             align-items: end;
 
             padding: 70px 0 65px;
@@ -108,9 +100,7 @@
             margin: 0 0 10px;
 
             font-size: 10px;
-
             text-transform: uppercase;
-
             letter-spacing: 3px;
 
             color: #759283;
@@ -123,7 +113,6 @@
             font-weight: 400;
 
             line-height: 0.9;
-
             letter-spacing: -3px;
 
             color: #759283;
@@ -133,7 +122,6 @@
             margin: 12px 0 0;
 
             font-family: "Bodoni Moda", serif;
-
             font-size: 31px;
 
             color: #9a735f;
@@ -162,14 +150,11 @@
             margin: 0;
 
             font-size: 9px;
-
             text-transform: uppercase;
-
             letter-spacing: 1.7px;
 
             color: #8b927f;
         }
-
 
 
         /* GENERAL */
@@ -182,9 +167,7 @@
             margin: 0 0 5px;
 
             font-size: 9px;
-
             text-transform: uppercase;
-
             letter-spacing: 2px;
 
             color: #759283;
@@ -229,33 +212,24 @@
         }
 
 
-
         /* ABOUT */
 
         .about-layout {
             display: grid;
-
-            grid-template-columns: 0.75fr 1.3fr;
+            grid-template-columns: 1fr 1.4fr;
 
             gap: 70px;
 
             align-items: start;
         }
 
-        .about-heading {
-            position: sticky;
-            top: 30px;
-        }
-
         .about-copy {
             font-size: 16px;
-
             max-width: 650px;
         }
 
 
-
-        /* PARLOR HOURS */
+        /* HOURS */
 
         .parlor-hours {
             display: flex;
@@ -281,88 +255,59 @@
 
         .hours-times {
             display: flex;
-
             gap: 65px;
         }
 
         .hours-times p {
             margin: 0;
-
             font-size: 13px;
         }
-
 
 
         /* LOCATIONS */
 
         .location-layout {
             display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
-            grid-template-columns: 1.35fr 0.65fr;
-
-            gap: 28px;
+            gap: 25px;
         }
 
-        .location-feature {
-            border-top: 1px solid #b8c4ba;
-
-            padding-top: 12px;
-        }
-
-        .location-feature img {
-            width: 100%;
-            height: 460px;
-
-            display: block;
-
-            object-fit: cover;
-        }
-
-        .location-feature h3 {
-            font-size: 30px;
-
-            margin-top: 14px;
-            margin-bottom: 4px;
-        }
-
-        .location-number {
-            margin: 0 0 10px;
-
-            font-size: 9px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 2px;
-
-            color: #9a735f;
-        }
-
-        .location-side {
-            display: grid;
-
-            grid-template-rows: 1fr 1fr;
-
-            gap: 28px;
-        }
-
+        .location-feature,
         .location-small {
             border-top: 1px solid #b8c4ba;
 
             padding-top: 12px;
         }
 
+        .location-feature img,
         .location-small img {
             width: 100%;
-            height: 190px;
+            height: 250px;
 
             display: block;
 
             object-fit: cover;
         }
 
+        .location-feature h3,
         .location-small h3 {
             margin-top: 12px;
             margin-bottom: 3px;
+        }
+
+        .location-number {
+            margin: 0 0 10px;
+
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            color: #9a735f;
+        }
+
+        .location-side {
+            display: contents;
         }
 
         .location-feature p,
@@ -376,12 +321,9 @@
             margin-top: 4px;
 
             font-size: 10px;
-
             text-transform: uppercase;
-
             letter-spacing: 1px;
         }
-
 
 
         /* SCOOP PRICING */
@@ -396,7 +338,6 @@
 
         .scoop-headings {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
 
             border-bottom: 1px solid #9a735f;
@@ -408,7 +349,6 @@
 
         .scoop-headings div {
             font-family: "Bodoni Moda", serif;
-
             font-size: 24px;
 
             color: #9a735f;
@@ -416,7 +356,6 @@
 
         .scoop-values {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
 
             padding-top: 25px;
@@ -424,28 +363,20 @@
             text-align: center;
         }
 
-        .scoop-values > div:nth-child(2),
-        .scoop-values > div:nth-child(4) {
-            transform: translateY(14px);
-        }
-
         .scoop-number {
             font-family: "Bodoni Moda", serif;
 
             font-size: 60px;
+            line-height: 1;
 
             color: #59645b;
-
-            line-height: 1;
         }
 
         .scoop-flavor {
             margin: 12px 0 5px;
 
             font-size: 11px;
-
             text-transform: uppercase;
-
             letter-spacing: 1.4px;
         }
 
@@ -457,41 +388,19 @@
         }
 
 
-
         /* FLAVORS */
 
         .flavor-grid {
             display: grid;
+            grid-template-columns: 1fr 1fr;
 
-            grid-template-columns: repeat(12, 1fr);
-
-            gap: 30px;
+            gap: 35px;
         }
 
         .flavor-section {
             border-top: 1px solid #b8c4ba;
 
             padding-top: 14px;
-        }
-
-        .naughty {
-            grid-column: span 5;
-        }
-
-        .nice {
-            grid-column: span 7;
-        }
-
-        .vegan {
-            grid-column: 2 / span 4;
-
-            margin-top: 15px;
-        }
-
-        .poe {
-            grid-column: 7 / span 5;
-
-            margin-top: 15px;
         }
 
         .flavor-section h3 {
@@ -525,7 +434,6 @@
             list-style: none;
 
             font-family: "Bodoni Moda", serif;
-
             font-size: 18px;
             font-weight: 500;
 
@@ -544,7 +452,6 @@
             margin-left: 15px;
 
             font-family: "DM Sans", sans-serif;
-
             font-size: 18px;
 
             color: #9a735f;
@@ -563,12 +470,10 @@
         }
 
 
-
         /* CONE */
 
         .cone-grid {
             display: grid;
-
             grid-template-columns: repeat(5, 1fr);
 
             border-top: 1px solid #b8c4ba;
@@ -589,7 +494,6 @@
 
         .cone-name {
             font-family: "Bodoni Moda", serif;
-
             font-size: 18px;
 
             color: #759283;
@@ -604,17 +508,13 @@
         }
 
 
-
         /* TOPPINGS */
 
         .topping-grid {
             display: grid;
-
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
 
             gap: 22px;
-
-            align-items: start;
         }
 
         .topping-card {
@@ -625,25 +525,11 @@
             border-top: 1px solid #b8c4ba;
         }
 
-        .topping-card:nth-child(2) {
-            margin-top: 35px;
-
-            background-color: #ece8dc;
-        }
-
-        .topping-card:nth-child(3) {
-            margin-top: 12px;
-
-            background-color: #e7ebe2;
-        }
-
         .topping-number {
             margin: 0 0 22px;
 
             font-size: 9px;
-
             text-transform: uppercase;
-
             letter-spacing: 1.8px;
 
             color: #9a735f;
@@ -669,31 +555,19 @@
         }
 
 
-
         /* EXTRAS */
 
         .extra-grid {
             display: grid;
-
-            grid-template-columns: 0.8fr 1.2fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 28px;
-
-            align-items: stretch;
         }
 
         .extra-item {
             border-top: 1px solid #b8c4ba;
 
             padding: 19px 0 0;
-        }
-
-        .extra-item:nth-child(2) {
-            padding: 24px 28px;
-
-            background-color: #ece8dc;
-
-            border-top: none;
         }
 
         .extra-item h3 {
@@ -715,7 +589,6 @@
             font-family: "Bodoni Moda", serif;
 
             font-size: 45px;
-
             line-height: 1;
 
             color: #9a735f;
@@ -723,9 +596,7 @@
 
         .extra-note {
             font-size: 10px;
-
             text-transform: uppercase;
-
             letter-spacing: 1.4px;
 
             color: #759283;
@@ -752,7 +623,6 @@
 
             color: #9a735f;
         }
-
 
 
         /* TABLET */
@@ -786,10 +656,6 @@
                 gap: 25px;
             }
 
-            .about-heading {
-                position: static;
-            }
-
             .parlor-hours {
                 flex-direction: column;
 
@@ -797,25 +663,10 @@
             }
 
             .location-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .location-side {
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-            }
-
-            .naughty,
-            .nice,
-            .vegan,
-            .poe {
-                grid-column: span 6;
-
-                margin-top: 0;
             }
 
         }
-
 
 
         /* MOBILE */
@@ -868,12 +719,12 @@
                 gap: 20px;
             }
 
-            .location-feature img {
-                height: 300px;
+            .location-layout {
+                grid-template-columns: 1fr;
             }
 
-            .location-side {
-                grid-template-columns: 1fr;
+            .location-feature img {
+                height: 300px;
             }
 
             .location-small img {
@@ -887,20 +738,8 @@
                 row-gap: 30px;
             }
 
-            .scoop-values > div:nth-child(2),
-            .scoop-values > div:nth-child(4) {
-                transform: none;
-            }
-
             .flavor-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .naughty,
-            .nice,
-            .vegan,
-            .poe {
-                grid-column: auto;
             }
 
             .cone-grid {
@@ -921,11 +760,6 @@
             .topping-grid,
             .extra-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .topping-card:nth-child(2),
-            .topping-card:nth-child(3) {
-                margin-top: 0;
             }
 
         }
@@ -952,7 +786,6 @@
         </nav>
 
     </header>
-
 
 
     <div class="hero">
@@ -989,12 +822,11 @@
     </div>
 
 
-
     <section id="about">
 
         <div class="about-layout">
 
-            <div class="about-heading">
+            <div>
 
                 <p class="section-label">
                     About
@@ -1024,7 +856,6 @@
         </div>
 
     </section>
-
 
 
     <section id="locations">
@@ -1096,7 +927,6 @@
             </div>
 
 
-
             <div class="location-side">
 
 
@@ -1130,7 +960,6 @@
                     </a>
 
                 </div>
-
 
 
                 <div class="location-small">
@@ -1170,7 +999,6 @@
         </div>
 
     </section>
-
 
 
     <section>
@@ -1229,7 +1057,6 @@
     </section>
 
 
-
     <section id="flavors">
 
         <p class="section-label">
@@ -1248,7 +1075,7 @@
         <div class="flavor-grid">
 
 
-            <div class="flavor-section naughty">
+            <div class="flavor-section">
 
                 <h3>
                     Naughty
@@ -1285,8 +1112,7 @@
             </div>
 
 
-
-            <div class="flavor-section nice">
+            <div class="flavor-section">
 
                 <h3>
                     Nice
@@ -1389,8 +1215,7 @@
             </div>
 
 
-
-            <div class="flavor-section vegan">
+            <div class="flavor-section">
 
                 <h3>
                     Vegan
@@ -1430,8 +1255,7 @@
             </div>
 
 
-
-            <div class="flavor-section poe">
+            <div class="flavor-section">
 
                 <h3>
                     The Poe Collection
@@ -1467,7 +1291,6 @@
         </div>
 
     </section>
-
 
 
     <section>
@@ -1513,7 +1336,6 @@
     </section>
 
 
-
     <section id="toppings">
 
         <p class="section-label">
@@ -1551,7 +1373,6 @@
             </div>
 
 
-
             <div class="topping-card">
 
                 <p class="topping-number">
@@ -1573,7 +1394,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="topping-card">
@@ -1602,7 +1422,6 @@
         </div>
 
     </section>
-
 
 
     <section>
@@ -1638,7 +1457,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="extra-item">

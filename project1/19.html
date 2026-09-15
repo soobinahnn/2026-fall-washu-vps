@@ -2,16 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap');
 
         * {
             box-sizing: border-box;
@@ -21,360 +17,188 @@
             scroll-behavior: smooth;
         }
 
-        :root {
-            --ivory: #f4efe5;
-            --paper: #fbf8f1;
-            --navy: #18365d;
-            --deep-navy: #102846;
-            --ceramic-blue: #345d8c;
-            --soft-blue: #b9c9d8;
-            --vanilla: #e8d7a8;
-            --ink: #25282b;
-            --muted: #696964;
-            --line: #c9c2b7;
-            --soft-line: #ddd7cf;
-        }
-
         body {
-            background-color: var(--ivory);
-            color: var(--ink);
-
+            background-color: #f4efe5;
+            color: #25282b;
             font-family: "DM Sans", sans-serif;
             font-size: 15px;
             line-height: 1.7;
-
-            max-width: 1240px;
-
-            margin: 0 auto;
-            padding: 0 42px 50px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 35px 60px;
         }
 
         h1,
         h2,
         h3,
-        .logo,
-        .brand-subtitle,
-        .scoop-number {
+        .logo {
             font-family: "Bodoni Moda", serif;
-        }
-
-        a {
-            color: inherit;
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            padding: 22px 0;
-
-            border-bottom: 1px solid var(--navy);
+            padding: 20px 0;
+            border-bottom: 1px solid #18365d;
         }
 
         .logo {
-            color: var(--navy);
-
-            font-size: 25px;
-            font-weight: 500;
-
-            letter-spacing: -0.7px;
+            color: #18365d;
+            font-size: 24px;
         }
 
         nav {
             display: flex;
-            gap: 30px;
-
-            color: var(--navy);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-            font-weight: 500;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.4px;
+            gap: 25px;
         }
 
         nav a {
+            color: #18365d;
             text-decoration: none;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
-            color: var(--ceramic-blue);
+            color: #345d8c;
         }
 
         .hero {
             display: grid;
-
-            grid-template-columns: 1.55fr 0.65fr;
-
-            gap: 65px;
-
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
             align-items: end;
-
-            padding: 70px 0 64px;
+            padding: 65px 0;
         }
 
-        .hero-left {
-            min-width: 0;
-        }
-
-        .eyebrow {
-            margin: 0 0 14px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
+        .eyebrow,
+        .section-label,
+        .location-number,
+        .hours-small,
+        .topping-number {
+            color: #345d8c;
             font-size: 9px;
-            font-weight: 500;
-
             text-transform: uppercase;
-
-            letter-spacing: 2.3px;
+            letter-spacing: 2px;
         }
 
         h1 {
-            margin: 0;
-
-            color: var(--navy);
-
-            font-size: 101px;
+            color: #18365d;
+            font-size: 90px;
             font-weight: 400;
-
-            line-height: 0.88;
-
-            letter-spacing: -5px;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin: 0;
         }
 
         .brand-subtitle {
-            margin: 16px 0 0;
-
-            color: var(--ceramic-blue);
-
-            font-size: 32px;
+            color: #345d8c;
+            font-family: "Bodoni Moda", serif;
+            font-size: 30px;
             font-style: italic;
-            font-weight: 400;
-
-            line-height: 1.2;
+            margin-top: 12px;
         }
 
         .hero-right {
-            padding: 6px 0 7px 28px;
-
-            border-left: 1px solid var(--navy);
+            border-left: 1px solid #18365d;
+            padding-left: 25px;
         }
 
         .tagline {
-            margin: 0 0 22px;
-
-            color: var(--ink);
-
             font-family: "Bodoni Moda", serif;
-            font-size: 22px;
+            font-size: 21px;
             font-style: italic;
-
-            line-height: 1.45;
+            margin-top: 0;
         }
 
         .features {
-            margin: 0;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            color: #345d8c;
+            font-size: 9px;
             text-transform: uppercase;
-
-            letter-spacing: 1.4px;
-        }
-
-        .brand-photo {
-            margin-top: 5px;
+            letter-spacing: 1px;
         }
 
         .brand-photo img {
             width: 100%;
-            height: 460px;
-
-            display: block;
-
+            height: 420px;
             object-fit: cover;
+            display: block;
         }
 
         .brand-photo-info {
             display: flex;
-
             justify-content: space-between;
-            align-items: center;
-
-            padding: 11px 0;
-
-            color: var(--navy);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            padding: 10px 0;
+            color: #18365d;
+            font-size: 9px;
             text-transform: uppercase;
-
-            letter-spacing: 1.2px;
-
-            border-bottom: 1px solid var(--navy);
+            border-bottom: 1px solid #18365d;
         }
 
         section {
-            margin-top: 95px;
-        }
-
-        #about {
-            margin-top: 75px;
-        }
-
-        .section-label {
-            margin: 0 0 8px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-            font-weight: 500;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.8px;
+            margin-top: 90px;
         }
 
         h2 {
-            margin: 0 0 28px;
-
-            color: var(--navy);
-
-            font-size: 46px;
+            color: #18365d;
+            font-size: 42px;
             font-weight: 400;
-
             line-height: 1;
-
-            letter-spacing: -1.8px;
+            margin: 5px 0 25px;
         }
 
         h3 {
-            color: var(--navy);
-
-            font-size: 27px;
-            font-weight: 500;
-
-            line-height: 1.15;
-        }
-
-        .small-note {
-            margin-top: -15px;
-            margin-bottom: 27px;
-
-            color: var(--muted);
-
-            font-family: "Bodoni Moda", serif;
-            font-size: 14px;
-            font-style: italic;
+            color: #18365d;
+            font-size: 26px;
+            margin-bottom: 8px;
         }
 
         .about-layout {
             display: grid;
-
-            grid-template-columns: 0.55fr 1.45fr;
-
-            gap: 75px;
-
-            align-items: start;
-        }
-
-        .about-side {
-            padding-top: 4px;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
         }
 
         .about-number {
-            margin: 0;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.2px;
+            color: #345d8c;
+            font-size: 10px;
         }
 
         .about-copy {
-            max-width: 710px;
-
+            max-width: 650px;
             font-size: 16px;
         }
 
-        .about-copy p:first-child {
-            margin-top: 0;
-        }
-
-        .about-copy p {
-            max-width: 650px;
-        }
-
         .highlight {
-            color: var(--navy);
-
+            color: #18365d;
             font-family: "Bodoni Moda", serif;
-            font-size: 18px;
             font-style: italic;
-            font-weight: 500;
+            font-size: 18px;
         }
 
         .locations {
             display: grid;
-
-            grid-template-columns: 1.15fr 1fr 0.9fr;
-
-            gap: 28px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .location {
+            border-top: 1px solid #18365d;
             padding-top: 12px;
-
-            border-top: 1px solid var(--navy);
-        }
-
-        .location-number {
-            margin: 0 0 11px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.4px;
         }
 
         .location img {
             width: 100%;
-            height: 305px;
-
-            display: block;
-
-            object-fit: cover;
-
-            margin-bottom: 18px;
-        }
-
-        .location:nth-child(2) img {
             height: 280px;
-            margin-top: 25px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 15px;
         }
 
         .location h3 {
-            margin: 0 0 9px;
-
-            font-size: 28px;
+            margin: 5px 0;
         }
 
         .location p {
@@ -382,228 +206,115 @@
         }
 
         .location a {
+            color: #18365d;
             display: inline-block;
-
-            margin-top: 10px;
-            padding-bottom: 2px;
-
-            color: var(--navy);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
-            text-decoration: none;
+            margin-top: 8px;
+            font-size: 10px;
             text-transform: uppercase;
-
-            letter-spacing: 1.1px;
-
-            border-bottom: 1px solid var(--navy);
-        }
-
-        .location a:hover {
-            color: var(--ceramic-blue);
-
-            border-color: var(--ceramic-blue);
         }
 
         .parlor-hours {
             display: grid;
-
-            grid-template-columns: 1.6fr 1fr 1fr;
-
-            align-items: start;
-
-            margin-top: 38px;
-
-            padding: 20px 0;
-
-            border-top: 1px solid var(--navy);
-            border-bottom: 1px solid var(--navy);
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-top: 35px;
+            padding: 18px 0;
+            border-top: 1px solid #18365d;
+            border-bottom: 1px solid #18365d;
         }
 
-        .hours-small {
-            margin: 0 0 3px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.3px;
-        }
-
-        .parlor-hours h3 {
-            margin: 0;
-
-            font-size: 24px;
-        }
-
+        .parlor-hours h3,
         .parlor-hours p {
             margin: 0;
-
-            font-size: 13px;
         }
 
         .scoop-box {
-            background-color: var(--navy);
-
-            color: var(--ivory);
-
-            padding: 38px 32px 40px;
+            background-color: #18365d;
+            color: #f4efe5;
+            padding: 35px 30px;
         }
 
-        .scoop-headings {
+        .scoop-headings,
+        .scoop-values {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
-            padding-bottom: 17px;
-
-            border-bottom: 1px solid rgba(244, 239, 229, 0.35);
-
             text-align: center;
         }
 
-        .scoop-name {
-            color: var(--ivory);
+        .scoop-headings {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #8fa0b3;
+        }
 
+        .scoop-name {
             font-family: "Bodoni Moda", serif;
             font-size: 22px;
             font-style: italic;
         }
 
         .scoop-values {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            padding-top: 28px;
-
-            text-align: center;
+            padding-top: 25px;
         }
 
         .scoop-number {
-            color: var(--ivory);
-
-            font-size: 65px;
-            font-weight: 400;
-
+            font-family: "Bodoni Moda", serif;
+            font-size: 60px;
             line-height: 1;
         }
 
         .scoop-flavor {
             margin: 8px 0 4px;
-
-            color: #ddd9d0;
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            font-size: 9px;
             text-transform: uppercase;
-
-            letter-spacing: 1.3px;
         }
 
         .scoop-price {
-            color: var(--vanilla);
-
+            color: #e8d7a8;
             font-size: 18px;
-            font-weight: 500;
+        }
+
+        .small-note {
+            color: #696964;
+            font-family: "Bodoni Moda", serif;
+            font-style: italic;
+            margin-top: -15px;
         }
 
         .flavor-grid {
             display: grid;
-
-            grid-template-columns: repeat(12, 1fr);
-
-            gap: 28px;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
         .flavor-section {
-            padding: 27px 28px 20px;
-        }
-
-        .flavor-section:nth-child(1) {
-            grid-column: span 5;
-
-            background-color: var(--paper);
-
-            border: 1px solid var(--line);
-        }
-
-        .flavor-section:nth-child(2) {
-            grid-column: span 7;
-
-            background-color: var(--vanilla);
-        }
-
-        .flavor-section:nth-child(3) {
-            grid-column: span 6;
-
-            background-color: var(--soft-blue);
-        }
-
-        .flavor-section:nth-child(4) {
-            grid-column: span 6;
-
-            background-color: var(--navy);
-
-            color: var(--ivory);
+            border-top: 1px solid #18365d;
+            padding-top: 15px;
         }
 
         .flavor-section h3 {
-            margin: 0 0 5px;
-
-            font-size: 31px;
-            font-weight: 400;
-        }
-
-        .flavor-section:nth-child(4) h3 {
-            color: var(--ivory);
+            margin-top: 0;
         }
 
         .flavor-label {
-            margin: 0 0 21px;
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            color: #345d8c;
+            font-size: 10px;
             text-transform: uppercase;
-
-            letter-spacing: 1.4px;
-        }
-
-        .flavor-section:nth-child(4) .flavor-label {
-            color: var(--vanilla);
+            letter-spacing: 1px;
         }
 
         details {
-            padding: 12px 0;
-
-            border-top: 1px solid rgba(37, 40, 43, 0.2);
-        }
-
-        .flavor-section:nth-child(4) details {
-            border-top: 1px solid rgba(244, 239, 229, 0.25);
+            border-bottom: 1px solid #c9c2b7;
+            padding: 10px 0;
         }
 
         summary {
             display: flex;
-
             justify-content: space-between;
             align-items: center;
-
-            gap: 15px;
-
-            font-family: "DM Sans", sans-serif;
+            list-style: none;
+            cursor: pointer;
             font-size: 14px;
             font-weight: 500;
-
-            cursor: pointer;
-
-            list-style: none;
         }
 
         summary::-webkit-details-marker {
@@ -612,12 +323,9 @@
 
         summary::after {
             content: "+";
-
+            color: #345d8c;
             font-family: "Bodoni Moda", serif;
-            font-size: 22px;
-            font-weight: 400;
-
-            line-height: 1;
+            font-size: 21px;
         }
 
         details[open] summary::after {
@@ -625,40 +333,21 @@
         }
 
         details p {
-            margin: 9px 0 0;
-
-            color: #555654;
-
+            margin: 7px 0 0;
             font-size: 13px;
-        }
-
-        details p b {
-            color: var(--ink);
-        }
-
-        .flavor-section:nth-child(4) details p {
-            color: #ddd8d0;
-        }
-
-        .flavor-section:nth-child(4) details p b {
-            color: var(--ivory);
         }
 
         .cone-grid {
             display: grid;
-
             grid-template-columns: repeat(5, 1fr);
-
-            border-top: 1px solid var(--navy);
-            border-bottom: 1px solid var(--navy);
+            border-top: 1px solid #18365d;
+            border-bottom: 1px solid #18365d;
         }
 
         .cone-item {
-            padding: 28px 13px;
-
             text-align: center;
-
-            border-right: 1px solid rgba(24, 54, 93, 0.22);
+            padding: 25px 10px;
+            border-right: 1px solid #c9c2b7;
         }
 
         .cone-item:last-child {
@@ -666,414 +355,155 @@
         }
 
         .cone-name {
-            color: var(--navy);
-
+            color: #18365d;
             font-family: "Bodoni Moda", serif;
             font-size: 18px;
-            font-weight: 500;
         }
 
         .cone-price {
-            margin-top: 6px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 9px;
+            color: #345d8c;
+            margin-top: 5px;
         }
 
         .topping-grid {
             display: grid;
-
-            grid-template-columns: 1.1fr 0.9fr 1fr;
-
-            gap: 28px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .topping-card {
-            padding: 24px 0 16px;
-
-            border-top: 1px solid var(--navy);
-        }
-
-        .topping-card:nth-child(2) {
-            margin-top: 32px;
-        }
-
-        .topping-number {
-            margin: 0 0 23px;
-
-            color: var(--ceramic-blue);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.4px;
+            border-top: 1px solid #18365d;
+            padding-top: 18px;
         }
 
         .topping-card h3 {
-            margin: 0 0 5px;
-
-            font-size: 29px;
-            font-weight: 400;
+            margin: 0;
         }
 
         .topping-description {
-            margin: 0 0 21px;
-
-            color: var(--muted);
-
+            color: #696964;
             font-family: "Bodoni Moda", serif;
-            font-size: 15px;
             font-style: italic;
-        }
-
-        .topping-detail {
-            padding: 11px 0;
-
-            border-top: 1px solid var(--soft-line);
-        }
-
-        .topping-detail summary {
-            color: var(--navy);
-
-            font-size: 14px;
-        }
-
-        .topping-detail summary::after {
-            color: var(--ceramic-blue);
-
-            font-size: 19px;
-        }
-
-        .topping-detail p {
-            margin: 7px 0 2px;
-
-            color: #66645f;
-
-            font-size: 12px;
-
-            line-height: 1.6;
         }
 
         .extra-grid {
             display: grid;
-
-            grid-template-columns: 1.15fr 0.85fr;
-
-            gap: 28px;
-
-            align-items: start;
-        }
-
-        .extra-item {
-            overflow: hidden;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
         .extra-image {
             width: 100%;
-
-            display: block;
-
+            height: 330px;
             object-fit: cover;
-        }
-
-        .extra-item:first-child .extra-image {
-            height: 390px;
-        }
-
-        .extra-item:last-child .extra-image {
-            height: 325px;
+            display: block;
         }
 
         .extra-content {
-            padding: 25px 27px 28px;
+            padding: 22px;
+            background-color: #18365d;
+            color: #f4efe5;
         }
 
-        .extra-item:first-child .extra-content {
-            background-color: var(--navy);
-
-            color: var(--ivory);
-        }
-
-        .extra-item:last-child {
-            margin-top: 50px;
-        }
-
-        .extra-item:last-child .extra-content {
-            background-color: var(--vanilla);
-        }
-
-        .extra-item h3 {
-            margin: 0 0 8px;
-
-            font-size: 31px;
-            font-weight: 400;
-        }
-
-        .extra-item:first-child h3 {
-            color: var(--ivory);
-        }
-
-        .extra-item:last-child h3 {
-            color: var(--navy);
-        }
-
-        .extra-description {
-            margin: 0 0 12px;
-        }
-
-        .extra-item:first-child .extra-description {
-            color: #ded9d0;
+        .extra-content h3 {
+            color: #f4efe5;
+            margin-top: 0;
         }
 
         .extra-price {
-            margin: 12px 0;
-
-            color: var(--vanilla);
-
+            color: #e8d7a8;
             font-family: "Bodoni Moda", serif;
-            font-size: 48px;
-
-            line-height: 1;
+            font-size: 40px;
+            margin: 10px 0;
         }
 
         .extra-note {
-            margin: 0;
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            color: #e8d7a8;
+            font-size: 10px;
             text-transform: uppercase;
-
-            letter-spacing: 1.3px;
-        }
-
-        .extra-item:first-child .extra-note {
-            color: var(--vanilla);
-        }
-
-        .club-prices {
-            margin-top: 18px;
         }
 
         .club-row {
             display: flex;
-
             justify-content: space-between;
-
-            padding: 9px 0;
-
-            border-bottom: 1px solid rgba(24, 54, 93, 0.2);
-        }
-
-        .club-row:last-child {
-            border-bottom: none;
-        }
-
-        .club-row span {
-            color: var(--navy);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #8fa0b3;
         }
 
         footer {
             display: flex;
-
             justify-content: space-between;
-            align-items: center;
-
-            gap: 25px;
-
-            margin-top: 110px;
-
+            margin-top: 90px;
             padding-top: 15px;
-
-            border-top: 1px solid var(--navy);
-
-            color: var(--navy);
-
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-
+            border-top: 1px solid #18365d;
+            color: #18365d;
+            font-size: 9px;
             text-transform: uppercase;
-
-            letter-spacing: 1.1px;
         }
 
         footer p {
             margin: 0;
         }
 
-        @media (max-width: 900px) {
-
-            body {
-                padding: 0 24px 60px;
-            }
-
-            .hero {
+        @media (max-width: 800px) {
+            .hero,
+            .about-layout {
                 grid-template-columns: 1fr;
-
-                gap: 30px;
             }
 
             .hero-right {
-                padding: 20px 0 0;
-
                 border-left: none;
-                border-top: 1px solid var(--navy);
+                border-top: 1px solid #18365d;
+                padding: 20px 0 0;
             }
 
             h1 {
-                font-size: 75px;
-            }
-
-            .brand-photo img {
-                height: 350px;
-            }
-
-            .about-layout {
-                grid-template-columns: 1fr;
-
-                gap: 22px;
+                font-size: 68px;
             }
 
             .locations {
                 grid-template-columns: 1fr 1fr;
             }
 
-            .location:nth-child(2) img {
-                height: 305px;
-                margin-top: 0;
-            }
-
-            nav {
-                gap: 18px;
-            }
-
             .parlor-hours {
-                grid-template-columns: 1fr 1fr;
-
-                gap: 20px;
+                grid-template-columns: 1fr;
             }
-
-            .parlor-hours > div {
-                grid-column: 1 / -1;
-            }
-
-            .flavor-section:nth-child(1),
-            .flavor-section:nth-child(2),
-            .flavor-section:nth-child(3),
-            .flavor-section:nth-child(4) {
-                grid-column: span 6;
-            }
-
-            .extra-item:last-child {
-                margin-top: 0;
-            }
-
         }
 
-        @media (max-width: 650px) {
-
+        @media (max-width: 600px) {
             body {
-                padding: 0 18px 45px;
-            }
-
-            header {
-                align-items: flex-start;
-
-                gap: 20px;
-            }
-
-            .logo {
-                font-size: 20px;
+                padding: 0 18px 40px;
             }
 
             nav {
+                gap: 12px;
                 flex-wrap: wrap;
-
                 justify-content: flex-end;
-
-                gap: 8px 15px;
-            }
-
-            .hero {
-                padding: 45px 0 34px;
             }
 
             h1 {
-                font-size: 55px;
-
-                letter-spacing: -3px;
+                font-size: 50px;
             }
 
-            .brand-subtitle {
-                font-size: 25px;
+            h2 {
+                font-size: 34px;
             }
 
             .brand-photo img {
                 height: 250px;
             }
 
-            .brand-photo-info {
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 2px;
-            }
-
-            h2 {
-                font-size: 37px;
-            }
-
-            section {
-                margin-top: 70px;
-            }
-
-            #about {
-                margin-top: 55px;
-            }
-
-            .locations {
+            .locations,
+            .flavor-grid,
+            .topping-grid,
+            .extra-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .location img,
-            .location:nth-child(2) img {
-                height: 260px;
-            }
-
-            .parlor-hours {
-                grid-template-columns: 1fr;
-
-                gap: 17px;
-            }
-
-            .parlor-hours > div {
-                grid-column: auto;
             }
 
             .scoop-headings,
             .scoop-values {
                 grid-template-columns: repeat(2, 1fr);
-
-                row-gap: 28px;
-            }
-
-            .flavor-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .flavor-section:nth-child(1),
-            .flavor-section:nth-child(2),
-            .flavor-section:nth-child(3),
-            .flavor-section:nth-child(4) {
-                grid-column: auto;
+                row-gap: 25px;
             }
 
             .cone-grid {
@@ -1082,85 +512,41 @@
 
             .cone-item {
                 text-align: left;
-
                 border-right: none;
-                border-bottom: 1px solid rgba(24, 54, 93, 0.2);
-            }
-
-            .cone-item:last-child {
-                border-bottom: none;
-            }
-
-            .topping-grid,
-            .extra-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .topping-card:nth-child(2) {
-                margin-top: 0;
-            }
-
-            .extra-item:first-child .extra-image,
-            .extra-item:last-child .extra-image {
-                height: 270px;
+                border-bottom: 1px solid #c9c2b7;
             }
 
             footer {
                 flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 6px;
-
-                margin-top: 80px;
+                gap: 5px;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
-
     <header>
-
-        <div class="logo">
-            Clementine's
-        </div>
+        <div class="logo">Clementine's</div>
 
         <nav>
-
             <a href="#about">About</a>
-
             <a href="#locations">Parlors</a>
-
             <a href="#flavors">Flavors</a>
-
             <a href="#toppings">Toppings</a>
-
         </nav>
-
     </header>
-
 
     <div class="hero">
 
-        <div class="hero-left">
+        <div>
+            <p class="eyebrow">St. Louis microcreamery</p>
 
-            <p class="eyebrow">
-                St. Louis microcreamery
-            </p>
-
-            <h1>
-                Clementine's
-            </h1>
+            <h1>Clementine's</h1>
 
             <p class="brand-subtitle">
                 Naughty & nice ice cream
             </p>
-
         </div>
 
         <div class="hero-right">
@@ -1177,7 +563,6 @@
 
     </div>
 
-
     <div class="brand-photo">
 
         <img
@@ -1185,25 +570,17 @@
             alt="Clementine's Naughty and Nice Ice Cream storefront sign">
 
         <div class="brand-photo-info">
-
-            <span>
-                Clementine's Naughty & Nice
-            </span>
-
-            <span>
-                St. Louis, Missouri
-            </span>
-
+            <span>Clementine's Naughty & Nice</span>
+            <span>St. Louis, Missouri</span>
         </div>
 
     </div>
-
 
     <section id="about">
 
         <div class="about-layout">
 
-            <div class="about-side">
+            <div>
 
                 <p class="section-label">
                     About
@@ -1242,7 +619,6 @@
 
     </section>
 
-
     <section id="locations">
 
         <p class="section-label">
@@ -1254,7 +630,6 @@
         </h2>
 
         <div class="locations">
-
 
             <div class="location">
 
@@ -1285,7 +660,6 @@
 
             </div>
 
-
             <div class="location">
 
                 <p class="location-number">
@@ -1314,7 +688,6 @@
                 </a>
 
             </div>
-
 
             <div class="location">
 
@@ -1345,9 +718,7 @@
 
             </div>
 
-
         </div>
-
 
         <div class="parlor-hours">
 
@@ -1377,7 +748,6 @@
 
     </section>
 
-
     <section>
 
         <p class="section-label">
@@ -1391,57 +761,36 @@
         <div class="scoop-box">
 
             <div class="scoop-headings">
-
                 <div class="scoop-name">Mini</div>
-
                 <div class="scoop-name">Petite</div>
-
                 <div class="scoop-name">Moyen</div>
-
                 <div class="scoop-name">Grand Cru</div>
-
             </div>
 
             <div class="scoop-values">
 
                 <div>
-
                     <div class="scoop-number">1</div>
-
                     <div class="scoop-flavor">flavor</div>
-
                     <div class="scoop-price">$6</div>
-
                 </div>
 
                 <div>
-
                     <div class="scoop-number">2</div>
-
                     <div class="scoop-flavor">flavors</div>
-
                     <div class="scoop-price">$8</div>
-
                 </div>
 
                 <div>
-
                     <div class="scoop-number">3</div>
-
                     <div class="scoop-flavor">flavors</div>
-
                     <div class="scoop-price">$9.50</div>
-
                 </div>
 
                 <div>
-
                     <div class="scoop-number">5</div>
-
                     <div class="scoop-flavor">flavors</div>
-
                     <div class="scoop-price">$15</div>
-
                 </div>
 
             </div>
@@ -1449,7 +798,6 @@
         </div>
 
     </section>
-
 
     <section id="flavors">
 
@@ -1466,7 +814,6 @@
         </p>
 
         <div class="flavor-grid">
-
 
             <div class="flavor-section">
 
@@ -1503,7 +850,6 @@
                 </details>
 
             </div>
-
 
             <div class="flavor-section">
 
@@ -1607,7 +953,6 @@
 
             </div>
 
-
             <div class="flavor-section">
 
                 <h3>
@@ -1647,7 +992,6 @@
 
             </div>
 
-
             <div class="flavor-section">
 
                 <h3>
@@ -1680,11 +1024,9 @@
 
             </div>
 
-
         </div>
 
     </section>
-
 
     <section>
 
@@ -1727,7 +1069,6 @@
 
     </section>
 
-
     <section id="toppings">
 
         <p class="section-label">
@@ -1744,7 +1085,6 @@
 
         <div class="topping-grid">
 
-
             <div class="topping-card">
 
                 <p class="topping-number">
@@ -1759,23 +1099,22 @@
                     Sweet, sticky, and made for drizzling.
                 </p>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Hot Fudge</summary>
                     <p>Warm chocolate poured over the top.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Salted Caramel</summary>
                     <p>Buttery caramel finished with a little salt.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Hot Honey</summary>
                     <p>Sweet honey with a little heat.</p>
                 </details>
 
             </div>
-
 
             <div class="topping-card">
 
@@ -1791,23 +1130,22 @@
                     For a little extra bite.
                 </p>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Candied Pecans</summary>
                     <p>Sweet, toasted pecans with a crisp finish.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>PB Crumbles</summary>
                     <p>Salty-sweet peanut butter crunch.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Chocolate Flakes</summary>
                     <p>Thin pieces of chocolate for a delicate crunch.</p>
                 </details>
 
             </div>
-
 
             <div class="topping-card">
 
@@ -1823,28 +1161,26 @@
                     The finishing touch.
                 </p>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Whipped Cream</summary>
                     <p>Light, soft, and piled high.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Sprinkles</summary>
                     <p>A little color and crunch.</p>
                 </details>
 
-                <details class="topping-detail">
+                <details>
                     <summary>Cherries</summary>
                     <p>The classic finish on top.</p>
                 </details>
 
             </div>
 
-
         </div>
 
     </section>
-
 
     <section>
 
@@ -1858,8 +1194,7 @@
 
         <div class="extra-grid">
 
-
-            <div class="extra-item">
+            <div>
 
                 <img
                     class="extra-image"
@@ -1872,7 +1207,7 @@
                         Sunday Sundae
                     </h3>
 
-                    <p class="extra-description">
+                    <p>
                         2 scoops + 3 toppings
                     </p>
 
@@ -1888,8 +1223,7 @@
 
             </div>
 
-
-            <div class="extra-item">
+            <div>
 
                 <img
                     class="extra-image"
@@ -1902,11 +1236,11 @@
                         Pint of the Month Club
                     </h3>
 
-                    <p class="extra-description">
+                    <p>
                         Ice cream for one year, one pint at a time.
                     </p>
 
-                    <div class="club-prices">
+                    <div>
 
                         <div class="club-row">
                             <div>Naughty</div>
@@ -1929,11 +1263,9 @@
 
             </div>
 
-
         </div>
 
     </section>
-
 
     <footer>
 
@@ -1946,7 +1278,6 @@
         </p>
 
     </footer>
-
 
 </body>
 
