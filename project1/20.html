@@ -37,6 +37,15 @@
         .scoop-number,
         .cone-name {
             font-family: "Bodoni Moda", serif;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        .logo,
+        nav a {
+            color: #7f2531;
         }
 
         a {
@@ -50,7 +59,6 @@
         }
 
         .logo {
-            color: #7f2531;
             font-size: 30px;
         }
 
@@ -62,15 +70,10 @@
         }
 
         nav a {
-            color: #7f2531;
             text-decoration: none;
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        nav a:hover {
-            color: #a93443;
         }
 
         .hero {
@@ -78,7 +81,7 @@
             grid-template-columns: 2fr 1fr;
             gap: 50px;
             align-items: end;
-            padding: 70px 0 55px;
+            padding: 65px 0 50px;
             border-bottom: 1px solid #a93443;
         }
 
@@ -96,10 +99,8 @@
         }
 
         h1 {
-            color: #7f2531;
             font-size: 88px;
-            font-weight: 400;
-            line-height: 0.9;
+            line-height: .9;
             letter-spacing: -4px;
             margin: 0;
         }
@@ -120,7 +121,7 @@
             font-family: "Bodoni Moda", serif;
             font-size: 22px;
             font-style: italic;
-            margin-top: 0;
+            margin: 0;
         }
 
         .features {
@@ -134,11 +135,18 @@
             margin-top: 35px;
         }
 
-        .brand-photo img {
+        .brand-photo img,
+        .signature-feature img,
+        .topping-image,
+        .extra-image,
+        .location img {
             width: 100%;
-            height: 430px;
             object-fit: cover;
             display: block;
+        }
+
+        .brand-photo img {
+            height: 430px;
         }
 
         .brand-photo-info {
@@ -152,21 +160,23 @@
         }
 
         section {
-            margin-top: 85px;
+            margin-top: 70px;
         }
 
         h2 {
-            color: #7f2531;
             font-size: 43px;
-            font-weight: 400;
             line-height: 1;
-            margin: 5px 0 25px;
+            margin: 4px 0 22px;
         }
 
         h3 {
-            color: #7f2531;
             font-size: 27px;
-            margin-bottom: 8px;
+            line-height: 1.1;
+            margin: 0 0 8px;
+        }
+
+        .section-label {
+            margin-bottom: 0;
         }
 
         .about-layout {
@@ -190,40 +200,38 @@
         .signature-feature {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
-            margin-top: 40px;
+            margin-top: 22px;
             border-top: 1px solid #a93443;
             border-bottom: 1px solid #a93443;
         }
 
         .signature-feature img {
-            width: 100%;
-            height: 330px;
-            object-fit: cover;
-            display: block;
+            height: 310px;
         }
 
         .signature-detail {
             background: #faf7f2;
-            padding: 30px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .signature-detail h3 {
-            font-size: 36px;
-            font-weight: 400;
-            margin: 5px 0 15px;
+            font-size: 32px;
+            margin: 4px 0 10px;
         }
 
         .signature-detail p {
             color: #6f6a65;
+            margin: 5px 0;
         }
 
         .signature-allergens {
             color: #7f2531 !important;
             font-size: 9px;
             text-transform: uppercase;
+            margin-top: 12px !important;
         }
 
         .scoop-box {
@@ -269,11 +277,16 @@
             font-size: 18px;
         }
 
-        .small-note {
+        .small-note,
+        .topping-description,
+        .cone-description {
             color: #6f6a65;
             font-family: "Bodoni Moda", serif;
             font-style: italic;
-            margin-top: -15px;
+        }
+
+        .small-note {
+            margin: -12px 0 22px;
         }
 
         .flavor-grid {
@@ -305,9 +318,8 @@
         }
 
         .flavor-section h3 {
-            margin: 0 0 5px;
             font-size: 32px;
-            font-weight: 400;
+            margin-bottom: 4px;
         }
 
         .flavor-section:nth-child(4) h3 {
@@ -319,9 +331,11 @@
             font-size: 9px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: 0;
         }
 
-        .flavor-section:nth-child(4) .flavor-label {
+        .flavor-section:nth-child(4) .flavor-label,
+        .flavor-section:nth-child(4) summary::after {
             color: #c9d3db;
         }
 
@@ -334,6 +348,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
             list-style: none;
             cursor: pointer;
             font-weight: 500;
@@ -348,6 +363,7 @@
             color: #a93443;
             font-family: "Bodoni Moda", serif;
             font-size: 21px;
+            line-height: 1;
         }
 
         details[open] summary::after {
@@ -361,10 +377,6 @@
 
         .flavor-section:nth-child(4) details {
             border-color: #aebdc8;
-        }
-
-        .flavor-section:nth-child(4) summary::after {
-            color: #c9d3db;
         }
 
         .flavor-section:nth-child(4) details p {
@@ -393,8 +405,15 @@
             font-size: 18px;
         }
 
+        .cone-description {
+            line-height: 1.4;
+            margin-top: 12px;
+        }
+
         .cone-price {
             color: #a93443;
+            font-size: 13px;
+            font-weight: 500;
             margin-top: 8px;
         }
 
@@ -405,10 +424,7 @@
         }
 
         .topping-image {
-            width: 100%;
             height: 285px;
-            object-fit: cover;
-            display: block;
         }
 
         .topping-content {
@@ -420,12 +436,6 @@
             margin: 0;
         }
 
-        .topping-description {
-            color: #6f6a65;
-            font-family: "Bodoni Moda", serif;
-            font-style: italic;
-        }
-
         .topping-detail {
             border-top: 1px solid #ded7cf;
         }
@@ -434,17 +444,21 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
+            align-items: stretch;
+        }
+
+        .extra-item {
+            display: flex;
+            flex-direction: column;
         }
 
         .extra-image {
-            width: 100%;
             height: 330px;
-            object-fit: cover;
-            display: block;
         }
 
         .extra-content {
             padding: 24px 26px;
+            flex: 1;
         }
 
         .extra-item:first-child .extra-content {
@@ -458,10 +472,6 @@
 
         .extra-item:first-child h3 {
             color: #f3eee6;
-        }
-
-        .extra-item h3 {
-            margin-top: 0;
         }
 
         .extra-price {
@@ -495,17 +505,11 @@
         }
 
         .location img {
-            width: 100%;
             height: 280px;
-            object-fit: cover;
-            display: block;
             margin-bottom: 15px;
         }
 
-        .location h3 {
-            margin: 5px 0;
-        }
-
+        .location h3,
         .location p {
             margin: 5px 0;
         }
@@ -536,7 +540,7 @@
         footer {
             display: flex;
             justify-content: space-between;
-            margin-top: 90px;
+            margin-top: 80px;
             padding-top: 15px;
             border-top: 1px solid #a93443;
             color: #7f2531;
@@ -584,6 +588,10 @@
                 gap: 10px 18px;
             }
 
+            section {
+                margin-top: 55px;
+            }
+
             h1 {
                 font-size: 50px;
             }
@@ -597,9 +605,9 @@
                 height: 250px;
             }
 
-            .brand-photo-info {
+            .brand-photo-info,
+            footer {
                 flex-direction: column;
-                align-items: flex-start;
             }
 
             .locations,
@@ -624,13 +632,16 @@
                 border-bottom: 1px solid #d7aab0;
             }
 
+            .cone-item:last-child {
+                border-bottom: none;
+            }
+
             .topping-image,
             .extra-image {
                 height: 260px;
             }
 
             footer {
-                flex-direction: column;
                 gap: 5px;
             }
         }
@@ -640,10 +651,7 @@
 <body>
 
     <header>
-
-        <div class="logo">
-            Clementine's
-        </div>
+        <div class="logo">Clementine's</div>
 
         <nav>
             <a href="#about">About</a>
@@ -651,31 +659,17 @@
             <a href="#toppings">Toppings</a>
             <a href="#locations">Parlors</a>
         </nav>
-
     </header>
-
 
     <div class="hero">
 
         <div>
-
-            <p class="eyebrow">
-                St. Louis microcreamery
-            </p>
-
-            <h1>
-                Clementine's
-            </h1>
-
-            <p class="brand-subtitle">
-                Naughty & nice ice cream
-            </p>
-
+            <p class="eyebrow">St. Louis microcreamery</p>
+            <h1>Clementine's</h1>
+            <p class="brand-subtitle">Naughty & nice ice cream</p>
         </div>
 
-
         <div class="hero-right">
-
             <p class="tagline">
                 Small-batch ice cream and sorbet made locally in St. Louis.
             </p>
@@ -683,58 +677,35 @@
             <p class="features">
                 Dairy-free • Gluten-free • Vegan • Alcohol-infused
             </p>
-
         </div>
 
     </div>
-
 
     <div class="brand-photo">
 
-        <img
-            src="Images/Clementine.png"
+        <img src="Images/Clementine.png"
             alt="Clementine's Naughty and Nice Ice Cream storefront sign">
 
         <div class="brand-photo-info">
-
-            <span>
-                Clementine's Naughty & Nice
-            </span>
-
-            <span>
-                St. Louis, Missouri
-            </span>
-
+            <span>Clementine's Naughty & Nice</span>
+            <span>St. Louis, Missouri</span>
         </div>
 
     </div>
-
 
     <section id="about">
 
         <div class="about-layout">
 
             <div>
-
-                <p class="section-label">
-                    About
-                </p>
-
-                <p class="about-number">
-                    The Microcreamery
-                </p>
-
+                <p class="section-label">About</p>
+                <p class="about-number">The Microcreamery</p>
             </div>
 
-
             <div>
-
-                <h2>
-                    A little about Clementine's
-                </h2>
+                <h2>A little about Clementine's</h2>
 
                 <div class="about-copy">
-
                     <p>
                         Clementine's is a St. Louis microcreamery making small-batch
                         ice creams and sorbets locally.
@@ -745,18 +716,14 @@
                         <span class="highlight">Gooey Butter Cake</span> is one of their
                         best-known flavors.
                     </p>
-
                 </div>
-
             </div>
 
         </div>
 
-
         <div class="signature-feature">
 
-            <img
-                src="Images/gooey-butter-cake.png"
+            <img src="Images/gooey-butter-cake.png"
                 alt="Clementine's Gooey Butter Cake ice cream">
 
             <div class="signature-detail">
@@ -765,9 +732,7 @@
                     Signature Flavor / St. Louis
                 </p>
 
-                <h3>
-                    Gooey Butter Cake
-                </h3>
+                <h3>Gooey Butter Cake</h3>
 
                 <p>
                     Cream cheese ice cream layered with chunks of
@@ -784,29 +749,19 @@
 
     </section>
 
-
     <section>
 
-        <p class="section-label">
-            Menu
-        </p>
-
-        <h2>
-            Build your scoop
-        </h2>
-
+        <p class="section-label">Menu</p>
+        <h2>Build your scoop</h2>
 
         <div class="scoop-box">
 
             <div class="scoop-headings">
-
                 <div class="scoop-name">Mini</div>
                 <div class="scoop-name">Petite</div>
                 <div class="scoop-name">Moyen</div>
                 <div class="scoop-name">Grand Cru</div>
-
             </div>
-
 
             <div class="scoop-values">
 
@@ -840,34 +795,21 @@
 
     </section>
 
-
     <section id="flavors">
 
-        <p class="section-label">
-            Flavors
-        </p>
-
-        <h2>
-            Choose your flavor
-        </h2>
+        <p class="section-label">Flavors</p>
+        <h2>Choose your flavor</h2>
 
         <p class="small-note">
             Click a flavor to see its description and allergens.
         </p>
 
-
         <div class="flavor-grid">
-
 
             <div class="flavor-section">
 
-                <h3>
-                    Naughty
-                </h3>
-
-                <p class="flavor-label">
-                    Alcohol-infused
-                </p>
+                <h3>Naughty</h3>
+                <p class="flavor-label">Alcohol-infused</p>
 
                 <details>
                     <summary>Maple Bourbon Pecan</summary>
@@ -895,16 +837,10 @@
 
             </div>
 
-
             <div class="flavor-section">
 
-                <h3>
-                    Nice
-                </h3>
-
-                <p class="flavor-label">
-                    Classic favorites
-                </p>
+                <h3>Nice</h3>
+                <p class="flavor-label">Classic favorites</p>
 
                 <details>
                     <summary>Gooey Butter Cake</summary>
@@ -998,16 +934,10 @@
 
             </div>
 
-
             <div class="flavor-section">
 
-                <h3>
-                    Vegan
-                </h3>
-
-                <p class="flavor-label">
-                    Dairy-free
-                </p>
+                <h3>Vegan</h3>
+                <p class="flavor-label">Dairy-free</p>
 
                 <details>
                     <summary>Coconut Fudge</summary>
@@ -1038,16 +968,10 @@
 
             </div>
 
-
             <div class="flavor-section">
 
-                <h3>
-                    The Poe Collection
-                </h3>
-
-                <p class="flavor-label">
-                    A little mysterious
-                </p>
+                <h3>The Poe Collection</h3>
+                <p class="flavor-label">A little mysterious</p>
 
                 <details>
                     <summary>The Raven</summary>
@@ -1071,51 +995,58 @@
 
             </div>
 
-
         </div>
 
     </section>
 
-
     <section>
 
-        <p class="section-label">
-            Pick your base
-        </p>
-
-        <h2>
-            Cone or cup?
-        </h2>
+        <p class="section-label">Pick your base</p>
+        <h2>Cone or cup?</h2>
 
         <p class="small-note">
-            Click an option to see the price.
+            Click an option for a little more.
         </p>
-
 
         <div class="cone-grid">
 
             <details class="cone-item">
                 <summary class="cone-name">Waffle Cone</summary>
+                <p class="cone-description">
+                    Crisp, golden, and perfect for a classic scoop.
+                </p>
                 <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
                 <summary class="cone-name">Waffle Bowl</summary>
+                <p class="cone-description">
+                    All the waffle crunch, with a little more room.
+                </p>
                 <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
                 <summary class="cone-name">Gluten-Free Cone</summary>
+                <p class="cone-description">
+                    A crisp gluten-free option for your favorite scoop.
+                </p>
                 <div class="cone-price">+$2.50</div>
             </details>
 
             <details class="cone-item">
                 <summary class="cone-name">Konery Cone</summary>
+                <p class="cone-description">
+                    A specialty cone for a little extra crunch.
+                </p>
                 <div class="cone-price">+$2</div>
             </details>
 
             <details class="cone-item">
                 <summary class="cone-name">Extra Cup</summary>
+                <p class="cone-description">
+                    A little extra room for sharing, saving, or less mess.
+                </p>
                 <div class="cone-price">+$0.25</div>
             </details>
 
@@ -1123,41 +1054,27 @@
 
     </section>
 
-
     <section id="toppings">
 
-        <p class="section-label">
-            Toppings
-        </p>
-
-        <h2>
-            Top it off
-        </h2>
+        <p class="section-label">Toppings</p>
+        <h2>Top it off</h2>
 
         <p class="small-note">
             Click each topping for a little more.
         </p>
 
-
         <div class="topping-grid">
-
 
             <div class="topping-card">
 
-                <img
-                    class="topping-image"
+                <img class="topping-image"
                     src="Images/Sauces.png"
                     alt="Ice cream topped with sauce">
 
                 <div class="topping-content">
 
-                    <p class="topping-number">
-                        Drizzle
-                    </p>
-
-                    <h3>
-                        Sauces
-                    </h3>
+                    <p class="topping-number">Drizzle</p>
+                    <h3>Sauces</h3>
 
                     <p class="topping-description">
                         Sweet, sticky, and made for drizzling.
@@ -1182,23 +1099,16 @@
 
             </div>
 
-
             <div class="topping-card">
 
-                <img
-                    class="topping-image"
+                <img class="topping-image"
                     src="Images/Crunch.png"
                     alt="Ice cream with crunchy topping">
 
                 <div class="topping-content">
 
-                    <p class="topping-number">
-                        Texture
-                    </p>
-
-                    <h3>
-                        Crunch
-                    </h3>
+                    <p class="topping-number">Texture</p>
+                    <h3>Crunch</h3>
 
                     <p class="topping-description">
                         For a little extra bite.
@@ -1223,23 +1133,16 @@
 
             </div>
 
-
             <div class="topping-card">
 
-                <img
-                    class="topping-image"
+                <img class="topping-image"
                     src="Images/Classics.png"
                     alt="Classic ice cream topping">
 
                 <div class="topping-content">
 
-                    <p class="topping-number">
-                        Classic
-                    </p>
-
-                    <h3>
-                        Classics
-                    </h3>
+                    <p class="topping-number">Classic</p>
+                    <h3>Classics</h3>
 
                     <p class="topping-description">
                         The finishing touch.
@@ -1264,38 +1167,26 @@
 
             </div>
 
-
         </div>
 
     </section>
 
-
     <section>
 
-        <p class="section-label">
-            Extras
-        </p>
-
-        <h2>
-            A little extra
-        </h2>
-
+        <p class="section-label">Extras</p>
+        <h2>A little extra</h2>
 
         <div class="extra-grid">
 
-
             <div class="extra-item">
 
-                <img
-                    class="extra-image"
+                <img class="extra-image"
                     src="Images/Sundae.png"
                     alt="Clementine's Sunday Sundae">
 
                 <div class="extra-content">
 
-                    <h3>
-                        Sunday Sundae
-                    </h3>
+                    <h3>Sunday Sundae</h3>
 
                     <p>
                         2 scoops + 3 toppings
@@ -1313,80 +1204,58 @@
 
             </div>
 
-
             <div class="extra-item">
 
-                <img
-                    class="extra-image"
+                <img class="extra-image"
                     src="Images/Pint.png"
                     alt="Clementine's Pint of the Month Club">
 
                 <div class="extra-content">
 
-                    <h3>
-                        Pint of the Month Club
-                    </h3>
+                    <h3>Pint of the Month Club</h3>
 
                     <p>
                         Ice cream for one year, one pint at a time.
                     </p>
 
-                    <div>
+                    <div class="club-row">
+                        <div>Naughty</div>
+                        <span>$159</span>
+                    </div>
 
-                        <div class="club-row">
-                            <div>Naughty</div>
-                            <span>$159</span>
-                        </div>
+                    <div class="club-row">
+                        <div>Nice</div>
+                        <span>$129</span>
+                    </div>
 
-                        <div class="club-row">
-                            <div>Nice</div>
-                            <span>$129</span>
-                        </div>
-
-                        <div class="club-row">
-                            <div>Vegan</div>
-                            <span>$159</span>
-                        </div>
-
+                    <div class="club-row">
+                        <div>Vegan</div>
+                        <span>$159</span>
                     </div>
 
                 </div>
 
             </div>
 
-
         </div>
 
     </section>
 
-
     <section id="locations">
 
-        <p class="section-label">
-            Parlors
-        </p>
-
-        <h2>
-            Find your parlor
-        </h2>
-
+        <p class="section-label">Parlors</p>
+        <h2>Find your parlor</h2>
 
         <div class="locations">
 
-
             <div class="location">
 
-                <p class="location-number">
-                    Clayton
-                </p>
+                <p class="location-number">Clayton</p>
 
-                <img
-                    src="Images/clayton.png"
+                <img src="Images/clayton.png"
                     alt="Clementine's Clayton location">
 
-                <h3>
-                    Clayton
-                </h3>
+                <h3>Clayton</h3>
 
                 <p>
                     730 De Mun Avenue<br>
@@ -1403,20 +1272,14 @@
 
             </div>
 
-
             <div class="location">
 
-                <p class="location-number">
-                    Central West End
-                </p>
+                <p class="location-number">Central West End</p>
 
-                <img
-                    src="Images/central-west-end.png"
+                <img src="Images/central-west-end.png"
                     alt="Clementine's Central West End location">
 
-                <h3>
-                    Central West End
-                </h3>
+                <h3>Central West End</h3>
 
                 <p>
                     308 N Euclid Avenue<br>
@@ -1433,20 +1296,14 @@
 
             </div>
 
-
             <div class="location">
 
-                <p class="location-number">
-                    Lafayette Square
-                </p>
+                <p class="location-number">Lafayette Square</p>
 
-                <img
-                    src="Images/lafayette-square.png"
+                <img src="Images/lafayette-square.png"
                     alt="Clementine's Lafayette Square location">
 
-                <h3>
-                    Lafayette Square
-                </h3>
+                <h3>Lafayette Square</h3>
 
                 <p>
                     1637 S 18th Street<br>
@@ -1463,22 +1320,13 @@
 
             </div>
 
-
         </div>
-
 
         <div class="parlor-hours">
 
             <div>
-
-                <p class="hours-small">
-                    Hours
-                </p>
-
-                <h3>
-                    Parlor hours
-                </h3>
-
+                <p class="hours-small">Hours</p>
+                <h3>Parlor hours</h3>
             </div>
 
             <p>
@@ -1494,7 +1342,6 @@
         </div>
 
     </section>
-
 
     <footer>
 
