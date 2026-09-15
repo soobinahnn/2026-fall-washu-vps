@@ -7,7 +7,7 @@
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
 
         * {
             box-sizing: border-box;
@@ -31,8 +31,12 @@
         h1,
         h2,
         h3,
-        .logo {
-            font-family: "Bodoni Moda", serif;
+        .logo,
+        nav,
+        summary,
+        .scoop-name,
+        .scoop-number {
+            font-family: "Manrope", sans-serif;
         }
 
         header {
@@ -45,7 +49,8 @@
 
         .logo {
             color: #18365d;
-            font-size: 24px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
         nav {
@@ -57,74 +62,68 @@
             color: #18365d;
             text-decoration: none;
             font-size: 10px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        nav a:hover {
-            color: #345d8c;
-        }
-
         .hero {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: end;
-            padding: 65px 0;
+            text-align: center;
+            padding: 50px 20px 40px;
         }
 
         .eyebrow,
         .section-label,
+        .about-number,
         .location-number,
         .hours-small,
         .topping-number {
             color: #345d8c;
             font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
         }
 
         h1 {
             color: #18365d;
-            font-size: 90px;
-            font-weight: 400;
-            line-height: 0.9;
-            letter-spacing: -4px;
+            font-size: 80px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -3px;
             margin: 0;
         }
 
         .brand-subtitle {
             color: #345d8c;
-            font-family: "Bodoni Moda", serif;
-            font-size: 30px;
-            font-style: italic;
-            margin-top: 12px;
-        }
-
-        .hero-right {
-            border-left: 1px solid #18365d;
-            padding-left: 25px;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 12px 0 0;
         }
 
         .tagline {
-            font-family: "Bodoni Moda", serif;
-            font-size: 21px;
-            font-style: italic;
-            margin-top: 0;
+            max-width: 600px;
+            margin: 22px auto 0;
+            color: #696964;
         }
 
         .features {
-            color: #345d8c;
+            color: #18365d;
+            margin-top: 14px;
             font-size: 9px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        .brand-photo {
+            margin-top: 20px;
+        }
+
         .brand-photo img {
             width: 100%;
-            height: 420px;
-            object-fit: cover;
+            height: 400px;
             display: block;
+            object-fit: cover;
         }
 
         .brand-photo-info {
@@ -138,100 +137,48 @@
         }
 
         section {
-            margin-top: 90px;
+            margin-top: 80px;
         }
 
         h2 {
             color: #18365d;
-            font-size: 42px;
-            font-weight: 400;
-            line-height: 1;
+            font-size: 38px;
+            font-weight: 500;
+            line-height: 1.1;
             margin: 5px 0 25px;
         }
 
         h3 {
             color: #18365d;
-            font-size: 26px;
-            margin-bottom: 8px;
+            font-size: 23px;
+        }
+
+        .small-note {
+            color: #696964;
+            font-size: 12px;
+            margin-top: -15px;
         }
 
         .about-layout {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 60px;
-        }
-
-        .about-number {
-            color: #345d8c;
-            font-size: 10px;
+            gap: 55px;
         }
 
         .about-copy {
-            max-width: 650px;
+            max-width: 700px;
             font-size: 16px;
         }
 
         .highlight {
             color: #18365d;
-            font-family: "Bodoni Moda", serif;
-            font-style: italic;
-            font-size: 18px;
-        }
-
-        .locations {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .location {
-            border-top: 1px solid #18365d;
-            padding-top: 12px;
-        }
-
-        .location img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .location h3 {
-            margin: 5px 0;
-        }
-
-        .location p {
-            margin: 5px 0;
-        }
-
-        .location a {
-            color: #18365d;
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 10px;
-            text-transform: uppercase;
-        }
-
-        .parlor-hours {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 30px;
-            margin-top: 35px;
-            padding: 18px 0;
-            border-top: 1px solid #18365d;
-            border-bottom: 1px solid #18365d;
-        }
-
-        .parlor-hours h3,
-        .parlor-hours p {
-            margin: 0;
+            font-weight: 600;
         }
 
         .scoop-box {
             background-color: #18365d;
             color: #f4efe5;
-            padding: 35px 30px;
+            padding: 32px 28px;
         }
 
         .scoop-headings,
@@ -243,26 +190,26 @@
 
         .scoop-headings {
             padding-bottom: 15px;
-            border-bottom: 1px solid #8fa0b3;
-        }
-
-        .scoop-name {
-            font-family: "Bodoni Moda", serif;
-            font-size: 22px;
-            font-style: italic;
+            border-bottom: 1px solid #718197;
         }
 
         .scoop-values {
-            padding-top: 25px;
+            padding-top: 24px;
+        }
+
+        .scoop-name {
+            font-size: 19px;
+            font-weight: 600;
         }
 
         .scoop-number {
-            font-family: "Bodoni Moda", serif;
-            font-size: 60px;
+            font-size: 54px;
+            font-weight: 500;
             line-height: 1;
         }
 
         .scoop-flavor {
+            color: #d9d5ce;
             margin: 8px 0 4px;
             font-size: 9px;
             text-transform: uppercase;
@@ -271,40 +218,56 @@
         .scoop-price {
             color: #e8d7a8;
             font-size: 18px;
-        }
-
-        .small-note {
-            color: #696964;
-            font-family: "Bodoni Moda", serif;
-            font-style: italic;
-            margin-top: -15px;
+            font-weight: 600;
         }
 
         .flavor-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 25px;
         }
 
         .flavor-section {
-            border-top: 1px solid #18365d;
-            padding-top: 15px;
+            padding: 24px;
+        }
+
+        .flavor-section:nth-child(1) {
+            background-color: #fbf8f1;
+            border: 1px solid #c9c2b7;
+        }
+
+        .flavor-section:nth-child(2) {
+            background-color: #e8d7a8;
+        }
+
+        .flavor-section:nth-child(3) {
+            background-color: #b9c9d8;
+        }
+
+        .flavor-section:nth-child(4) {
+            background-color: #18365d;
+            color: #f4efe5;
         }
 
         .flavor-section h3 {
-            margin-top: 0;
+            margin: 0 0 4px;
+        }
+
+        .flavor-section:nth-child(4) h3 {
+            color: #f4efe5;
         }
 
         .flavor-label {
-            color: #345d8c;
-            font-size: 10px;
+            margin: 0 0 15px;
+            font-size: 9px;
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         details {
-            border-bottom: 1px solid #c9c2b7;
             padding: 10px 0;
+            border-top: 1px solid #aaa;
         }
 
         summary {
@@ -313,8 +276,8 @@
             align-items: center;
             list-style: none;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
         }
 
         summary::-webkit-details-marker {
@@ -323,9 +286,7 @@
 
         summary::after {
             content: "+";
-            color: #345d8c;
-            font-family: "Bodoni Moda", serif;
-            font-size: 21px;
+            font-size: 20px;
         }
 
         details[open] summary::after {
@@ -334,7 +295,16 @@
 
         details p {
             margin: 7px 0 0;
+            color: #555654;
             font-size: 13px;
+        }
+
+        .flavor-section:nth-child(4) details {
+            border-color: #718197;
+        }
+
+        .flavor-section:nth-child(4) details p {
+            color: #ddd8d0;
         }
 
         .cone-grid {
@@ -345,81 +315,118 @@
         }
 
         .cone-item {
-            text-align: center;
-            padding: 25px 10px;
-            border-right: 1px solid #c9c2b7;
+            border-top: none;
+            border-right: 1px solid #b9c9d8;
         }
 
         .cone-item:last-child {
             border-right: none;
         }
 
-        .cone-name {
+        .cone-item summary {
             color: #18365d;
-            font-family: "Bodoni Moda", serif;
-            font-size: 18px;
+            justify-content: center;
+            padding: 22px 10px;
+            font-size: 15px;
+        }
+
+        .cone-item summary::after {
+            color: #345d8c;
+            margin-left: 8px;
         }
 
         .cone-price {
             color: #345d8c;
-            margin-top: 5px;
+            text-align: center;
+            padding: 0 10px 20px;
+            font-weight: 600;
         }
 
         .topping-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
         }
 
         .topping-card {
-            border-top: 1px solid #18365d;
-            padding-top: 18px;
+            background-color: #fbf8f1;
+            padding: 22px;
+            border-top: 3px solid #18365d;
+        }
+
+        .topping-card:nth-child(2) {
+            border-color: #345d8c;
+        }
+
+        .topping-card:nth-child(3) {
+            border-color: #e8d7a8;
         }
 
         .topping-card h3 {
-            margin: 0;
+            margin: 0 0 4px;
         }
 
         .topping-description {
             color: #696964;
-            font-family: "Bodoni Moda", serif;
-            font-style: italic;
+            font-size: 13px;
+        }
+
+        .topping-detail {
+            border-top: 1px solid #ddd7cf;
+        }
+
+        .topping-detail summary {
+            color: #18365d;
+            font-size: 14px;
+        }
+
+        .topping-detail summary::after {
+            color: #345d8c;
         }
 
         .extra-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 22px;
         }
 
         .extra-image {
             width: 100%;
-            height: 330px;
-            object-fit: cover;
+            height: 320px;
             display: block;
+            object-fit: cover;
         }
 
         .extra-content {
-            padding: 22px;
+            padding: 24px 26px;
+        }
+
+        .extra-item:first-child .extra-content {
             background-color: #18365d;
             color: #f4efe5;
         }
 
-        .extra-content h3 {
+        .extra-item:last-child .extra-content {
+            background-color: #e8d7a8;
+        }
+
+        .extra-item:first-child h3 {
             color: #f4efe5;
+        }
+
+        .extra-content h3 {
             margin-top: 0;
         }
 
         .extra-price {
             color: #e8d7a8;
-            font-family: "Bodoni Moda", serif;
-            font-size: 40px;
+            font-size: 38px;
+            font-weight: 500;
             margin: 10px 0;
         }
 
         .extra-note {
-            color: #e8d7a8;
-            font-size: 10px;
+            font-size: 9px;
             text-transform: uppercase;
         }
 
@@ -427,13 +434,61 @@
             display: flex;
             justify-content: space-between;
             padding: 8px 0;
-            border-bottom: 1px solid #8fa0b3;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .location {
+            padding-top: 12px;
+            border-top: 2px solid #18365d;
+        }
+
+        .location img {
+            width: 100%;
+            height: 280px;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .location h3,
+        .location p {
+            margin: 5px 0;
+        }
+
+        .location a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #18365d;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .parlor-hours {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+            padding: 18px 0;
+            border-top: 1px solid #18365d;
+            border-bottom: 1px solid #18365d;
+        }
+
+        .parlor-hours h3,
+        .parlor-hours p {
+            margin: 0;
         }
 
         footer {
             display: flex;
             justify-content: space-between;
-            margin-top: 90px;
+            margin-top: 85px;
             padding-top: 15px;
             border-top: 1px solid #18365d;
             color: #18365d;
@@ -445,54 +500,40 @@
             margin: 0;
         }
 
-        @media (max-width: 800px) {
-            .hero,
-            .about-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-right {
-                border-left: none;
-                border-top: 1px solid #18365d;
-                padding: 20px 0 0;
-            }
-
-            h1 {
-                font-size: 68px;
-            }
-
-            .locations {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .parlor-hours {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             body {
-                padding: 0 18px 40px;
+                padding: 0 18px 45px;
+            }
+
+            header {
+                align-items: flex-start;
+                gap: 15px;
             }
 
             nav {
-                gap: 12px;
                 flex-wrap: wrap;
                 justify-content: flex-end;
+                gap: 8px 14px;
             }
 
             h1 {
-                font-size: 50px;
+                font-size: 48px;
             }
 
             h2 {
-                font-size: 34px;
+                font-size: 31px;
             }
 
             .brand-photo img {
                 height: 250px;
             }
 
+            .brand-photo-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-layout,
             .locations,
             .flavor-grid,
             .topping-grid,
@@ -511,9 +552,21 @@
             }
 
             .cone-item {
-                text-align: left;
                 border-right: none;
-                border-bottom: 1px solid #c9c2b7;
+                border-bottom: 1px solid #b9c9d8;
+            }
+
+            .cone-item summary {
+                justify-content: space-between;
+            }
+
+            .extra-image,
+            .location img {
+                height: 260px;
+            }
+
+            .parlor-hours {
+                grid-template-columns: 1fr;
             }
 
             footer {
@@ -531,35 +584,33 @@
 
         <nav>
             <a href="#about">About</a>
-            <a href="#locations">Parlors</a>
             <a href="#flavors">Flavors</a>
             <a href="#toppings">Toppings</a>
+            <a href="#locations">Parlors</a>
         </nav>
     </header>
 
     <div class="hero">
 
-        <div>
-            <p class="eyebrow">St. Louis microcreamery</p>
+        <p class="eyebrow">
+            St. Louis microcreamery
+        </p>
 
-            <h1>Clementine's</h1>
+        <h1>
+            Clementine's
+        </h1>
 
-            <p class="brand-subtitle">
-                Naughty & nice ice cream
-            </p>
-        </div>
+        <p class="brand-subtitle">
+            Naughty & nice ice cream
+        </p>
 
-        <div class="hero-right">
+        <p class="tagline">
+            Small-batch ice cream and sorbet made locally in St. Louis.
+        </p>
 
-            <p class="tagline">
-                Small-batch ice cream and sorbet made locally in St. Louis.
-            </p>
-
-            <p class="features">
-                Dairy-free • Gluten-free • Vegan • Alcohol-infused
-            </p>
-
-        </div>
+        <p class="features">
+            Dairy-free • Gluten-free • Vegan • Alcohol-infused
+        </p>
 
     </div>
 
@@ -581,15 +632,8 @@
         <div class="about-layout">
 
             <div>
-
-                <p class="section-label">
-                    About
-                </p>
-
-                <p class="about-number">
-                    01 / The Microcreamery
-                </p>
-
+                <p class="section-label">About</p>
+                <p class="about-number">01 / The Microcreamery</p>
             </div>
 
             <div>
@@ -614,135 +658,6 @@
                 </div>
 
             </div>
-
-        </div>
-
-    </section>
-
-    <section id="locations">
-
-        <p class="section-label">
-            Parlors
-        </p>
-
-        <h2>
-            Find your parlor
-        </h2>
-
-        <div class="locations">
-
-            <div class="location">
-
-                <p class="location-number">
-                    01 / Clayton
-                </p>
-
-                <img
-                    src="Images/clayton.png"
-                    alt="Clementine's Clayton location">
-
-                <h3>
-                    Clayton
-                </h3>
-
-                <p>
-                    730 De Mun Avenue<br>
-                    Clayton, Missouri 63105
-                </p>
-
-                <p>
-                    (314) 643-9900
-                </p>
-
-                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    02 / Central West End
-                </p>
-
-                <img
-                    src="Images/central-west-end.png"
-                    alt="Clementine's Central West End location">
-
-                <h3>
-                    Central West End
-                </h3>
-
-                <p>
-                    308 N Euclid Avenue<br>
-                    St. Louis, Missouri 63108
-                </p>
-
-                <p>
-                    (314) 916-4100
-                </p>
-
-                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    03 / Lafayette Square
-                </p>
-
-                <img
-                    src="Images/lafayette-square.png"
-                    alt="Clementine's Lafayette Square location">
-
-                <h3>
-                    Lafayette Square
-                </h3>
-
-                <p>
-                    1637 S 18th Street<br>
-                    St. Louis, Missouri 63104
-                </p>
-
-                <p>
-                    (314) 474-5800
-                </p>
-
-                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
-                    Google Maps
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="parlor-hours">
-
-            <div>
-
-                <p class="hours-small">
-                    Hours
-                </p>
-
-                <h3>
-                    Parlor hours
-                </h3>
-
-            </div>
-
-            <p>
-                <b>Sunday–Thursday</b><br>
-                12pm–10pm
-            </p>
-
-            <p>
-                <b>Friday–Saturday</b><br>
-                12pm–11pm
-            </p>
 
         </div>
 
@@ -817,9 +732,7 @@
 
             <div class="flavor-section">
 
-                <h3>
-                    Naughty
-                </h3>
+                <h3>Naughty</h3>
 
                 <p class="flavor-label">
                     Alcohol-infused
@@ -853,9 +766,7 @@
 
             <div class="flavor-section">
 
-                <h3>
-                    Nice
-                </h3>
+                <h3>Nice</h3>
 
                 <p class="flavor-label">
                     Classic favorites
@@ -955,9 +866,7 @@
 
             <div class="flavor-section">
 
-                <h3>
-                    Vegan
-                </h3>
+                <h3>Vegan</h3>
 
                 <p class="flavor-label">
                     Dairy-free
@@ -1038,32 +947,36 @@
             Cone or cup?
         </h2>
 
+        <p class="small-note">
+            Click an option to see the price.
+        </p>
+
         <div class="cone-grid">
 
-            <div class="cone-item">
-                <div class="cone-name">Waffle Cone</div>
+            <details class="cone-item">
+                <summary>Waffle Cone</summary>
                 <div class="cone-price">+$2</div>
-            </div>
+            </details>
 
-            <div class="cone-item">
-                <div class="cone-name">Waffle Bowl</div>
+            <details class="cone-item">
+                <summary>Waffle Bowl</summary>
                 <div class="cone-price">+$2</div>
-            </div>
+            </details>
 
-            <div class="cone-item">
-                <div class="cone-name">Gluten-Free Cone</div>
+            <details class="cone-item">
+                <summary>Gluten-Free Cone</summary>
                 <div class="cone-price">+$2.50</div>
-            </div>
+            </details>
 
-            <div class="cone-item">
-                <div class="cone-name">Konery Cone</div>
+            <details class="cone-item">
+                <summary>Konery Cone</summary>
                 <div class="cone-price">+$2</div>
-            </div>
+            </details>
 
-            <div class="cone-item">
-                <div class="cone-name">Extra Cup</div>
+            <details class="cone-item">
+                <summary>Extra Cup</summary>
                 <div class="cone-price">+$0.25</div>
-            </div>
+            </details>
 
         </div>
 
@@ -1088,28 +1001,26 @@
             <div class="topping-card">
 
                 <p class="topping-number">
-                    01 / Drizzle
+                    01 / drizzle
                 </p>
 
-                <h3>
-                    Sauces
-                </h3>
+                <h3>Sauces</h3>
 
                 <p class="topping-description">
                     Sweet, sticky, and made for drizzling.
                 </p>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Hot Fudge</summary>
                     <p>Warm chocolate poured over the top.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Salted Caramel</summary>
                     <p>Buttery caramel finished with a little salt.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Hot Honey</summary>
                     <p>Sweet honey with a little heat.</p>
                 </details>
@@ -1119,28 +1030,26 @@
             <div class="topping-card">
 
                 <p class="topping-number">
-                    02 / Texture
+                    02 / texture
                 </p>
 
-                <h3>
-                    Crunch
-                </h3>
+                <h3>Crunch</h3>
 
                 <p class="topping-description">
                     For a little extra bite.
                 </p>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Candied Pecans</summary>
                     <p>Sweet, toasted pecans with a crisp finish.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>PB Crumbles</summary>
                     <p>Salty-sweet peanut butter crunch.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Chocolate Flakes</summary>
                     <p>Thin pieces of chocolate for a delicate crunch.</p>
                 </details>
@@ -1150,28 +1059,26 @@
             <div class="topping-card">
 
                 <p class="topping-number">
-                    03 / Classic
+                    03 / classic
                 </p>
 
-                <h3>
-                    Classics
-                </h3>
+                <h3>Classics</h3>
 
                 <p class="topping-description">
                     The finishing touch.
                 </p>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Whipped Cream</summary>
                     <p>Light, soft, and piled high.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Sprinkles</summary>
                     <p>A little color and crunch.</p>
                 </details>
 
-                <details>
+                <details class="topping-detail">
                     <summary>Cherries</summary>
                     <p>The classic finish on top.</p>
                 </details>
@@ -1194,7 +1101,7 @@
 
         <div class="extra-grid">
 
-            <div>
+            <div class="extra-item">
 
                 <img
                     class="extra-image"
@@ -1223,7 +1130,7 @@
 
             </div>
 
-            <div>
+            <div class="extra-item">
 
                 <img
                     class="extra-image"
@@ -1240,7 +1147,7 @@
                         Ice cream for one year, one pint at a time.
                     </p>
 
-                    <div>
+                    <div class="club-prices">
 
                         <div class="club-row">
                             <div>Naughty</div>
@@ -1262,6 +1169,126 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </section>
+
+    <section id="locations">
+
+        <p class="section-label">
+            Parlors
+        </p>
+
+        <h2>
+            Find your parlor
+        </h2>
+
+        <div class="locations">
+
+            <div class="location">
+
+                <p class="location-number">
+                    01 / Clayton
+                </p>
+
+                <img
+                    src="Images/clayton.png"
+                    alt="Clementine's Clayton location">
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>
+                    (314) 643-9900
+                </p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div class="location">
+
+                <p class="location-number">
+                    02 / Central West End
+                </p>
+
+                <img
+                    src="Images/central-west-end.png"
+                    alt="Clementine's Central West End location">
+
+                <h3>
+                    Central West End
+                </h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>
+                    (314) 916-4100
+                </p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+
+            </div>
+
+            <div class="location">
+
+                <p class="location-number">
+                    03 / Lafayette Square
+                </p>
+
+                <img
+                    src="Images/lafayette-square.png"
+                    alt="Clementine's Lafayette Square location">
+
+                <h3>
+                    Lafayette Square
+                </h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>
+                    (314) 474-5800
+                </p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="parlor-hours">
+
+            <div>
+                <p class="hours-small">Hours</p>
+                <h3>Parlor hours</h3>
+            </div>
+
+            <p>
+                <b>Sunday–Thursday</b><br>
+                12pm–10pm
+            </p>
+
+            <p>
+                <b>Friday–Saturday</b><br>
+                12pm–11pm
+            </p>
 
         </div>
 
