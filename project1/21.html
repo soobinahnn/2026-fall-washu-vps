@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Clementine's Naughty & Nice Ice Cream</title>
 
     <style>
@@ -48,8 +47,7 @@
         .logo,
         .brand-subtitle,
         .scoop-number,
-        .scoop-name,
-        .cone-name {
+        .scoop-name {
             font-family: "Bodoni Moda", serif;
         }
 
@@ -225,15 +223,12 @@
             font-style: italic;
         }
 
-        .about-layout {
+        .about-layout,
+        .history-layout {
             display: grid;
             grid-template-columns: 0.55fr 1.45fr;
             gap: 75px;
             align-items: start;
-        }
-
-        .about-side {
-            padding-top: 4px;
         }
 
         .about-number {
@@ -245,16 +240,19 @@
             letter-spacing: 1.2px;
         }
 
-        .about-copy {
+        .about-copy,
+        .history-copy {
             max-width: 710px;
             font-size: 16px;
         }
 
-        .about-copy p:first-child {
+        .about-copy p:first-child,
+        .history-copy p:first-child {
             margin-top: 0;
         }
 
-        .about-copy p {
+        .about-copy p,
+        .history-copy p {
             max-width: 650px;
         }
 
@@ -320,377 +318,6 @@
             letter-spacing: 1.2px;
         }
 
-        .scoop-box {
-            background-color: var(--cherry);
-            color: var(--ivory);
-            padding: 38px 32px 40px;
-        }
-
-        .scoop-headings {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding-bottom: 17px;
-            border-bottom: 1px solid rgba(243, 238, 230, 0.4);
-            text-align: center;
-        }
-
-        .scoop-name {
-            color: var(--ivory);
-            font-size: 22px;
-            font-style: italic;
-        }
-
-        .scoop-values {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding-top: 28px;
-            text-align: center;
-        }
-
-        .scoop-number {
-            color: var(--ivory);
-            font-size: 65px;
-            font-weight: 400;
-            line-height: 1;
-        }
-
-        .scoop-flavor {
-            margin: 8px 0 4px;
-            color: #eee5e1;
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-        }
-
-        .scoop-price {
-            color: var(--powder);
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .flavor-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            align-items: start;
-        }
-
-        .flavor-section {
-            padding: 28px 30px 22px;
-        }
-
-        .flavor-section:nth-child(1) {
-            background-color: var(--powder);
-        }
-
-        .flavor-section:nth-child(2) {
-            background-color: var(--paper);
-            border: 1px solid var(--line);
-        }
-
-        .flavor-section:nth-child(3) {
-            background-color: var(--soft-blue);
-        }
-
-        .flavor-section:nth-child(4) {
-            background-color: var(--deep-red);
-            color: var(--ivory);
-        }
-
-        .flavor-section h3 {
-            margin: 0 0 5px;
-            font-size: 36px;
-            font-weight: 400;
-            line-height: 1;
-        }
-
-        .flavor-section:nth-child(4) h3 {
-            color: var(--ivory);
-        }
-
-        .flavor-label {
-            margin: 0 0 20px;
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-        }
-
-        .flavor-section:nth-child(4) .flavor-label {
-            color: var(--powder);
-        }
-
-        details {
-            padding: 12px 0;
-            border-top: 1px solid rgba(45, 43, 41, 0.2);
-        }
-
-        .flavor-section:nth-child(4) details {
-            border-top: 1px solid rgba(243, 238, 230, 0.27);
-        }
-
-        summary {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: "+";
-            color: var(--cherry);
-            font-family: "Bodoni Moda", serif;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 1;
-        }
-
-        details[open] summary::after {
-            content: "−";
-        }
-
-        .flavor-section:nth-child(4) summary::after {
-            color: var(--powder);
-        }
-
-        details p {
-            margin: 9px 0 0;
-            color: #55514e;
-            font-size: 13px;
-        }
-
-        details p b {
-            color: var(--ink);
-        }
-
-        .flavor-section:nth-child(4) details p {
-            color: #eadfdb;
-        }
-
-        .flavor-section:nth-child(4) details p b {
-            color: var(--ivory);
-        }
-
-        .cone-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            border-top: 1px solid var(--cherry);
-            border-bottom: 1px solid var(--cherry);
-        }
-
-        .cone-item {
-            padding: 0;
-            border-right: 1px solid rgba(169, 52, 67, 0.25);
-        }
-
-        .cone-item:last-child {
-            border-right: none;
-        }
-
-        .cone-item summary {
-            min-height: 116px;
-            padding: 25px 20px 20px;
-            align-items: flex-start;
-            justify-content: space-between;
-            color: var(--deep-red);
-            text-align: left;
-        }
-
-        .cone-item summary::after {
-            margin-top: 5px;
-            margin-left: 12px;
-            color: var(--cherry);
-            font-size: 20px;
-        }
-
-        .cone-name {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.2;
-        }
-
-        .cone-price {
-            padding: 0 20px 24px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 10px;
-            text-align: left;
-            letter-spacing: 1.3px;
-        }
-
-        .topping-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            align-items: start;
-        }
-
-        .topping-card {
-            overflow: hidden;
-        }
-
-        .topping-image {
-            width: 100%;
-            height: 310px;
-            display: block;
-            object-fit: cover;
-        }
-
-        .topping-content {
-            padding: 20px 0 14px;
-            border-top: 1px solid var(--cherry);
-        }
-
-        .topping-number {
-            margin: 0 0 16px;
-            color: var(--cherry);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-        }
-
-        .topping-card h3 {
-            margin: 0 0 5px;
-            font-size: 30px;
-            font-weight: 400;
-        }
-
-        .topping-description {
-            margin: 0 0 20px;
-            color: var(--muted);
-            font-family: "Bodoni Moda", serif;
-            font-size: 15px;
-            font-style: italic;
-        }
-
-        .topping-detail {
-            padding: 11px 0;
-            border-top: 1px solid var(--soft-line);
-        }
-
-        .topping-detail summary {
-            color: var(--deep-red);
-            font-size: 14px;
-        }
-
-        .topping-detail summary::after {
-            color: var(--cherry);
-            font-size: 19px;
-        }
-
-        .topping-detail p {
-            margin: 7px 0 2px;
-            color: #66615d;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .extra-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            align-items: start;
-        }
-
-        .extra-item {
-            overflow: hidden;
-        }
-
-        .extra-image {
-            width: 100%;
-            height: 350px;
-            display: block;
-            object-fit: cover;
-        }
-
-        .extra-content {
-            padding: 25px 27px 28px;
-        }
-
-        .extra-item:first-child .extra-content {
-            background-color: var(--deep-red);
-            color: var(--ivory);
-        }
-
-        .extra-item:last-child .extra-content {
-            background-color: var(--powder);
-        }
-
-        .extra-item h3 {
-            margin: 0 0 8px;
-            font-size: 31px;
-            font-weight: 400;
-        }
-
-        .extra-item:first-child h3 {
-            color: var(--ivory);
-        }
-
-        .extra-item:last-child h3 {
-            color: var(--deep-red);
-        }
-
-        .extra-description {
-            margin: 0 0 12px;
-        }
-
-        .extra-item:first-child .extra-description {
-            color: #eee3df;
-        }
-
-        .extra-price {
-            margin: 12px 0;
-            color: var(--powder);
-            font-family: "Bodoni Moda", serif;
-            font-size: 48px;
-            line-height: 1;
-        }
-
-        .extra-note {
-            margin: 0;
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-        }
-
-        .extra-item:first-child .extra-note {
-            color: var(--powder);
-        }
-
-        .club-prices {
-            margin-top: 18px;
-        }
-
-        .club-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 9px 0;
-            border-bottom: 1px solid rgba(127, 37, 49, 0.22);
-        }
-
-        .club-row:last-child {
-            border-bottom: none;
-        }
-
-        .club-row span {
-            color: var(--deep-red);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 10px;
-        }
-
         .locations {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -741,11 +368,6 @@
             border-bottom: 1px solid var(--deep-red);
         }
 
-        .location a:hover {
-            color: var(--cherry);
-            border-color: var(--cherry);
-        }
-
         .parlor-hours {
             display: grid;
             grid-template-columns: 1.6fr 1fr 1fr;
@@ -775,6 +397,350 @@
             font-size: 13px;
         }
 
+        .scoop-box {
+            background-color: var(--cherry);
+            color: var(--ivory);
+            padding: 38px 32px 40px;
+        }
+
+        .scoop-headings,
+        .scoop-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .scoop-headings {
+            padding-bottom: 17px;
+            border-bottom: 1px solid rgba(243, 238, 230, 0.4);
+        }
+
+        .scoop-values {
+            padding-top: 28px;
+        }
+
+        .scoop-name {
+            color: var(--ivory);
+            font-size: 22px;
+            font-style: italic;
+        }
+
+        .scoop-number {
+            color: var(--ivory);
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .scoop-flavor {
+            margin: 8px 0 4px;
+            color: #eee5e1;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        .scoop-price {
+            color: var(--powder);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .base-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 26px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--cherry);
+            color: var(--deep-red);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .flavor-section {
+            padding: 28px 30px 22px;
+        }
+
+        .flavor-section:nth-child(1) {
+            background-color: var(--powder);
+        }
+
+        .flavor-section:nth-child(2) {
+            background-color: var(--paper);
+            border: 1px solid var(--line);
+        }
+
+        .flavor-section:nth-child(3) {
+            background-color: var(--soft-blue);
+        }
+
+        .flavor-section:nth-child(4) {
+            background-color: var(--deep-red);
+            color: var(--ivory);
+        }
+
+        .flavor-section h3 {
+            margin: 0 0 5px;
+            font-size: 36px;
+            font-weight: 400;
+        }
+
+        .flavor-section:nth-child(4) h3 {
+            color: var(--ivory);
+        }
+
+        .flavor-label {
+            margin: 0 0 20px;
+            color: var(--deep-red);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .flavor-section:nth-child(4) .flavor-label {
+            color: var(--powder);
+        }
+
+        details {
+            padding: 12px 0;
+            border-top: 1px solid rgba(45, 43, 41, 0.2);
+        }
+
+        .flavor-section:nth-child(4) details {
+            border-top: 1px solid rgba(243, 238, 230, 0.27);
+        }
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            color: var(--cherry);
+            font-family: "Bodoni Moda", serif;
+            font-size: 22px;
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        .flavor-section:nth-child(4) summary::after {
+            color: var(--powder);
+        }
+
+        details p {
+            margin: 9px 0 0;
+            color: #55514e;
+            font-size: 13px;
+        }
+
+        details p b {
+            color: var(--ink);
+        }
+
+        .flavor-section:nth-child(4) details p {
+            color: #eadfdb;
+        }
+
+        .flavor-section:nth-child(4) details p b {
+            color: var(--ivory);
+        }
+
+        .topping-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .topping-image {
+            width: 100%;
+            height: 310px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .topping-content {
+            padding: 20px 0 14px;
+            border-top: 1px solid var(--cherry);
+        }
+
+        .topping-number {
+            margin: 0 0 16px;
+            color: var(--cherry);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .topping-card h3 {
+            margin: 0 0 5px;
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        .topping-description {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-family: "Bodoni Moda", serif;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .topping-detail {
+            padding: 11px 0;
+            border-top: 1px solid var(--soft-line);
+        }
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .extra-image {
+            width: 100%;
+            height: 350px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .extra-content {
+            padding: 25px 27px 28px;
+        }
+
+        .extra-item:first-child .extra-content {
+            background-color: var(--deep-red);
+            color: var(--ivory);
+        }
+
+        .extra-item:last-child .extra-content {
+            background-color: var(--powder);
+        }
+
+        .extra-item h3 {
+            margin: 0 0 8px;
+            font-size: 31px;
+            font-weight: 400;
+        }
+
+        .extra-item:first-child h3 {
+            color: var(--ivory);
+        }
+
+        .extra-description {
+            margin: 0 0 12px;
+        }
+
+        .extra-price {
+            margin: 12px 0;
+            color: var(--powder);
+            font-family: "Bodoni Moda", serif;
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        .extra-note {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        .club-prices {
+            margin-top: 18px;
+        }
+
+        .club-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(127, 37, 49, 0.22);
+        }
+
+        .history-feature {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            margin-top: 45px;
+            background-color: var(--paper);
+            border-top: 1px solid var(--cherry);
+            border-bottom: 1px solid var(--cherry);
+        }
+
+        .history-feature img {
+            width: 100%;
+            height: 430px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .history-feature-copy {
+            padding: 38px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .history-feature-copy p {
+            margin: 0 0 20px;
+            font-size: 14px;
+        }
+
+        .history-feature-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .history-timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 28px;
+            border-top: 1px solid var(--cherry);
+        }
+
+        .history-point {
+            padding: 20px 24px 10px 0;
+        }
+
+        .history-year {
+            margin: 0 0 5px;
+            color: var(--cherry);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        .history-point p:last-child {
+            margin: 0;
+            font-family: "Bodoni Moda", serif;
+            font-size: 18px;
+        }
+
         footer {
             display: flex;
             justify-content: space-between;
@@ -794,67 +760,9 @@
             margin: 0;
         }
 
-        @media (max-width: 900px) {
-            body {
-                padding: 0 24px 60px;
-            }
-
-            .hero {
-                grid-template-columns: 1.25fr 0.75fr;
-                gap: 34px;
-            }
-
-            .hero-right {
-                padding-left: 24px;
-            }
-
-            .tagline {
-                font-size: 20px;
-            }
-
-            h1 {
-                font-size: 75px;
-            }
-
-            .brand-photo img {
-                height: 350px;
-            }
-
-            .about-layout {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .signature-feature {
-                grid-template-columns: 1.2fr 0.8fr;
-            }
-
-            .locations {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
-            }
-
-            .location img {
-                height: 230px;
-            }
-
-            .parlor-hours {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            .parlor-hours > div {
-                grid-column: 1 / -1;
-            }
-        }
-
         @media (max-width: 700px) {
             body {
                 padding: 0 18px 45px;
-            }
-
-            .logo {
-                font-size: 24px;
             }
 
             nav {
@@ -874,28 +782,9 @@
                 border-top: 1px solid var(--cherry);
             }
 
-            .tagline {
-                max-width: 430px;
-                font-size: 21px;
-            }
-
             h1 {
                 font-size: 58px;
                 letter-spacing: -3px;
-            }
-
-            .brand-subtitle {
-                font-size: 25px;
-            }
-
-            .brand-photo img {
-                height: 250px;
-            }
-
-            .brand-photo-info {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 2px;
             }
 
             h2 {
@@ -906,20 +795,16 @@
                 margin-top: 70px;
             }
 
-            #about {
-                margin-top: 55px;
-            }
-
-            .signature-feature {
+            .about-layout,
+            .history-layout,
+            .signature-feature,
+            .history-feature,
+            .flavor-grid,
+            .topping-grid,
+            .extra-grid,
+            .locations,
+            .history-timeline {
                 grid-template-columns: 1fr;
-            }
-
-            .signature-feature img {
-                height: 260px;
-            }
-
-            .signature-detail {
-                padding: 27px 24px 30px;
             }
 
             .scoop-headings,
@@ -928,42 +813,9 @@
                 row-gap: 28px;
             }
 
-            .flavor-grid,
-            .topping-grid,
-            .extra-grid,
-            .locations {
-                grid-template-columns: 1fr;
-            }
-
-            .cone-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cone-item {
-                border-right: none;
-                border-bottom: 1px solid rgba(169, 52, 67, 0.22);
-            }
-
-            .cone-item:last-child {
-                border-bottom: none;
-            }
-
-            .cone-item summary {
-                min-height: auto;
-                padding: 20px 8px 14px;
-            }
-
-            .cone-price {
-                padding: 0 8px 20px;
-            }
-
-            .topping-image,
-            .extra-image {
-                height: 270px;
-            }
-
-            .location img {
-                height: 260px;
+            .brand-photo img,
+            .history-feature img {
+                height: 280px;
             }
 
             .parlor-hours {
@@ -971,15 +823,9 @@
                 gap: 17px;
             }
 
-            .parlor-hours > div {
-                grid-column: auto;
-            }
-
             footer {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 6px;
-                margin-top: 80px;
             }
         }
     </style>
@@ -988,36 +834,25 @@
 <body>
 
     <header>
-        <div class="logo">
-            Clementine's
-        </div>
+        <div class="logo">Clementine's</div>
 
         <nav>
             <a href="#about">About</a>
+            <a href="#locations">Parlors</a>
             <a href="#flavors">Flavors</a>
             <a href="#toppings">Toppings</a>
-            <a href="#locations">Parlors</a>
+            <a href="#history">History</a>
         </nav>
     </header>
 
     <div class="hero">
-
         <div>
-            <p class="eyebrow">
-                St. Louis microcreamery
-            </p>
-
-            <h1>
-                Clementine's
-            </h1>
-
-            <p class="brand-subtitle">
-                Naughty & nice ice cream
-            </p>
+            <p class="eyebrow">St. Louis microcreamery</p>
+            <h1>Clementine's</h1>
+            <p class="brand-subtitle">Naughty & nice ice cream</p>
         </div>
 
         <div class="hero-right">
-
             <p class="tagline">
                 Small-batch ice cream and sorbet made locally in St. Louis.
             </p>
@@ -1025,53 +860,29 @@
             <p class="features">
                 Dairy-free • Gluten-free • Vegan • Alcohol-infused
             </p>
-
         </div>
-
     </div>
 
     <div class="brand-photo">
-
-        <img
-            src="Images/Clementine.png"
-            alt="Clementine's Naughty and Nice Ice Cream storefront sign">
+        <img src="Images/Clementine.png" alt="Clementine's Naughty and Nice Ice Cream storefront sign">
 
         <div class="brand-photo-info">
-            <span>
-                Clementine's Naughty & Nice
-            </span>
-
-            <span>
-                St. Louis, Missouri
-            </span>
+            <span>Clementine's Naughty & Nice</span>
+            <span>St. Louis, Missouri</span>
         </div>
-
     </div>
 
     <section id="about">
-
         <div class="about-layout">
-
-            <div class="about-side">
-
-                <p class="section-label">
-                    About
-                </p>
-
-                <p class="about-number">
-                    The Microcreamery
-                </p>
-
+            <div>
+                <p class="section-label">About</p>
+                <p class="about-number">The Microcreamery</p>
             </div>
 
             <div>
-
-                <h2>
-                    A little about Clementine's
-                </h2>
+                <h2>A little about Clementine's</h2>
 
                 <div class="about-copy">
-
                     <p>
                         Clementine's is a St. Louis microcreamery making small-batch
                         ice creams and sorbets locally.
@@ -1082,28 +893,16 @@
                         <span class="highlight">Gooey Butter Cake</span> is one of their
                         best-known flavors.
                     </p>
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="signature-feature">
-
-            <img
-                src="Images/gooey-butter-cake.png"
-                alt="Clementine's Gooey Butter Cake ice cream">
+            <img src="Images/gooey-butter-cake.png" alt="Clementine's Gooey Butter Cake ice cream">
 
             <div class="signature-detail">
-
-                <p class="signature-label">
-                    Signature Flavor / St. Louis
-                </p>
-
-                <h3>
-                    Gooey Butter Cake
-                </h3>
+                <p class="signature-label">Signature Flavor / St. Louis</p>
+                <h3>Gooey Butter Cake</h3>
 
                 <p>
                     Cream cheese ice cream layered with chunks of
@@ -1113,25 +912,96 @@
                 <p class="signature-allergens">
                     Contains milk • wheat • egg
                 </p>
+            </div>
+        </div>
+    </section>
 
+    <section id="locations">
+        <p class="section-label">Parlors</p>
+        <h2>Find your parlor</h2>
+
+        <div class="locations">
+            <div class="location">
+                <p class="location-number">Clayton</p>
+
+                <img src="Images/clayton.png" alt="Clementine's Clayton location">
+
+                <h3>Clayton</h3>
+
+                <p>
+                    730 De Mun Avenue<br>
+                    Clayton, Missouri 63105
+                </p>
+
+                <p>(314) 643-9900</p>
+
+                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                    Google Maps
+                </a>
             </div>
 
+            <div class="location">
+                <p class="location-number">Central West End</p>
+
+                <img src="Images/central-west-end.png" alt="Clementine's Central West End location">
+
+                <h3>Central West End</h3>
+
+                <p>
+                    308 N Euclid Avenue<br>
+                    St. Louis, Missouri 63108
+                </p>
+
+                <p>(314) 916-4100</p>
+
+                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                    Google Maps
+                </a>
+            </div>
+
+            <div class="location">
+                <p class="location-number">Lafayette Square</p>
+
+                <img src="Images/lafayette-square.png" alt="Clementine's Lafayette Square location">
+
+                <h3>Lafayette Square</h3>
+
+                <p>
+                    1637 S 18th Street<br>
+                    St. Louis, Missouri 63104
+                </p>
+
+                <p>(314) 474-5800</p>
+
+                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                    Google Maps
+                </a>
+            </div>
         </div>
 
+        <div class="parlor-hours">
+            <div>
+                <p class="hours-small">Hours</p>
+                <h3>Parlor hours</h3>
+            </div>
+
+            <p>
+                <b>Sunday–Thursday</b><br>
+                12pm–10pm
+            </p>
+
+            <p>
+                <b>Friday–Saturday</b><br>
+                12pm–11pm
+            </p>
+        </div>
     </section>
 
     <section>
-
-        <p class="section-label">
-            Menu
-        </p>
-
-        <h2>
-            Build your scoop
-        </h2>
+        <p class="section-label">Menu</p>
+        <h2>Build your scoop</h2>
 
         <div class="scoop-box">
-
             <div class="scoop-headings">
                 <div class="scoop-name">Mini</div>
                 <div class="scoop-name">Petite</div>
@@ -1140,7 +1010,6 @@
             </div>
 
             <div class="scoop-values">
-
                 <div>
                     <div class="scoop-number">1</div>
                     <div class="scoop-flavor">flavor</div>
@@ -1164,38 +1033,29 @@
                     <div class="scoop-flavor">flavors</div>
                     <div class="scoop-price">$15</div>
                 </div>
-
             </div>
-
         </div>
 
+        <div class="base-options">
+            <span>Waffle Cone +$2</span>
+            <span>Waffle Bowl +$2</span>
+            <span>Gluten-Free Cone +$2.50</span>
+            <span>Konery Cone +$2</span>
+        </div>
     </section>
 
     <section id="flavors">
-
-        <p class="section-label">
-            Flavors
-        </p>
-
-        <h2>
-            Choose your flavor
-        </h2>
+        <p class="section-label">Flavors</p>
+        <h2>Choose your flavor</h2>
 
         <p class="small-note">
             Click a flavor to see its description and allergens.
         </p>
 
         <div class="flavor-grid">
-
             <div class="flavor-section">
-
-                <h3>
-                    Naughty
-                </h3>
-
-                <p class="flavor-label">
-                    Alcohol-infused
-                </p>
+                <h3>Naughty</h3>
+                <p class="flavor-label">Alcohol-infused</p>
 
                 <details>
                     <summary>Maple Bourbon Pecan</summary>
@@ -1220,18 +1080,11 @@
                     <p>Amaretto ice cream with bright lemon and a tart cherry swirl.</p>
                     <p><b>Contains:</b> alcohol</p>
                 </details>
-
             </div>
 
             <div class="flavor-section">
-
-                <h3>
-                    Nice
-                </h3>
-
-                <p class="flavor-label">
-                    Classic favorites
-                </p>
+                <h3>Nice</h3>
+                <p class="flavor-label">Classic favorites</p>
 
                 <details>
                     <summary>Gooey Butter Cake</summary>
@@ -1322,18 +1175,11 @@
                     <p>Cinnamon ice cream with an apple cranberry pie swirl.</p>
                     <p><b>Contains:</b> milk, wheat, soy</p>
                 </details>
-
             </div>
 
             <div class="flavor-section">
-
-                <h3>
-                    Vegan
-                </h3>
-
-                <p class="flavor-label">
-                    Dairy-free
-                </p>
+                <h3>Vegan</h3>
+                <p class="flavor-label">Dairy-free</p>
 
                 <details>
                     <summary>Coconut Fudge</summary>
@@ -1361,18 +1207,11 @@
                     <p>Golden mylk coconut ice cream with cinnamon Biscoff cookies.</p>
                     <p><b>Contains:</b> soy, wheat</p>
                 </details>
-
             </div>
 
             <div class="flavor-section">
-
-                <h3>
-                    The Poe Collection
-                </h3>
-
-                <p class="flavor-label">
-                    A little mysterious
-                </p>
+                <h3>The Poe Collection</h3>
+                <p class="flavor-label">A little mysterious</p>
 
                 <details>
                     <summary>The Raven</summary>
@@ -1393,114 +1232,26 @@
                     <summary>Midnight Dreary</summary>
                     <p>Dark chocolate raspberry ice cream.</p>
                 </details>
-
             </div>
-
         </div>
-
-    </section>
-
-    <section>
-
-        <p class="section-label">
-            Pick your base
-        </p>
-
-        <h2>
-            Cone or cup?
-        </h2>
-
-        <p class="small-note">
-            Click an option to see the price.
-        </p>
-
-        <div class="cone-grid">
-
-            <details class="cone-item">
-                <summary class="cone-name">
-                    Waffle Cone
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
-            </details>
-
-            <details class="cone-item">
-                <summary class="cone-name">
-                    Waffle Bowl
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
-            </details>
-
-            <details class="cone-item">
-                <summary class="cone-name">
-                    Gluten-Free Cone
-                </summary>
-                <div class="cone-price">
-                    +$2.50
-                </div>
-            </details>
-
-            <details class="cone-item">
-                <summary class="cone-name">
-                    Konery Cone
-                </summary>
-                <div class="cone-price">
-                    +$2
-                </div>
-            </details>
-
-            <details class="cone-item">
-                <summary class="cone-name">
-                    Extra Cup
-                </summary>
-                <div class="cone-price">
-                    +$0.25
-                </div>
-            </details>
-
-        </div>
-
     </section>
 
     <section id="toppings">
-
-        <p class="section-label">
-            Toppings
-        </p>
-
-        <h2>
-            Top it off
-        </h2>
+        <p class="section-label">Toppings</p>
+        <h2>Top it off</h2>
 
         <p class="small-note">
             Click each topping for a little more.
         </p>
 
         <div class="topping-grid">
-
             <div class="topping-card">
-
-                <img
-                    class="topping-image"
-                    src="Images/Sauces.png"
-                    alt="Ice cream topped with sauce">
+                <img class="topping-image" src="Images/Sauces.png" alt="Ice cream topped with sauce">
 
                 <div class="topping-content">
-
-                    <p class="topping-number">
-                        Drizzle
-                    </p>
-
-                    <h3>
-                        Sauces
-                    </h3>
-
-                    <p class="topping-description">
-                        Sweet, sticky, and made for drizzling.
-                    </p>
+                    <p class="topping-number">Drizzle</p>
+                    <h3>Sauces</h3>
+                    <p class="topping-description">Sweet, sticky, and made for drizzling.</p>
 
                     <details class="topping-detail">
                         <summary>Hot Fudge</summary>
@@ -1516,31 +1267,16 @@
                         <summary>Hot Honey</summary>
                         <p>Sweet honey with a little heat.</p>
                     </details>
-
                 </div>
-
             </div>
 
             <div class="topping-card">
-
-                <img
-                    class="topping-image"
-                    src="Images/Crunch.png"
-                    alt="Ice cream with crunchy topping">
+                <img class="topping-image" src="Images/Crunch.png" alt="Ice cream with crunchy topping">
 
                 <div class="topping-content">
-
-                    <p class="topping-number">
-                        Texture
-                    </p>
-
-                    <h3>
-                        Crunch
-                    </h3>
-
-                    <p class="topping-description">
-                        For a little extra bite.
-                    </p>
+                    <p class="topping-number">Texture</p>
+                    <h3>Crunch</h3>
+                    <p class="topping-description">For a little extra bite.</p>
 
                     <details class="topping-detail">
                         <summary>Candied Pecans</summary>
@@ -1556,31 +1292,16 @@
                         <summary>Chocolate Flakes</summary>
                         <p>Thin pieces of chocolate for a delicate crunch.</p>
                     </details>
-
                 </div>
-
             </div>
 
             <div class="topping-card">
-
-                <img
-                    class="topping-image"
-                    src="Images/Classics.png"
-                    alt="Classic ice cream topping">
+                <img class="topping-image" src="Images/Classics.png" alt="Classic ice cream topping">
 
                 <div class="topping-content">
-
-                    <p class="topping-number">
-                        Classic
-                    </p>
-
-                    <h3>
-                        Classics
-                    </h3>
-
-                    <p class="topping-description">
-                        The finishing touch.
-                    </p>
+                    <p class="topping-number">Classic</p>
+                    <h3>Classics</h3>
+                    <p class="topping-description">The finishing touch.</p>
 
                     <details class="topping-detail">
                         <summary>Whipped Cream</summary>
@@ -1596,75 +1317,38 @@
                         <summary>Cherries</summary>
                         <p>The classic finish on top.</p>
                     </details>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <section>
-
-        <p class="section-label">
-            Extras
-        </p>
-
-        <h2>
-            A little extra
-        </h2>
+        <p class="section-label">Extras</p>
+        <h2>A little extra</h2>
 
         <div class="extra-grid">
-
             <div class="extra-item">
-
-                <img
-                    class="extra-image"
-                    src="Images/Sundae.png"
-                    alt="Clementine's Sunday Sundae">
+                <img class="extra-image" src="Images/Sundae.png" alt="Clementine's Sunday Sundae">
 
                 <div class="extra-content">
-
-                    <h3>
-                        Sunday Sundae
-                    </h3>
-
-                    <p class="extra-description">
-                        2 scoops + 3 toppings
-                    </p>
-
-                    <p class="extra-price">
-                        $9.25
-                    </p>
-
-                    <p class="extra-note">
-                        Sundays only
-                    </p>
-
+                    <h3>Sunday Sundae</h3>
+                    <p class="extra-description">2 scoops + 3 toppings</p>
+                    <p class="extra-price">$9.25</p>
+                    <p class="extra-note">Sundays only</p>
                 </div>
-
             </div>
 
             <div class="extra-item">
-
-                <img
-                    class="extra-image"
-                    src="Images/Pint.png"
-                    alt="Clementine's Pint of the Month Club">
+                <img class="extra-image" src="Images/Pint.png" alt="Clementine's Pint of the Month Club">
 
                 <div class="extra-content">
-
-                    <h3>
-                        Pint of the Month Club
-                    </h3>
+                    <h3>Pint of the Month Club</h3>
 
                     <p class="extra-description">
                         Ice cream for one year, one pint at a time.
                     </p>
 
                     <div class="club-prices">
-
                         <div class="club-row">
                             <div>Naughty</div>
                             <span>$159</span>
@@ -1679,158 +1363,78 @@
                             <div>Vegan</div>
                             <span>$159</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="locations">
-
-        <p class="section-label">
-            Parlors
-        </p>
-
-        <h2>
-            Find your parlor
-        </h2>
-
-        <div class="locations">
-
-            <div class="location">
-
-                <p class="location-number">
-                    Clayton
-                </p>
-
-                <img
-                    src="Images/clayton.png"
-                    alt="Clementine's Clayton location">
-
-                <h3>
-                    Clayton
-                </h3>
-
-                <p>
-                    730 De Mun Avenue<br>
-                    Clayton, Missouri 63105
-                </p>
-
-                <p>
-                    (314) 643-9900
-                </p>
-
-                <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
-                    Google Maps
-                </a>
-
+    <section id="history">
+        <div class="history-layout">
+            <div>
+                <p class="section-label">History</p>
+                <p class="about-number">Since 2014</p>
             </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    Central West End
-                </p>
-
-                <img
-                    src="Images/central-west-end.png"
-                    alt="Clementine's Central West End location">
-
-                <h3>
-                    Central West End
-                </h3>
-
-                <p>
-                    308 N Euclid Avenue<br>
-                    St. Louis, Missouri 63108
-                </p>
-
-                <p>
-                    (314) 916-4100
-                </p>
-
-                <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
-                    Google Maps
-                </a>
-
-            </div>
-
-            <div class="location">
-
-                <p class="location-number">
-                    Lafayette Square
-                </p>
-
-                <img
-                    src="Images/lafayette-square.png"
-                    alt="Clementine's Lafayette Square location">
-
-                <h3>
-                    Lafayette Square
-                </h3>
-
-                <p>
-                    1637 S 18th Street<br>
-                    St. Louis, Missouri 63104
-                </p>
-
-                <p>
-                    (314) 474-5800
-                </p>
-
-                <a href="https://share.google/GIK7YTYYrtyXrQzYs">
-                    Google Maps
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="parlor-hours">
 
             <div>
+                <h2>Ice cream changed her life. Twice.</h2>
 
-                <p class="hours-small">
-                    Hours
-                </p>
-
-                <h3>
-                    Parlor hours
-                </h3>
-
+                <div class="history-copy">
+                    <p>
+                        Clementine's began with founder Tamara Keefe's childhood memory
+                        of making ice cream at home with a $2 hand-crank machine.
+                        Years later, that same idea of ice cream bringing people together
+                        inspired her to build a community of her own in St. Louis.
+                    </p>
+                </div>
             </div>
-
-            <p>
-                <b>Sunday–Thursday</b><br>
-                12pm–10pm
-            </p>
-
-            <p>
-                <b>Friday–Saturday</b><br>
-                12pm–11pm
-            </p>
-
         </div>
 
+        <div class="history-feature">
+            <img src="Images/tamara-keefe.jpg" alt="Clementine's founder Tamara Keefe inside a Clementine's parlor">
+
+            <div class="history-feature-copy">
+                <p>
+                    In 2014, Keefe invested her life savings and 401K into an
+                    FDA-certified ice cream kitchen and founded Clementine's.
+                </p>
+
+                <p>
+                    She worked with food scientists and chemists to develop a process
+                    for freezing alcohol into ice cream, creating the signature
+                    “Naughty” flavors.
+                </p>
+
+                <p>
+                    Today, Clementine's has grown to multiple parlors, nationwide
+                    shipping, and catering while keeping community at the center
+                    of the brand.
+                </p>
+            </div>
+        </div>
+
+        <div class="history-timeline">
+            <div class="history-point">
+                <p class="history-year">2014</p>
+                <p>Clementine's founded by Tamara Keefe</p>
+            </div>
+
+            <div class="history-point">
+                <p class="history-year">St. Louis</p>
+                <p>Built around ice cream and community</p>
+            </div>
+
+            <div class="history-point">
+                <p class="history-year">Today</p>
+                <p>Parlors, nationwide shipping, and catering</p>
+            </div>
+        </div>
     </section>
 
     <footer>
-
-        <p>
-            Clementine's Naughty & Nice Ice Cream
-        </p>
-
-        <p>
-            Designed by Soobin Ahn · 2026
-        </p>
-
+        <p>Clementine's Naughty & Nice Ice Cream</p>
+        <p>Designed by Soobin Ahn · 2026</p>
     </footer>
 
 </body>
-
 </html>

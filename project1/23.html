@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clementine's Naughty & Nice Ice Cream</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f3eee6;
+    color: #2d2b29;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+main {
+    width: min(1120px, calc(100% - 48px));
+    margin: auto;
+    padding-bottom: 70px;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.price,
+summary,
+.base-name {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    color: #7f2531;
+}
+
+header {
+    text-align: center;
+    padding: 28px 0 20px;
+    border-bottom: 1px solid #a93443;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #a93443;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+    transition: opacity .2s ease;
+}
+
+nav a:hover {
+    opacity: .55;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 0 38px;
+}
+
+.eyebrow,
+.label {
+    color: #a93443;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 9px;
+}
+
+h1 {
+    font-size: clamp(58px, 9vw, 96px);
+    line-height: .85;
+    letter-spacing: -4px;
+    margin: 8px 0 10px;
+}
+
+.subtitle {
+    margin: 0;
+    color: #a93443;
+    font-family: "Bodoni Moda", serif;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.tagline {
+    max-width: 480px;
+    margin: 22px auto 0;
+    font-family: "Bodoni Moda", serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.hero img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    margin-top: 40px;
+}
+
+.photo-caption {
+    display: flex;
+    justify-content: space-between;
+    color: #7f2531;
+    border-bottom: 1px solid #a93443;
+    padding: 8px 0;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 66px 0 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 1;
+    margin: 4px 0 10px;
+}
+
+.intro {
+    max-width: 560px;
+    margin: 0 auto 30px;
+    color: #6f6a65;
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+}
+
+.scoop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #a93443;
+    border-bottom: 1px solid #a93443;
+    margin-top: 28px;
+}
+
+.scoop {
+    padding: 27px 12px;
+    border-right: 1px solid #d7aab0;
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.scoop:last-child {
+    border-right: 0;
+}
+
+.scoop:hover {
+    background: #faf7f2;
+    transform: translateY(-3px);
+}
+
+.scoop h3 {
+    font-size: 21px;
+    font-style: italic;
+    margin: 0;
+}
+
+.scoop-number {
+    color: #7f2531;
+    font-family: "Bodoni Moda", serif;
+    font-size: 42px;
+    line-height: 1;
+    margin: 10px 0 2px;
+}
+
+.scoop small {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 8px;
+}
+
+.price {
+    color: #a93443;
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+.flavor-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 26px 0 24px;
+}
+
+.flavor-tabs button {
+    border: 1px solid #a93443;
+    background: transparent;
+    color: #7f2531;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.flavor-tabs button.active,
+.flavor-tabs button:hover {
+    background: #7f2531;
+    color: #f3eee6;
+}
+
+.flavor-tabs button:hover {
+    transform: translateY(-2px);
+}
+
+.flavor-tabs button:active {
+    transform: scale(.97);
+}
+
+.flavor-panel {
+    display: none;
+    max-width: 760px;
+    margin: auto;
+    text-align: left;
+    border-top: 1px solid #a93443;
+}
+
+.flavor-panel.active {
+    display: block;
+    animation: flavorFade .35s ease;
+}
+
+@keyframes flavorFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flavor-title {
+    text-align: center;
+    padding: 18px 0 12px;
+}
+
+.flavor-title h3 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.flavor-title p {
+    color: #a93443;
+    margin: 2px 0 0;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+details {
+    border-top: 1px solid #d5cbc1;
+    padding: 11px 0;
+}
+
+details:last-child {
+    border-bottom: 1px solid #d5cbc1;
+}
+
+summary {
+    list-style: none;
+    color: #2d2b29;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: color .2s ease;
+}
+
+summary:hover {
+    color: #a93443;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    color: #a93443;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    color: #6f6a65;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    margin: 6px 30px 2px 0;
+}
+
+.base-list {
+    max-width: 760px;
+    margin: 28px auto 0;
+    border-top: 1px solid #a93443;
+}
+
+.base-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    text-align: left;
+    padding: 14px 0;
+    border-bottom: 1px solid #d5cbc1;
+    transition:
+        padding .2s ease,
+        background .2s ease;
+}
+
+.base-row:hover {
+    background: #faf7f2;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.base-name {
+    color: #7f2531;
+    font-size: 18px;
+}
+
+.base-row p {
+    margin: 2px 0 0;
+    color: #6f6a65;
+    font-family: "Bodoni Moda", serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.toppings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 28px;
+    border-top: 1px solid #a93443;
+    border-bottom: 1px solid #a93443;
+}
+
+.topping {
+    padding: 28px 32px;
+    border-right: 1px solid #d7aab0;
+}
+
+.topping:last-child {
+    border-right: 0;
+}
+
+.topping h3 {
+    margin: 3px 0 4px;
+    font-size: 27px;
+}
+
+.topping > p:not(.label) {
+    margin: 0 0 16px;
+    color: #6f6a65;
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.topping ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topping li {
+    padding: 9px 0;
+    border-top: 1px solid #d5cbc1;
+    transition:
+        color .2s ease,
+        padding .2s ease;
+}
+
+.topping li:hover {
+    color: #a93443;
+    padding-left: 5px;
+}
+
+.extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.extra {
+    text-align: left;
+    overflow: hidden;
+}
+
+.extra img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s ease;
+}
+
+.extra:hover img {
+    transform: scale(1.025);
+}
+
+.extra-content {
+    padding: 24px;
+}
+
+.extra:first-child .extra-content {
+    background: #7f2531;
+    color: #f3eee6;
+}
+
+.extra:first-child h3 {
+    color: #f3eee6;
+}
+
+.extra:last-child .extra-content {
+    background: #c9d3db;
+}
+
+.extra h3 {
+    font-size: 27px;
+    margin: 0 0 8px;
+}
+
+.extra .price {
+    font-size: 36px;
+}
+
+.locations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 28px;
+    text-align: left;
+}
+
+.location {
+    border-top: 1px solid #a93443;
+    padding-top: 12px;
+}
+
+.location img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.location:hover img {
+    transform: translateY(-3px);
+}
+
+.location h3 {
+    margin: 12px 0 6px;
+    font-size: 24px;
+}
+
+.location p {
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+.location a {
+    color: #7f2531;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.hours {
+    margin-top: 28px;
+    padding: 18px 0;
+    border-top: 1px solid #a93443;
+    border-bottom: 1px solid #a93443;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.hours p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    color: #a93443;
+    border-top: 1px solid #a93443;
+    margin-top: 70px;
+    padding-top: 14px;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 850px) {
+
+    main {
+        width: calc(100% - 36px);
+    }
+
+    h1 {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .hero img {
+        height: 340px;
+    }
+
+    .scoop-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scoop:nth-child(2) {
+        border-right: 0;
+    }
+
+    .scoop:nth-child(-n + 2) {
+        border-bottom: 1px solid #d7aab0;
+    }
+
+    .toppings {
+        grid-template-columns: 1fr;
+    }
+
+    .topping {
+        border-right: 0;
+        border-bottom: 1px solid #d7aab0;
+    }
+
+    .topping:last-child {
+        border-bottom: 0;
+    }
+
+    .locations {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .location:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .location:last-child img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: calc(100% - 24px);
+    }
+
+    header {
+        padding: 22px 0 16px;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 42px 0 32px;
+    }
+
+    h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 23px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .hero img {
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    section {
+        padding-top: 52px;
+    }
+
+    .photo-caption {
+        gap: 10px;
+        font-size: 7px;
+    }
+
+    .flavor-tabs {
+        gap: 6px;
+    }
+
+    .flavor-tabs button {
+        padding: 7px 12px;
+        font-size: 8px;
+    }
+
+    .scoop {
+        padding: 20px 8px;
+    }
+
+    .scoop-number {
+        font-size: 36px;
+    }
+
+    .extras,
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+    .location:last-child {
+        grid-column: auto;
+    }
+
+    .location:last-child img,
+    .location img {
+        height: 240px;
+    }
+
+    .extra img {
+        height: 250px;
+    }
+
+    .hours {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<header>
+    <div class="logo">Clementine's</div>
+
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#flavors">Flavors</a>
+        <a href="#toppings">Toppings</a>
+        <a href="#locations">Parlors</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <p class="eyebrow">St. Louis Microcreamery</p>
+
+    <h1>Clementine's</h1>
+
+    <p class="subtitle">Naughty & Nice Ice Cream</p>
+
+    <p class="tagline">
+        Small-batch ice cream and sorbet made locally in St. Louis.
+    </p>
+
+    <img
+        src="Images/Clementine.png"
+        alt="Clementine's storefront">
+
+    <div class="photo-caption">
+        <span>Naughty & Nice Ice Cream</span>
+        <span>St. Louis, Missouri</span>
+    </div>
+</div>
+
+<section id="menu">
+    <p class="label">Menu</p>
+
+    <h2>Build your scoop</h2>
+
+    <p class="intro">
+        Choose your size, pick a flavor, then make it your own.
+    </p>
+
+    <div class="scoop-grid">
+
+        <div class="scoop">
+            <h3>Mini</h3>
+            <div class="scoop-number">1</div>
+            <small>Flavor</small>
+            <div class="price">$6</div>
+        </div>
+
+        <div class="scoop">
+            <h3>Petite</h3>
+            <div class="scoop-number">2</div>
+            <small>Flavors</small>
+            <div class="price">$8</div>
+        </div>
+
+        <div class="scoop">
+            <h3>Moyen</h3>
+            <div class="scoop-number">3</div>
+            <small>Flavors</small>
+            <div class="price">$9.50</div>
+        </div>
+
+        <div class="scoop">
+            <h3>Grand Cru</h3>
+            <div class="scoop-number">5</div>
+            <small>Flavors</small>
+            <div class="price">$15</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="flavors">
+    <p class="label">Flavors</p>
+
+    <h2>Choose your flavor</h2>
+
+    <p class="intro">
+        Naughty, nice, dairy-free, or a little mysterious.
+    </p>
+
+    <div class="flavor-tabs">
+        <button class="active" data-tab="nice">Nice</button>
+        <button data-tab="naughty">Naughty</button>
+        <button data-tab="vegan">Vegan</button>
+        <button data-tab="poe">The Poe Collection</button>
+    </div>
+
+    <div class="flavor-panel active" id="nice">
+
+        <div class="flavor-title">
+            <h3>Nice</h3>
+            <p>Classic Favorites</p>
+        </div>
+
+        <details>
+            <summary>Gooey Butter Cake</summary>
+            <p>
+                Cream cheese ice cream layered with chunks of scratch-made gooey butter cake.
+            </p>
+            <p>Contains milk, wheat, egg.</p>
+        </details>
+
+        <details>
+            <summary>Salted Caramel Cookies & Cream</summary>
+            <p>
+                Dark chocolate sandwich cookie crumbles with ribbons of salted caramel.
+            </p>
+            <p>Contains milk, wheat, egg, soy.</p>
+        </details>
+
+        <details>
+            <summary>Salted Cracker Caramel</summary>
+            <p>
+                Sweet and salty caramel ice cream with chocolate, caramel, and crackers.
+            </p>
+        </details>
+
+        <details>
+            <summary>Italian Butter Cookie</summary>
+            <p>
+                Cookie pieces folded into spiced cookie butter ice cream with brown sugar and cinnamon.
+            </p>
+        </details>
+
+        <details>
+            <summary>Madagascar Vanilla</summary>
+            <p>
+                Clementine's signature rich vanilla ice cream.
+            </p>
+        </details>
+
+        <details>
+            <summary>Midnight Pleasures</summary>
+            <p>
+                Triple dark chocolate ice cream.
+            </p>
+        </details>
+
+        <details>
+            <summary>Espresso Royale</summary>
+            <p>
+                Dark roast coffee ice cream with notes of vanilla and brown sugar.
+            </p>
+        </details>
+
+        <details>
+            <summary>Chocolate Dreams</summary>
+            <p>
+                Milk chocolate ice cream made with Belgian chocolate.
+            </p>
+        </details>
+
+        <details>
+            <summary>Banana Moo' Pie</summary>
+            <p>
+                Banana cream ice cream with mini marshmallows and crunchy cookie pieces.
+            </p>
+        </details>
+
+        <details>
+            <summary>Pumpkin Gooey Butter Cake</summary>
+            <p>
+                Pumpkin spice ice cream with chunks of Clementine's gooey butter cake.
+            </p>
+        </details>
+
+        <details>
+            <summary>Blue Moon</summary>
+            <p>
+                Fruity lemon and raspberry ice cream inspired by the Midwestern classic.
+            </p>
+        </details>
+
+        <details>
+            <summary>Heritage Mint Chip</summary>
+            <p>
+                Spearmint and peppermint ice cream with dark chocolate flakes.
+            </p>
+        </details>
+
+        <details>
+            <summary>Honey Lavender</summary>
+            <p>
+                Lavender ice cream sweetened with honey.
+            </p>
+        </details>
+
+        <details>
+            <summary>Grandma Marie's Butter Brickle</summary>
+            <p>
+                Buttery ice cream with crunchy toffee pieces and caramelized brown sugar.
+            </p>
+        </details>
+
+        <details>
+            <summary>Ashleigh's Apple Cranberry Pie</summary>
+            <p>
+                Cinnamon ice cream with an apple cranberry pie swirl.
+            </p>
+        </details>
+
+    </div>
+
+    <div class="flavor-panel" id="naughty">
+
+        <div class="flavor-title">
+            <h3>Naughty</h3>
+            <p>Alcohol-Infused</p>
+        </div>
+
+        <details>
+            <summary>Maple Bourbon Pecan</summary>
+            <p>
+                Bourbon and maple syrup ice cream with salted candied Missouri pecans.
+            </p>
+        </details>
+
+        <details>
+            <summary>Pink Champagne Sorbet</summary>
+            <p>
+                A light and fresh sparkling wine sorbet.
+            </p>
+        </details>
+
+        <details>
+            <summary>Chocolate Cabernet</summary>
+            <p>
+                Rich chocolate ice cream infused with Cabernet Sauvignon.
+            </p>
+        </details>
+
+        <details>
+            <summary>Amaretto Sour</summary>
+            <p>
+                Amaretto ice cream with bright lemon and a tart cherry swirl.
+            </p>
+        </details>
+
+    </div>
+
+    <div class="flavor-panel" id="vegan">
+
+        <div class="flavor-title">
+            <h3>Vegan</h3>
+            <p>Dairy-Free</p>
+        </div>
+
+        <details>
+            <summary>Coconut Fudge</summary>
+            <p>
+                Rich chocolate ice cream made with coconut cream and coconut milk.
+            </p>
+        </details>
+
+        <details>
+            <summary>Lemon Poppyseed</summary>
+            <p>
+                Tart lemon ice cream with poppy seeds.
+            </p>
+        </details>
+
+        <details>
+            <summary>Tahini Chocolate Chip</summary>
+            <p>
+                Tahini ice cream with vanilla, brown sugar, and dark chocolate flakes.
+            </p>
+        </details>
+
+        <details>
+            <summary>Pomegranate Sorbet</summary>
+            <p>
+                Sweet and tart pomegranate sorbet with hibiscus.
+            </p>
+        </details>
+
+        <details>
+            <summary>Golden Mylk Biscoff</summary>
+            <p>
+                Golden mylk coconut ice cream with cinnamon Biscoff cookies.
+            </p>
+        </details>
+
+    </div>
+
+    <div class="flavor-panel" id="poe">
+
+        <div class="flavor-title">
+            <h3>The Poe Collection</h3>
+            <p>A Little Mysterious</p>
+        </div>
+
+        <details>
+            <summary>The Raven</summary>
+            <p>
+                Blueberry muffin in ice cream form.
+            </p>
+        </details>
+
+        <details>
+            <summary>Thing of Evil</summary>
+            <p>
+                Caramel miso coconut with chocolate sandwich cookies.
+            </p>
+        </details>
+
+        <details>
+            <summary>Nevermorange</summary>
+            <p>
+                Blood orange and olive oil ice cream.
+            </p>
+        </details>
+
+        <details>
+            <summary>Midnight Dreary</summary>
+            <p>
+                Dark chocolate raspberry ice cream.
+            </p>
+        </details>
+
+    </div>
+</section>
+
+<section>
+    <p class="label">Pick Your Base</p>
+
+    <h2>Cone or cup?</h2>
+
+    <p class="intro">
+        Pick your favorite way to hold your scoop.
+    </p>
+
+    <div class="base-list">
+
+        <div class="base-row">
+            <div>
+                <div class="base-name">Waffle Cone</div>
+                <p>Crisp, golden, and classic.</p>
+            </div>
+
+            <div class="price">+$2</div>
+        </div>
+
+        <div class="base-row">
+            <div>
+                <div class="base-name">Waffle Bowl</div>
+                <p>All the waffle crunch with a little more room.</p>
+            </div>
+
+            <div class="price">+$2</div>
+        </div>
+
+        <div class="base-row">
+            <div>
+                <div class="base-name">Gluten-Free Cone</div>
+                <p>A crisp gluten-free option.</p>
+            </div>
+
+            <div class="price">+$2.50</div>
+        </div>
+
+        <div class="base-row">
+            <div>
+                <div class="base-name">Konery Cone</div>
+                <p>A specialty cone for a little extra crunch.</p>
+            </div>
+
+            <div class="price">+$2</div>
+        </div>
+
+        <div class="base-row">
+            <div>
+                <div class="base-name">Extra Cup</div>
+            </div>
+
+            <div class="price">+$0.25</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="toppings">
+    <p class="label">Toppings</p>
+
+    <h2>Top it off</h2>
+
+    <p class="intro">
+        A little drizzle, crunch, or something classic.
+    </p>
+
+    <div class="toppings">
+
+        <div class="topping">
+            <p class="label">Drizzle</p>
+
+            <h3>Sauces</h3>
+
+            <p>
+                Sweet, sticky, and made for drizzling.
+            </p>
+
+            <ul>
+                <li>Hot Fudge</li>
+                <li>Salted Caramel</li>
+                <li>Hot Honey</li>
+            </ul>
+        </div>
+
+        <div class="topping">
+            <p class="label">Texture</p>
+
+            <h3>Crunch</h3>
+
+            <p>
+                For a little extra bite.
+            </p>
+
+            <ul>
+                <li>Candied Pecans</li>
+                <li>PB Crumbles</li>
+                <li>Chocolate Flakes</li>
+            </ul>
+        </div>
+
+        <div class="topping">
+            <p class="label">Classic</p>
+
+            <h3>Classics</h3>
+
+            <p>
+                The finishing touch.
+            </p>
+
+            <ul>
+                <li>Whipped Cream</li>
+                <li>Sprinkles</li>
+                <li>Cherries</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <p class="label">Extras</p>
+
+    <h2>A little extra</h2>
+
+    <div class="extras">
+
+        <div class="extra">
+            <img
+                src="Images/Sundae.png"
+                alt="Sunday Sundae">
+
+            <div class="extra-content">
+                <h3>Sunday Sundae</h3>
+
+                <p>2 scoops + 3 toppings</p>
+
+                <div class="price">$9.25</div>
+
+                <p>Sundays only</p>
+            </div>
+        </div>
+
+        <div class="extra">
+            <img
+                src="Images/Pint.png"
+                alt="Pint of the Month Club">
+
+            <div class="extra-content">
+                <h3>Pint of the Month Club</h3>
+
+                <p>
+                    Ice cream for one year, one pint at a time.
+                </p>
+
+                <p>Naughty — $159</p>
+                <p>Nice — $129</p>
+                <p>Vegan — $159</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="locations">
+    <p class="label">Parlors</p>
+
+    <h2>Find your parlor</h2>
+
+    <div class="locations">
+
+        <div class="location">
+            <img
+                src="Images/clayton.png"
+                alt="Clayton">
+
+            <h3>Clayton</h3>
+
+            <p>
+                730 De Mun Avenue<br>
+                Clayton, Missouri 63105
+            </p>
+
+            <p>(314) 643-9900</p>
+
+            <a href="https://maps.app.goo.gl/yEQBokx8aKJnKGGR6?g_st=ic">
+                Google Maps
+            </a>
+        </div>
+
+        <div class="location">
+            <img
+                src="Images/central-west-end.png"
+                alt="Central West End">
+
+            <h3>Central West End</h3>
+
+            <p>
+                308 N Euclid Avenue<br>
+                St. Louis, Missouri 63108
+            </p>
+
+            <p>(314) 916-4100</p>
+
+            <a href="https://maps.app.goo.gl/XRkK6rmpAFbvZ9uN6">
+                Google Maps
+            </a>
+        </div>
+
+        <div class="location">
+            <img
+                src="Images/lafayette-square.png"
+                alt="Lafayette Square">
+
+            <h3>Lafayette Square</h3>
+
+            <p>
+                1637 S 18th Street<br>
+                St. Louis, Missouri 63104
+            </p>
+
+            <p>(314) 474-5800</p>
+
+            <a href="https://share.google/GIK7YTYYrtyXrQzYs">
+                Google Maps
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hours">
+        <p>
+            <b>Sunday–Thursday</b><br>
+            12pm–10pm
+        </p>
+
+        <p>
+            <b>Friday–Saturday</b><br>
+            12pm–11pm
+        </p>
+    </div>
+</section>
+
+<footer>
+    Clementine's Naughty & Nice Ice Cream · Designed by Soobin Ahn · 2026
+</footer>
+
+</main>
+
+<script>
+const buttons = document.querySelectorAll(".flavor-tabs button");
+const panels = document.querySelectorAll(".flavor-panel");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        buttons.forEach(item => item.classList.remove("active"));
+        panels.forEach(panel => panel.classList.remove("active"));
+
+        button.classList.add("active");
+
+        document
+            .getElementById(button.dataset.tab)
+            .classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
