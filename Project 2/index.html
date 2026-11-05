@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Fixed Destination</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <button class="graph-toggle" id="graph-toggle" aria-label="Show graph" aria-pressed="false" title="Show graph">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M12 2V22M2 12H22"/>
+      <path d="M9.5 4.5L12 2L14.5 4.5"/>
+      <path d="M9.5 19.5L12 22L14.5 19.5"/>
+      <path d="M4.5 9.5L2 12L4.5 14.5"/>
+      <path d="M19.5 9.5L22 12L19.5 14.5"/>
+    </svg>
+  </button>
+
+  <nav class="city-nav" aria-label="Choose a city">
+    <button class="city-button active" data-city="all" aria-pressed="true">
+      <span class="city-globe">🌍</span>
+      <span>All Places</span>
+    </button>
+    <button class="city-button" data-city="nyc" aria-pressed="false">
+      <span class="city-dot nyc-dot"></span>
+      <span>New York</span>
+    </button>
+    <button class="city-button" data-city="stl" aria-pressed="false">
+      <span class="city-dot stl-dot"></span>
+      <span>St. Louis</span>
+    </button>
+    <button class="city-button" data-city="flr" aria-pressed="false">
+      <span class="city-dot flr-dot"></span>
+      <span>Florence</span>
+    </button>
+    <button class="city-button" data-city="sel" aria-pressed="false">
+      <span class="city-dot sel-dot"></span>
+      <span>Seoul</span>
+    </button>
+  </nav>
+
+  <button class="guide-button" id="open-guide">About this map</button>
+
+  <div class="zoom-controls">
+    <button id="zoom-in" aria-label="Zoom in">+</button>
+    <div class="zoom-divider"></div>
+    <button id="zoom-out" aria-label="Zoom out">−</button>
+    <div class="zoom-divider"></div>
+    <button id="zoom-reset" aria-label="Reset map view">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="zoom-level" id="zoom-level">100%</div>
+
+  <div class="map-viewport" id="map-viewport">
+    <main id="map">
+      <div class="graph-overlay" id="graph-overlay" aria-hidden="true">
+        <div class="graph-axis graph-horizontal"></div>
+        <div class="graph-axis graph-vertical"></div>
+        <span class="graph-label graph-personal">PERSONAL</span>
+        <span class="graph-label graph-professional">PROFESSIONAL</span>
+        <span class="graph-label graph-possibility">POSSIBILITY</span>
+        <span class="graph-label graph-familiarity">FAMILIARITY</span>
+      </div>
+
+      <header class="site-title">
+        <h1>No Fixed Destination</h1>
+        <p>A map of things I keep coming back to.</p>
+      </header>
+
+      <div class="point" data-city="sel" style="--x:110px;--y:170px;--w:175px">
+        <div class="image-wrap">
+          <img src="Images/BookOne.png" alt="The Untethered Soul" draggable="false">
+        </div>
+        <div class="info">
+          <h2>The Untethered Soul</h2>
+          <p class="info-location">Seoul · Michael A. Singer</p>
+          <p>My dad recommended this book when I told him I sometimes felt held back by my own thoughts. It made me realize how much of that was coming from my own mind, and I still think about it whenever I feel stuck.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="flr" style="--x:1400px;--y:925px;--w:105px">
+        <div class="image-wrap">
+          <img src="Images/Booktwo.png" alt="Reductionism in Art and Brain Science" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Reductionism in Art and Brain Science</h2>
+          <p class="info-location">Florence · Eric R. Kandel</p>
+          <p>Seeing a Rothko painting in Florence made me wonder how something as simple as color could communicate so much emotion. That curiosity led me to this book and made me more interested in the relationship between art and cognitive science.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="stl" style="--x:1215px;--y:275px;--w:245px">
+        <div class="image-wrap">
+          <img src="Images/Collage.png" alt="Photomontage by Grete Stern" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Photomontage</h2>
+          <p class="info-location">St. Louis · Grete Stern · Kemper Art Museum · Buenos Aires Modern</p>
+          <p>I came across Grete Stern's work while working at the Kemper for Buenos Aires Modern. I love how she puts together images that don't really belong together but somehow make sense. Her photomontages feel a little strange, almost like dreams, which is probably why I kept looking at them.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="stl" style="--x:1010px;--y:170px;--w:145px">
+        <div class="image-wrap">
+          <img src="Images/Didot.png" alt="Didot" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Didot</h2>
+          <p class="info-location">St. Louis · Typography</p>
+          <p>One of my favorite serif typefaces. I used it for my final project in Typography II, and I'm using it again for this map. I love how elegant it is without feeling old-fashioned. It's pretty, but still chic.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="sel" style="--x:165px;--y:1080px;--w:190px">
+        <div class="image-wrap">
+          <img src="Images/Diptyque.png" alt="Diptyque Figuier" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Figuier</h2>
+          <p class="info-location">Seoul · Diptyque</p>
+          <p>The scent of my room back home. No matter where I am, it always reminds me of Seoul.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="nyc" style="--x:65px;--y:510px;--w:265px">
+        <div class="image-wrap">
+          <img src="Images/GustavKlimt.png" alt="Mäda Primavesi by Gustav Klimt" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Mäda Primavesi</h2>
+          <p class="info-location">New York · Gustav Klimt, 1912–13</p>
+          <p>One of my favorite paintings at The Met. I love how different the coloring is from his more well-known gold paintings, like The Kiss. The pinks, purples, and patterns are so beautiful, and I always stop to look at it when I visit.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="nyc" style="--x:900px;--y:825px;--w:205px">
+        <div class="image-wrap">
+          <img src="Images/MarbledVase.png" alt="Amber-glazed Marbled Earthenware Cup" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Amber-glazed Marbled Earthenware Cup</h2>
+          <p class="info-location">New York · Chinese Works of Art · Eskenazi Collection</p>
+          <p>I came across this cup while working on a Chinese Works of Art project in New York. I was immediately drawn to its colors and marbled surface. What I find interesting about Chinese works of art is that we often know the dynasty rather than the exact year or maker. There's so much history behind an object even when we don't know who made it.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="stl" style="--x:1020px;--y:1040px;--w:150px">
+        <div class="image-wrap">
+          <img src="Images/Neue.png" alt="Neue Haas Grotesk" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Neue Haas Grotesk</h2>
+          <p class="info-location">St. Louis · Typography</p>
+          <p>My favorite sans-serif typeface, which I used throughout my typography classes. I like how simple and restrained it is while still having so much personality. I'm also using it for the text throughout this map.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="flr" style="--x:400px;--y:1000px;--w:275px">
+        <div class="image-wrap">
+          <img src="Images/Santospirto.png" alt="Piazza Santo Spirito" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Piazza Santo Spirito</h2>
+          <p class="info-location">Florence, Italy</p>
+          <p>One of my favorite areas in Florence. The Sunday markets, the bars and restaurants, and even just walking around the neighborhood made me really happy. I have so many good memories here.</p>
+        </div>
+      </div>
+
+      <div class="point" data-city="flr" style="--x:545px;--y:235px;--w:125px">
+        <div class="image-wrap">
+          <img src="Images/Website1.png" alt="197 Historias Ilustradas" draggable="false">
+        </div>
+        <div class="info">
+          <h2>197 Historias Ilustradas</h2>
+          <p class="info-location">Florence · Digital Inspiration</p>
+          <p>I love the idea that remembering is a way of keeping something alive. The line about how only what is not forgotten stays alive really stayed with me.</p>
+          <a href="https://www.197historiasilustradas.com/en" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+
+      <div class="point" data-city="stl" style="--x:1235px;--y:745px;--w:115px">
+        <div class="image-wrap">
+          <img src="Images/Website2.png" alt="Neutomni" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Neutomni</h2>
+          <p class="info-location">St. Louis · Digital Inspiration</p>
+          <p>I love the interactive cut-along-the-line detail. It's such a simple idea, but it makes navigating the website feel playful and unexpected.</p>
+          <a href="https://neutomni.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+
+      <div class="point" data-city="flr" style="--x:790px;--y:325px;--w:165px">
+        <div class="image-wrap">
+          <img src="Images/Website3.png" alt="Mike's CV" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Mike's CV</h2>
+          <p class="info-location">Florence · Digital Inspiration</p>
+          <p>The interactive boarding pass caught my attention. I love how the wiping interaction turns something familiar into an unexpected way of exploring a portfolio.</p>
+          <a href="https://www.mikes.cv/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+
+      <div class="point" data-city="nyc" style="--x:1180px;--y:1190px;--w:170px">
+        <div class="image-wrap">
+          <img src="Images/Website4.png" alt="BOC Studio" draggable="false">
+        </div>
+        <div class="info">
+          <h2>BOC Studio</h2>
+          <p class="info-location">New York · Digital Inspiration</p>
+          <p>I love how this branding studio presents its work through a nighttime cityscape, almost like advertisements lighting up buildings in Times Square. It makes the portfolio feel like part of the city.</p>
+          <a href="https://boc.studio/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+
+      <div class="point" data-city="sel" style="--x:695px;--y:825px;--w:105px">
+        <div class="image-wrap">
+          <img src="Images/Website5.png" alt="Brandon Yasin" draggable="false">
+        </div>
+        <div class="info">
+          <h2>Brandon Yasin</h2>
+          <p class="info-location">Seoul · Digital Inspiration</p>
+          <p>I keep coming back to the minimal layout and fashion-inspired visual direction. I like how the imagery and typography are given so much space without needing anything extra.</p>
+          <a href="https://brandonyasin.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+
+<div class="point" data-city="nyc" style="--x:365px;--y:110px;--w:165px">        <div class="image-wrap">
+          <img src="Images/Oyster.png" alt="The World Is Your Oyster" draggable="false">
+        </div>
+        <div class="info">
+          <h2>The World Is Your Oyster</h2>
+          <p class="info-location">New York</p>
+          <p>A colleague said this to me while I was working in New York, and it has stayed with me ever since. Whenever I'm unsure about what's next, I think about how many possibilities there are ahead.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="popup-overlay" id="popup-overlay" aria-hidden="true">
+    <div class="popup-panel" role="dialog" aria-modal="true" aria-label="About this image">
+      <button class="popup-close" id="popup-close" aria-label="Close">×</button>
+      <div class="popup-image" id="popup-image"></div>
+      <div class="popup-text" id="popup-text"></div>
+    </div>
+  </div>
+
+  <div class="guide-overlay" id="guide-overlay" aria-hidden="true">
+    <div class="guide-panel" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+      <button class="guide-close" id="guide-close" aria-label="Close">×</button>
+      <h2 id="guide-title">About this map</h2>
+      <p class="guide-intro">These shimmering points are things I like, places I miss, and things I've come across that have stayed with me.</p>
+      <p class="guide-intro">They're from four cities I've spent time in. You can explore each city separately or see everything together.</p>
+      <div class="guide-cities">
+        <span><i class="city-dot nyc-dot"></i>New York</span>
+        <span><i class="city-dot stl-dot"></i>St. Louis</span>
+        <span><i class="city-dot flr-dot"></i>Florence</span>
+        <span><i class="city-dot sel-dot"></i>Seoul</span>
+      </div>
+      <p class="guide-intro">I placed everything somewhere between personal and professional, possibility and familiarity. You can move the points around because where they belong might change.</p>
+      <p class="guide-intro">Their sizes are based on how much space they take up in my head right now, but that changes depending on the day too. You can resize them however you like.</p>
+      <p class="guide-ending">Click on anything to read more. There's no particular way to explore this map.</p>
+      <button class="guide-start" id="guide-start">Explore the map</button>
+    </div>
+  </div>
+
+  <div class="map-pin-cursor" id="map-pin-cursor" aria-hidden="true"></div>
+</body>
+</html>
