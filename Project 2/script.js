@@ -211,6 +211,7 @@ zoomInButton.addEventListener("click", () => zoomFromCenter(1.2));
 zoomOutButton.addEventListener("click", () => zoomFromCenter(1 / 1.2));
 zoomResetButton.addEventListener("click", resetView);
 
+// NEW: Scroll to zoom around the cursor
 viewport.addEventListener("wheel", event => {
   if (
     popupOverlay.classList.contains("active") ||
@@ -219,17 +220,13 @@ viewport.addEventListener("wheel", event => {
 
   event.preventDefault();
 
-  if (event.ctrlKey || event.metaKey) {
-    zoomAt(
-      zoom * Math.exp(-event.deltaY * 0.008),
-      event.clientX,
-      event.clientY
-    );
-  } else {
-    panX -= event.deltaX;
-    panY -= event.deltaY;
-    renderMap();
-  }
+  const sensitivity = event.deltaMode === 1 ? 0.025 : 0.002;
+
+  zoomAt(
+    zoom * Math.exp(-event.deltaY * sensitivity),
+    event.clientX,
+    event.clientY
+  );
 }, { passive: false });
 
 function positionPoint(point, x, y) {
